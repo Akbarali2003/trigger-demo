@@ -1,0 +1,126 @@
+.header{
+    &__nav{
+        padding: 12px 0 12px 0;
+        margin-bottom: 16px;
+    }
+    &__nav-lists{
+        width: 1140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav-items{
+        display: flex;
+        align-items: center;
+        height: 18px;
+        &:hover .header__nav-icon-arrow svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover .header__nav-lang{
+            transition: 350ms;
+            color: #fff;
+        }
+    }
+    &__nav-list{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item{
+        display: flex;
+        align-items: center;
+        &:nth-child(1){
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+        }
+        &:last-child{
+            display: flex;
+            align-items: center;
+            padding-right: 0;
+        }
+        &:hover .header__nav-icon svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover .header__nav-text{
+            transition: 350ms;
+            color: #fff;
+        }
+    }
+    &__nav-item-line{
+        margin-left: 16px;
+        margin-right: 18px;
+    }
+    &__nav-border-line{
+        width: 1px;
+        height: 18px;
+        border: none;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.12);;
+    }
+    &__nav-lang{
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 255, 255, 0.65);
+    }
+    &__nav-icon-flag{
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        & img{
+            border-radius: 50%;
+        }
+    }
+    &__nav-icon-arrow{
+        display: flex;
+        align-items: center;
+        margin-left: 6px;
+    }
+    &__nav-line{
+        width: 1px;
+        height: 18px;
+        background-color:rgba(255, 255, 255, 0.12);
+        border: none;
+        margin-left: 16px;
+        margin-right: 18px;
+        
+    }
+    &__nav-icon{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-phonespan{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover .header__nav-icon svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover .header__nav-phonenumber{
+            transition: 350ms;
+            color: #fff;
+        }
+    }
+    &__nav-phonenumber{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    &__nav-text{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        margin-left: 10px;
+    }
+}

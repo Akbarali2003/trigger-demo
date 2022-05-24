@@ -1,0 +1,96 @@
+.employer{
+    content: '';
+    background-image: url('../../Assets/Images/decor3.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-y: 0px;
+    background-position-x: 1320px;
+    &__title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        color: #1B283B;
+        margin: 0;
+        margin-bottom: 62px;
+        
+        
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+        background: #FFFFFF;
+        border: 1px solid #E7EAEE;
+        border-radius: 18px;
+        padding: 46px 24px 24px 24px;
+        position: relative;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    &__marksimg{
+        position: absolute;
+        top: -30px;
+        left: 13px;
+    }
+    
+    &__discription{
+        width: 316px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #6B7A8C;
+        margin-bottom: 16px;
+        
+    }
+    
+    &__star-group{
+        width: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover{
+            & svg path{
+                fill: #B4B7C9;
+            }
+        }
+    }
+    
+    &__user{
+        display: flex;
+        align-items: center;
+        margin-top: 42px;
+    }
+    
+    &__user-information{
+        margin-left: 16px;
+    }
+    
+    &__user-name{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #1B283B;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+    
+    &__user-position{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #9397AD;
+        margin: 0;
+    }
+}

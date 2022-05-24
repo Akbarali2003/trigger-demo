@@ -1,0 +1,90 @@
+.aboutus{
+    margin-top: 415px;
+    display: flex;
+    align-items: center;
+    &__image{
+        width: 546px;
+        height: 546px;
+        margin-right: 100px;
+        position: relative;
+    }
+    &__decor {
+        &-right {
+            position: absolute;
+            top: -53px;
+            left: -52px;
+        }   
+        &-left {
+            position: absolute;
+            bottom: -53px;
+            right: -52px;
+        } 
+    }
+    &__subtitle{
+        width: 494px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 56px;
+        color: #1B283B;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+    &__text{
+        width: 494px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #6B7A8C;
+        margin-bottom: 48px;
+    }
+    &__btn{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #3E96FC;
+        box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+        border-radius: 10px;
+        border: none;
+        padding: 14px 16px;
+        margin-bottom: 48px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        
+    }
+    &__item{
+        margin-right: 50px;
+        text-align: left;
+    }
+    &__count{
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 56px;
+        color: #000000;
+        margin-bottom: 6px;
+    }
+    &__plus{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 56px;
+        color: #3E96FC;
+    }
+    &__discription{
+        width: 104px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #6B7A8C;
+    }
+}
