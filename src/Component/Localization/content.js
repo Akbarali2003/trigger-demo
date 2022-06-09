@@ -63,7 +63,11 @@ const content = {
             },
             {
                 titlee: 'Обслуживаемые компании',
-                subtitle: 'Строительство и недвижимость',
+                subtitle: [
+                    'Оперативное обслуживание',
+                    'Страхование безопасности',
+                    'Строительство и недвижимость',
+                ]
             },
             {
                 title: ' Что наши клиенты говорят о нас',
@@ -84,6 +88,41 @@ const content = {
             },
             {
                 title: 'Последние новости',
+                list: [
+                    {
+                        jobs: [
+                            'Финансы',
+                            'Бизнес',
+                        ],
+                        date:'Апр 6, 2022',
+                        text:'Взломать стеклянный потолок гендерной...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Финансы',
+                        ],
+                        date:'Дек 23, 2022',
+                        text:'На прошлой неделе войти в культовый рейтинг...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Предприятие',
+                        ],
+                        date:'Сен 17, 2022',
+                        text:'Градиентный ИИ нацелен как на андеррайтинг, так...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Предприятие',
+                        ],
+                        date:'Сен 17, 2022',
+                        text:'Градиентный ИИ нацелен как на андеррайтинг, так...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                ]
             },
             {
                 title: 'Нужна помощь или информация? Не стесняйтесь связаться с нами',
@@ -146,8 +185,8 @@ const content = {
                 ]
             },
             {
-                text:'При копировании материалов ссылка на сайт обязательна',
-                links:[
+                text: 'При копировании материалов ссылка на сайт обязательна',
+                links: [
                     "© 2022 General Insurance. Все права защищены..",
                     'Политика конфиденциальности',
                     "Условия обслуживания",
@@ -217,7 +256,11 @@ const content = {
             },
             {
                 titlee: "Xizmat ko'rsatgan kompaniyalar",
-                subtitle: "Qurilish va ko'chmas mulk",
+                subtitle: [
+                    'Tezkor xizmat',
+                    "Xavfsizlik sug'urtasi",
+                    "Qurilish va ko'chmas mulk",
+                ]
             },
             {
                 title: ' Mijozlarimiz biz haqimizda nima deyishadi',
@@ -238,6 +281,41 @@ const content = {
             },
             {
                 title: "So'ngi yangiliklar",
+                list: [
+                    {
+                        jobs: [
+                            'Moliya',
+                            'Biznes',
+                        ],
+                        date:'2022 yil 6 aprel',
+                        text:'Jinsning shisha shiftini sindirib oching ...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Moliya',
+                        ],
+                        date:'2022 yil 23 dekabr',
+                        text:"O'tgan haftada diniy reytingga kiring...",
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Kompaniya',
+                        ],
+                        date:'2022 yil 17-sentabr',
+                        text:'Gradient AI ham anderrayting, ham...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Kompaniya',
+                        ],
+                        date:'2022 yil 17-sentabr',
+                        text:'Gradient AI ham anderrayting, ham...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                ]
             },
             {
                 title: "Yordam yoki ma'lumot kerakmi? Biz bilan bog'lanishingiz mumkin",
@@ -300,8 +378,8 @@ const content = {
                 ]
             },
             {
-                text:'Materiallardan nusxa olishda saytga havola kerak',
-                links:[
+                text: 'Materiallardan nusxa olishda saytga havola kerak',
+                links: [
                     "© 2022 Umumiy sug'urta. Barcha huquqlar himoyalangan.",
                     'Maxfiylik siyosati',
                     "Xizmat ko'rsatish shartlari"
@@ -309,5 +387,198 @@ const content = {
             }
         ]
     },
+    en:{
+        nav: {
+            link: [
+                'Home',
+                'Site map',
+                'Mail',
+                'Sound',
+                "View",
+                'Search',
+            ],
+        },
+        header: {
+            text: [
+                'About us',
+                'Service',
+                'Library',
+                'Branches',
+                'News',
+                "Contact us",
+            ],
+            btn: [
+                'Get a quote'
+            ]
+        },
+        main: [
+            {
+                title: "Protect life's most important things",
+                text: "The world's first and largest insurance company for everyone to protect their property",
+                placeholder: 'Enter policy number',
+                btn: 'Check policy',
+            },
+            {
+                title: 'Select package',
+                btn1: 'Personal',
+                btn2: 'Business',
+                discription: [
+                    'Car Insurance',
+                    'Property',
+                    'Travel',
+                    "Life Insurance",
+                ],
+            },
+            {
+                title: 'Where your safety comes first',
+                text: "Over the past decades,our motto has been 'Where your safety comes first.' For our clients,this is more that just words. It is the commitment of providing individualized service",
+                btn: "Learn more",
+                discription: [
+                    'Cars Protected',
+                    'Life Protected'
+                ]
+            },
+            {
+                title: 'Why choose us?',
+                subtitle: [
+                    'Fast service',
+                    'Officially certified',
+                    "On time service",
+                    'Professional team',
+                ]
+            },
+            {
+                titlee: "Industries we serve",
+                subtitle: [
+                    'Fast service',
+                    "Security insurance",
+                    "Construction and real estate",
+                ]
+            },
+            {
+                title: 'What our clients say about us',
+                user: [
+                    {
+                        username: 'Esther Howard',
+                        userjob: 'Spotify directors',
+                    },
+                    {
+                        username: 'Robert Fox',
+                        userjob: 'Spotify directors',
+                    },
+                    {
+                        username: 'Cameron Williamson',
+                        userjob: 'Spotify directors',
+                    },
+                ]
+            },
+            {
+                title: "Latest news",
+                list: [
+                    {
+                        jobs: [
+                            'Finance',
+                            'Business',
+                        ],
+                        date:'April 6, 2022',
+                        text:'Cracking the glass ceiling on gender inclusion',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Finance',
+                        ],
+                        date:'December 23, 2022',
+                        text:"Last week to enter the iconic rancing for retail producers",
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Company',
+                        ],
+                        date:'September 17, 2022',
+                        text:'Gradient AI is targets both underwriting and claims ...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                    {
+                        jobs: [
+                            'Company',
+                        ],
+                        date:'September 17, 2022',
+                        text:'Gradient AI is targets both underwriting and claims ...',
+                        discription:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do...'
+                    },
+                ]
+            },
+            {
+                title: "Need help or information? You can contact us",
+                list: [
+                    {
+                        text: "Contact Us",
+                        discription: "Contact us for any questions. We will help you respond to your message as soon as possible.",
+                        btn: "Contact Us",
+                    },
+                    {
+                        text: "Customer Service",
+                        discription: "Call us to talk to a member of our team. We are always happy to help you.",
+                        btn: "Call Now",
+                    }
+                ]
+            },
+            {
+                title: "Subscribe newsletter",
+                placeholder: 'E-mail address here',
+                btn: "Subscribe",
+            }
+        ],
+        footer: [
+            {
+                discription: "Over the past decades, our motto has been 'Where your safety comes first.'"
+            },
+            {
+                subtitle: 'Product',
+                link: [
+                    "Overview",
+                    'Features',
+                    'Solutions',
+                    'Tutorials',
+                    'Pricing',
+                    'Releases',
+                ]
+            },
+            {
+                subtitle: 'Company',
+                link: [
+                    'About us',
+                    'Kareers',
+                    'Press',
+                    'News',
+                    "Media kit",
+                    'Contact',
+                ]
+            },
+            {
+                subtitle: "Contact Us",
+                link: [
+                    '+99871 231-20-02',
+                    'info@ddgi.uz',
+                ]
+            },
+            {
+                subtitle: 'Location',
+                link: [
+                    '27, st, Navoi,Tashkent',
+                ]
+            },
+            {
+                text: 'When copying materials referance to the site is required',
+                links: [
+                    "© 2022 General Insurance. All rights reserved.",
+                    'Privacy Policy',
+                    "Term of Service"
+                ]
+            }
+        ]
+    }
 }
 export default content;

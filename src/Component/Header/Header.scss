@@ -2,9 +2,13 @@
     background: #0C2F62;
     display: flex;
     flex-direction: column;
+    padding-bottom: 72px;
     &__package{
         display: flex;
         align-items: center;
+    }
+    &__logoimg{
+        width: 117px;
     }
     &__list{
         display: flex;
@@ -26,15 +30,15 @@
         font-size: 16px;
         line-height: 24px;
         color: #FFFFFF;
-        background: #0C2F62;
         border: none;
         cursor: pointer;
         margin: 0 12px 0 12px;
+        transition: 0.35s;
         &:hover{
             color: #0d6efd;
         }
         &:hover .header__arrow svg path{
-            fill:#0d6efd
+            fill:#0d6efd;
         }
     }
     &__arrow{
@@ -46,6 +50,70 @@
             
         }
     }
+    &__dropdown-one-close{
+        display: none;
+    }
+    &__dropdown-one-open{
+        width: 187px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 8px 0px;
+        inset: 0px auto;
+        margin: 0px;
+        transform: translate3d(10px, 100px, 0px);
+    }
+    &__dropdown-two-close{
+        display: none;
+    }
+    &__dropdown-two-open{
+        width: 187px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 8px 0px;
+        inset: 0px auto;
+        margin: 0px;
+        transform: translate3d(10px, 100px, 0px);
+    }
+    &__dropdown-item-custom1{
+        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+        color: #000;
+        padding: 0.25rem 1rem;
+        
+    }
+    &__dropdown-item-custom2{
+        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+        color: #000;
+        padding: 0.25rem 1rem;
+        
+    }
+    &__dropdown-item{
+        display: flex;
+        align-items: center;   
+    }
+    &__dropdown-line{
+        width: 186px;
+        height: 1px;
+        border: none;
+        border-top: 1px solid rgba(0,0,0,0.15);
+        
+        margin: 0;
+    }
     &__discription{
         font-style: normal;
         font-weight: 400;
@@ -53,6 +121,7 @@
         line-height: 24px;
         color: #FFFFFF;
         margin: 0 12px 0 12px;
+        transition: 0.35s;
         &:hover{
             color: #0d6efd;
         }
@@ -71,8 +140,99 @@
         box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
         border-radius: 10px;
         cursor: pointer;
+        transition: 0.35s;
         &:hover{
             box-shadow: none;
+        }
+    }
+    &__bar-toggle{
+        display: none;
+    }
+}
+@media screen and (max-width:991px) {
+    .header{
+        padding-top: 36px;
+        padding-bottom: 52px;
+        &__list{
+            display: none;
+        }
+        &__btn{
+            margin-left: 401px;
+            margin-right: 8px;
+        }
+        &__bar-toggle{
+            display: block;
+            width: 56px;
+            height: 40px;
+            border: none;
+            border: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            padding: 4px 12px;
+            background-color: transparent;
+            border-radius: 0.25rem;
+            transition: box-shadow 0.15s ease-in-out;
+        }
+        &__hamburger{
+            width: 30px;
+            height: 30px;  
+        }
+        &__bar{
+            width: 30px;
+            height: 4px;
+            display: block;
+            background-color: #fff;
+            margin-bottom: 9px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .header{
+        padding-top: 36px;
+        padding-bottom: 52px;
+        &__list{
+            display: none;
+        }
+        &__btn{
+            margin-left: 233.5px;
+            margin-right: 8px;
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .header{
+        padding-top: 36px;
+        padding-bottom: 52px;
+        &__list{
+            display: none;
+        }
+        &__btn{
+            margin-left: 137.5px;
+            margin-right: 8px;
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .header{
+        padding-top: 36px;
+        padding-bottom: 40px;
+        &__package{
+            display: flex;
+            align-items: center;
+        }
+        &__logoimg{
+            width: 100px;
+        }
+        &__list{
+            display: none;
+        }
+        
+        &__btn{
+            font-size: 12px;
+            margin-left: 21px;
+            margin-right: 8px;
         }
     }
 }

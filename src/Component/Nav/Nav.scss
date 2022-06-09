@@ -2,6 +2,7 @@
     &__nav{
         padding: 12px 0 12px 0;
         margin-bottom: 16px;
+        position: relative;
     }
     &__nav-lists{
         width: 1140px;
@@ -10,25 +11,168 @@
         justify-content: space-between;
     }
     &__nav-items{
+        position: relative;
         display: flex;
         align-items: center;
         height: 18px;
-        &:hover .header__nav-icon-arrow svg path{
-            transition: 350ms;
-            fill-opacity: 1;
-        }
-        &:hover .header__nav-lang{
-            transition: 350ms;
-            color: #fff;
-        }
+        
     }
     &__nav-list{
         display: flex;
         align-items: center;
     }
+    .show{
+        color: #cc9713;
+        text-shadow: 0 0 8px #cc9713;
+    }
+    .icon{
+        fill:#cc9713 ;   
+        &:hover .header__nav-icon svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+            fill: #fff;
+        }     
+        &:hover .header__nav-text{
+            transition: 350ms;
+            fill: #cc9713;
+        }
+    }
+    &__nav-closeview{
+        display: none;
+        transition: 0.5s;
+    }
+    &__nav-openview{
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 4px;
+        transform: translate3d(0px, 95px, 0px);
+        padding: 8px 0; 
+        z-index: 10;
+        transition: 0.5s;
+        &>li:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__nav-viewline{
+        width: 163.5px;
+        height: 1px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    &__nav-viewdarkmode{
+        position: relative;
+        
+    }
+    input[type="checkbox"]{
+        box-sizing: border-box;
+        position: relative;
+        width: 60px;
+        height: 30px;
+        -webkit-appearance:none;
+        background-color: #fff;
+        border: 1px solid #000;
+        outline: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0  5px rgba(0,0,0,0.2);
+        transition: .5s;
+        
+    }
+    
+    input:checked[type="checkbox"]{
+        background:rgb(0,0,0);
+    }
+    input[type="checkbox"]::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height:30px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        background: #000;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        transform: scale(0.7);
+        transition: .5s;
+    }
+    input:checked[type="checkbox"]::before{
+        left: 30px;
+        transition: .5s;
+        background: #fff;
+
+    }
+    &__nav-my-size{
+        width: 155.5px;
+        padding: 4px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 16px;
+        color: #212529;
+    }
+    &__nav-font-size{
+        width: 143.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+    &__nav-decremet{
+        width: 40px;
+        height: 40px;
+        font-weight: normal;
+        font-size: 13px;
+        background-color: rgb(51, 51, 51);
+        color: #fff;
+        transition: .35s ease;
+        border-radius: 8px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        &:hover{
+            background-color: rgba(51, 51, 51,0.7);
+        }
+    }
+    &__nav-auto{
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        color: #fff;
+        transition: .35s ease;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        &:hover{
+            color: #000;
+            background: rgba(0,0,0,0.1);
+        }
+    }
+    &__nav-incremet{
+        width: 40px;
+        height: 40px;
+        font-weight: normal;
+        font-size: 18px;
+        background-color: #333;
+        color: #fff;
+        transition: .35s ease;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        &:hover{
+            background-color: rgba(51, 51, 51,0.7);
+        }
+    }
     &__nav-item{
         display: flex;
         align-items: center;
+        transition: 0.35s;
         &:nth-child(1){
             display: flex;
             align-items: center;
@@ -59,7 +203,10 @@
         margin: 0;
         background-color: rgba(255, 255, 255, 0.12);;
     }
-    &__nav-lang{
+    &__nav-lang-active{
+        color: red;
+    }
+    &__nav-lang-uz{
         display: flex;
         align-items: center;
         font-style: normal;
@@ -67,6 +214,48 @@
         font-size: 12px;
         line-height: 15px;
         color: rgba(255, 255, 255, 0.65);
+        &:hover .header__nav-icon-arrow svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover{
+            transition: 350ms;
+            color: #fff;
+        }
+    }
+    &__nav-lang-ru{
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        &:hover .header__nav-icon-arrow svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover{
+            transition: 350ms;
+            color: #fff;
+        }
+    }
+    &__nav-lang-en{
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        &:hover .header__nav-icon-arrow svg path{
+            transition: 350ms;
+            fill-opacity: 1;
+        }
+        &:hover{
+            transition: 350ms;
+            color: #fff;
+        }
     }
     &__nav-icon-flag{
         display: flex;
@@ -98,7 +287,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &:hover .header__nav-icon svg path{
+        transition: 0.35s;
+        &:hover .header__nav-icon-phone svg path{
             transition: 350ms;
             fill-opacity: 1;
         }
@@ -122,5 +312,105 @@
         line-height: 15px;
         color: rgba(255, 255, 255, 0.65);
         margin-left: 10px;
+        transition: 0.35s;
+    }
+    &__nav-closemodal{
+        display: none;
+    }
+    &__nav-openmodal{
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 6px 0px;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate3d(0px, 18.4px, 0px);
+        
+    }
+    &__nav-otherlang{
+        width: 126px;
+        display: flex;
+        align-items: center;   
+        padding: 4px 16px; 
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000;
+        padding-bottom: 0;
+        &:nth-child(1){
+            padding-top: 0;
+        }
+        &:hover{
+            background-color:#d2dbe8 ;
+        }
+    }
+    &__nav-closesearch{
+        display: none;
+        transition: 0.35s;
+    }
+    &__nav-opensearch{
+        width: 1170px;
+        height: 53px;
+        display: block;
+        position: absolute;
+        inset: 0px auto;
+        margin: 0px;
+        transform: translate3d(-1095px,45px, 0px);
+        transition:350ms ;
+        box-shadow: none;
+        &:hover .search-text{
+            transition: 350ms;
+            color: #cc9713 !important;
+        }
+        
+    }
+    &__nav-form{
+        box-shadow: 0 0 12px #000;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    &__nav-form-input{
+        width: 1061px;
+        height: 21px;
+        padding: 16px 16px;
+        outline: none;
+        border: none;
+        border-radius: 10px 0 0px 10px !important;
+        display: flex;
+        align-items: center;
+        &::placeholder{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+    &__nav-form-btn{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        background: #3E96FC;
+        border: none;
+        padding: 14.5px 16px;
+        border-radius: 0 10px 10px 0 !important;
+        transition: 0.35s;
+        &:hover{
+            background: #2263ae;
+        }
     }
 }
+
+@media screen and (max-width:991px) {
+    .header{
+        &__nav{
+            display: none;
+            padding: 12px 0 12px 0;
+        }
+    }
+}
+

@@ -1,79 +1,90 @@
-import React, { useState, useEffect } from "react";
-import { Users } from '../data';
-import './Swiper1.scss';
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import UserImg1 from '../../Assets/Images/news1.jpg';
+import UserImg2 from '../../Assets/Images/news2.jpg';
+import UserImg3 from '../../Assets/Images/news3.jpg';
+import UserImg4 from '../../Assets/Images/news4.jpg';
 import { FiChevronLeft, FiChevronRight } from '../../Assets/Images/index';
+import content from "../Localization/content";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./Swiper1.scss";
+import { Pagination, Navigation } from "swiper";
 
-function Swiper() {
-    const [people, setPeople] = useState(Users);
-    const [index, setindex] = useState(0);
-    useEffect(() => {
-        const lastIndex = people.length - 1
-        if (index < 0) {
-            setindex(lastIndex)
-        }
-        if (index > lastIndex) {
-            setindex(0)
-        }
-    }, [index, people])
-
-    // useEffect(() => {
-    //     let slider = setInterval(() => {
-    //         setindex(index + 1)
-    //     }, 3000)
-    //     return () => clearInterval(slider)
-    // })
-
+function Swiper1({ lang }) {
     return (
         <section className="swiper1">
             <div className="swiper1__content">
-                <button className="prev" onClick={() => {
-                    setindex(index - 1)
-                    console.log(index)
-                }}><FiChevronLeft /></button>
-                <ul className="swiper1__list">
-                    {people.map((person, personIndex) => {
-                        const { id, image, job, date, subtitle, text } = person;
-                        let position = "activeSlide"
-                        if (index == 0) {
-                            position = 'activeSlide'
-                        }
-                        if (index == 1) {
-                            position = 'lastSlide'
-                        }
-                        if (personIndex == 2) {
-                            position = "nextSlide";
-                        }
-                        // if (personIndex === index - 1 || (index === 0 && personIndex === people.length - 1)) {
-                        //     position = "lastSlide"
-                        // }
-                        return (
-                            <li key={id} className={position}>
-                                <img style={{ width: '332px', height: '240px', borderRadius: '18px 18px 0 0' }} src={image} alt={job} />
-                                <div className="swiper1__information">
-                                    <span className="swiper1__span">
-                                        <p className="swiper1__job">{job}</p>
-                                        <p className="swiper1__date">{date}</p>
+                <Swiper className="swiper1__list"
+                    slidesPerView={1}
+                    slidesPerGroup={1}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                >
+                    <SwiperSlide className='swiper1__item'>
+                        <a href="#" id='scroll-up'>
+                            <img className="swiper1__img" src={UserImg1} alt='Userimg1' />
+                            <div className="swiper1__information">
+                                <span className="swiper1__span">
+                                    <span className="swiper1__job-box">
+                                        <p className="swiper1__job">{content[lang].main[6].list[0].jobs[0]}</p>
+                                        <p className="swiper1__job">{content[lang].main[6].list[0].jobs[1]}</p>
                                     </span>
-                                    <h3 className="swiper1__subtitle">{subtitle}</h3>
-                                    <p className="swiper1__text">{text}</p>
-                                </div>
-                            </li>
-                        )
-                    })}
-                </ul>
-                <button className="next" onClick={() => {
-                    setindex(index + 1)
-                    console.log(index);
-                }}><FiChevronRight /></button>
+                                    <p className="swiper1__date">{content[lang].main[6].list[0].date}</p>
+                                </span>
+                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[0].text}</h3>
+                                <p className="swiper1__text">{content[lang].main[6].list[0].discription}</p>
+                            </div>
+                        </a>
+                    </SwiperSlide>
+                    <SwiperSlide className='swiper1__item'>
+                        <a href="#">
+                            <img className="swiper1__img" src={UserImg2} alt='UserImg2' />
+                            <div className="swiper1__information">
+                                <span className="swiper1__span">
+                                    <p className="swiper1__job">{content[lang].main[6].list[1].jobs[0]}</p>
+                                    <p className="swiper1__date">{content[lang].main[6].list[1].date}</p>
+                                </span>
+                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[1].text}</h3>
+                                <p className="swiper1__text">{content[lang].main[6].list[1].discription}</p>
+                            </div>
+                        </a>
+                    </SwiperSlide>
+                    <SwiperSlide className='swiper1__item'>
+                        <a href="#">
+                            <img className="swiper1__img" src={UserImg3} alt='UserImg3' />
+                            <div className="swiper1__information">
+                                <span className="swiper1__span">
+                                    <p className="swiper1__job">{content[lang].main[6].list[2].jobs[0]}</p>
+                                    <p className="swiper1__date">{content[lang].main[6].list[2].date}</p>
+                                </span>
+                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[2].text}</h3>
+                                <p className="swiper1__text">{content[lang].main[6].list[2].discription}</p>
+                            </div>
+                        </a>
+                    </SwiperSlide>
+                    <SwiperSlide className='swiper1__item'>
+                        <a href="#">
+                            <img className="swiper1__img" src={UserImg4} alt='UserImg4' />
+                            <div className="swiper1__information">
+                                <span className="swiper1__span">
+                                    <p className="swiper1__job">{content[lang].main[6].list[3].jobs[0]}</p>
+                                    <p className="swiper1__date">{content[lang].main[6].list[3].date}</p>
+                                </span>
+                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[3].text}</h3>
+                                <p className="swiper1__text">{content[lang].main[6].list[3].discription}</p>
+                            </div>
+                        </a>
+                    </SwiperSlide>
+                </Swiper>
             </div>
-            <div className="swiper1__points">
-                <span className="swiper1__point"></span>
-                <span className="swiper1__point"></span>
-                <span className="swiper1__point"></span>
-                <span className="swiper1__point"></span>
-            </div>
-        </section>
-    )
+        </section >
+    );
 }
-
-export default Swiper;
+export default Swiper1;

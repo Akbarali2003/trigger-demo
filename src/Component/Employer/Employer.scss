@@ -14,8 +14,6 @@
         color: #1B283B;
         margin: 0;
         margin-bottom: 62px;
-        
-        
     }
     &__list{
         display: flex;
@@ -38,8 +36,12 @@
     
     &__marksimg{
         position: absolute;
-        top: -30px;
-        left: 13px;
+        top: -20px;
+        left: 20px;
+        padding: 13.5px 12px ;
+        background: #3E96FC;
+        box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+        border-radius: 10px;
     }
     
     &__discription{
@@ -58,11 +60,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &:hover{
-            & svg path{
-                fill: #B4B7C9;
-            }
-        }
     }
     
     &__user{
@@ -92,5 +89,226 @@
         line-height: 15px;
         color: #9397AD;
         margin: 0;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .employer{
+        content: '';
+        background-image: none;
+        &__title{
+            margin-bottom: 36px;
+        }
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item{
+            height: 297px;
+            margin-right: 0px;
+            padding: 42px 22px 22px 22px;
+            position: relative;
+            &:nth-child(1){
+                margin-bottom: 32px;
+            }
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__marksimg{
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            padding: 11px 10px ;
+            background: #3E96FC;
+            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            border-radius: 10px;
+        }
+        &__discription{
+            width: 298px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #6B7A8C;
+            margin-bottom: 16px;
+            
+        }
+        &__user{
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .employer{
+        content: '';
+        background-image: none;
+        &__title{
+            margin-bottom: 36px;
+        }
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item{
+            height: 297px;
+            margin-right: 0px;
+            padding: 42px 22px 22px 22px;
+            position: relative;
+            &:nth-child(1){
+                margin-bottom: 32px;
+            }
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__marksimg{
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            padding: 11px 10px ;
+            background: #3E96FC;
+            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            border-radius: 10px;
+        }
+        &__discription{
+            width: 298px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #6B7A8C;
+            margin-bottom: 16px;
+            
+        }
+        &__user{
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .employer{
+        content: '';
+        background-image: none;
+        &__title{
+            width: 456px;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+        &__list{
+            width: 456px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            height: 297px;
+            margin-right: 0px;
+            padding: 42px 22px 22px 22px;
+            position: relative;
+            &:nth-child(1){
+                margin-bottom: 32px;
+            }
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__marksimg{
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            padding: 11px 10px ;
+            background: #3E96FC;
+            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            border-radius: 10px;
+        }
+        &__discription{
+            width: 298px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #6B7A8C;
+            margin-bottom: 16px;
+            
+        }
+        &__user{
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .employer{
+        content: '';
+        background-image: none;
+        &__title{
+            width:296px;
+            font-size: 33px;
+            margin-bottom: 36px;
+            line-height: 56px;
+            text-align: center;
+        }
+        &__list{
+            width:294px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            height:259px;
+            margin-right: 0px;
+            padding: 42px 22px 22px 22px;
+            position: relative;
+            &:nth-child(1){
+                margin-bottom: 32px;
+            }
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__marksimg{
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            padding: 11px 10px ;
+            background: #3E96FC;
+            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            border-radius: 10px;
+        }
+        &__discription{
+            width: 250px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #6B7A8C;
+            margin-bottom: 16px;
+            
+        }
+        &__user{
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
     }
 }

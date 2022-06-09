@@ -1,6 +1,4 @@
-.checksection{
-    background-color: #0C2F62;
-    padding-top: 40px;
+.checksection{   
     padding-bottom: 162px;
     height: 550px;
     &__global{
@@ -45,9 +43,12 @@
         background: #FFFFFF;
         border-radius: 10px 0px 0px 10px;
         padding: 17px 16px;
-        padding-bottom: 17.5px;
         border: none;
         outline: none;
+        transition: 0.35s;
+        &:hover{
+            color: black;
+        }
     }
     &__input{
         height: 18px;
@@ -68,9 +69,158 @@
         line-height: 24px;
         text-align: center;
         color: #FFFFFF;
-        background: #3E96FC;
         border-radius: 0px 10px 10px 0px;
         padding: 14px 16px;
         border: none;
+        cursor: pointer;
+        transition: 0.35s;
+        &:hover{
+            background: #2263ae;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .checksection{
+        display: block;
+        height: 796px;
+        &__global{
+            width: 720px;
+            height: 756px;
+            display: flex;
+            flex-direction: column; 
+        }
+        &__title{
+            width: 720px;
+        }
+        &__text{
+            width: 400px;
+        }
+        &__form{
+            display: flex;
+            align-items: center;
+        }
+        &__select{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #96A1AC;
+            background: #FFFFFF;
+            border-radius: 10px 0px 0px 10px;
+            padding: 17px 16px;
+            padding-bottom: 17.5px;
+            border: none;
+            outline: none;
+            transition: 0.35s;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .checksection{
+        display: block;
+        height: 796px;
+        padding-bottom: 125px;
+        &__global{
+            width: 552px;
+            height: 756px;
+            display: flex;
+            flex-direction: column; 
+        }
+        &__title{
+            width: 552px;
+        }
+        &__text{
+            width: 400px;
+        }
+        &__form{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .checksection{
+        display: block;
+        height: 796px;
+        padding-bottom: 125px;
+        &__global{
+            width: 456px;
+            height: 756px;
+            display: flex;
+            flex-direction: column; 
+        }
+        &__title{
+            width: 456px;
+        }
+        &__text{
+            width: 400px;
+        }
+        &__form{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .checksection{
+        display: block;
+        height: 850px;
+        padding-bottom: 125px;
+        &__global{
+            width: 296px;
+            height: 850px;
+            display: flex;
+            flex-direction: column; 
+        }
+        &__title{
+            width: 296px;
+            line-height: 48px;
+            margin-bottom: 32px;
+        }
+        &__text{
+            width: 296px;
+        }
+        &__form{
+            width: 296px;
+            display: flex;
+            align-items: center;
+        }
+        &__select{
+            width: 80px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #96A1AC;
+            background: #FFFFFF;
+            border-radius: 10px 0px 0px 10px;
+            padding: 12.5px 8px 12px 12px;
+            border: none;
+            outline: none;
+            transition: 0.35s;
+            &:hover{
+                color: black;
+            }
+        }
+        &__input{
+            width: 136px;
+            height: 14px !important;
+            padding: 13px 8px;
+            padding-bottom: 12.5px;
+            border: none;
+        }
+        &__btn{
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            color: #FFFFFF;
+            border-radius: 0px 10px 10px 0px;
+            padding: 12px 7px;
+            border: none;
+            cursor: pointer;
+            transition: 0.35s;
+        }
     }
 }

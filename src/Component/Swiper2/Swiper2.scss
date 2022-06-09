@@ -4,46 +4,312 @@
     align-items: center;
     margin-left: 60px;
     &__content{
+        width: 550px;
         display: flex;
         align-items: center;
-        height: 456px;
         margin-top: 40px; 
     }
-    
-    &__list{
-        width: 640px;
+    &__slide{
         display: flex;
-        align-items: center;  
-        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
     }
-    &__item{
-        width: 640px;
+    &__slide-images{
+        position: absolute;
+        top:65px;
+        z-index: 10;
+        &-one{
+            position: absolute;
+            top: 55px;
+            left:-80px;
+            padding: 16px 17px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        &-two{
+            position: relative;
+            top: 5px;
+            left: -25px;
+        }
+        &-three{
+            position: relative;
+            top: -40px;
+            left: -10px;
+            padding: 26px 17px 13px 17px;
+            border-radius: 50%;
+            background-color: #fff;
+            width: 22px;
+            height: 25px;
+        }
+        &-four{
+            position: relative;
+            left: 0px;
+            
+        }
+        &-five{
+            position: absolute;
+            top: 40px;
+            right: -60px;
+            padding: 16px 15px 15px 17px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
     }
-    &__activeSlide{
-        opacity: 1;
-        transform: translateX(-100%);
+    &__carimage{
+        width: 550px;
+        height: 550px;
+    }
     
-    }
-    &__lastSlide{
-        opacity: 0;
-    }
-    &__nextSlide{
-        opacity: 1;
-        transform: translateX(-100%);
-    }
-    &__points{
+    &__slide-image{
+        position: absolute;
+        bottom: 55px;
+        right:80px;
         display: flex;
         align-items: center;
-        margin-top: 40px;
+        background-color: #fff;
+        border-radius: 18px;
+        padding: 12px 24px 12px 12px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            bottom: 57px;
+            left:65px;
+            border-top-left-radius: 4px;
+            transform: rotate(56deg) skew(20deg);
+        }
     }
-    &__point{
-        width: 5px;
-        height: 5px;
-        margin-right: 12px;
-        background: #B4B7C9;
-        border-radius: 50%;
-        &:last-child{
-            margin-right: 0;
+    &__slide-image-img{
+        width: 16px;
+        height: 18px;
+        border-radius: 12px;
+        padding: 11px 12px ;
+        margin-right: 16px;
+    }
+    &__slide-image-text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    &__list{
+        display: flex;
+        width: 550px;
+    }
+    &__item{
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+    .swiper-slide{
+        opacity: 0 !important;
+    }
+    .swiper-slide-active{
+        opacity: 1 !important;
+        & img{
+            object-fit: contain !important;
+        }
+    }
+    .swiper-button-prev{
+        display: none;
+    }
+    .swiper-button-next{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        width: 5px !important;
+        height: 5px !important;
+        border-radius: 50% !important;
+        background-color: #b4b7c9 !important;
+        opacity: 1 !important;
+        margin-right: 0 !important;
+        margin-left: 12px !important;
+    }
+    .swiper-pagination-bullet-active{
+        width: 24px !important;
+        height: 5px !important;
+        border-radius: 10px !important;
+        background-color: #3e96fc !important;
+        margin: 0 !important;
+        margin-left: 12px !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .swiper2{
+        margin: 0;
+        &__content{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            align-items: center;
+            margin-top: 40px; 
+        } 
+        
+        &__list{
+            display: flex;
+            width: 480px;
+            height: 480px;
+        }
+        &__item{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 480px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 30px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 57px;
+                left:65px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .swiper2{
+        margin: 0;
+        &__content{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px; 
+        } 
+        
+        &__list{
+            display: flex;
+            width: 480px;
+            height: 480px;
+        }
+        &__item{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 480px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 30px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 57px;
+                left:65px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .swiper2{
+        margin: 0;
+        &__content{
+            width: 456px;
+            height: 480px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px; 
+        } 
+        
+        &__list{
+            display: flex;
+            width: 456px;
+            height: 480px;
+        }
+        &__item{
+            width: 456px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 456px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 30px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 57px;
+                left:65px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .swiper2{
+        margin: 0;
+        &__content{
+            width: 296px;
+            height: 480px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px; 
+        } 
+        
+        &__list{
+            display: flex;
+            width: 296px;
+            height: 480px;
+        }
+        &__item{
+            width: 296px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 296px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 30px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 57px;
+                left:65px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
         }
     }
 }

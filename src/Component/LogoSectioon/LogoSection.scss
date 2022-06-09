@@ -4,93 +4,106 @@
     &__list{
         display: flex;
         align-items: center;
+        transform: translate3d(0,0,0) !important;
     }
     &__item{
+        width: 168px !important;
+        height: 102px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: #FFFFFF;
         border: 1px solid #E7EAEE;
         border-radius: 18px;
         margin-right: 24px;
-        padding: 31px 35.48px 31px 34px;
         cursor: grab;
-        &:nth-child(1){
-            &:hover{
-                & svg path{
-                    fill:#0052ff;
-                }
-            }
+    }
+    &__coinbase:hover svg path{
+        fill:#0052ff !important;
+    }
+    &__spotify:hover svg path{
+        fill:#1ED760 ;
+    }
+    
+    &__slack:hover svg path:nth-child(1){
+        fill:#000 ;
+    }
+    &__slack:hover svg path:nth-child(2){
+        fill:#36C5F0 ;
+    }
+    &__slack:hover svg path:nth-child(3){
+        fill:#2EB67D ;
+    }
+    &__slack:hover svg path:nth-child(4){
+        fill:#ECB22E ;
+    }
+    &__slack:hover svg path:nth-child(5){
+        fill:#E01E5A ;
+    }
+    
+    &__dropbox:hover svg path:nth-child(1){
+        fill:#000 ;
+    }
+    &__dropbox:hover svg path:nth-child(2){
+        fill:#0061ff ;
+    }
+    &__webflow:hover svg path{
+        fill:#4353ff ;
+    }
+    &__zoom:hover svg path{
+        fill:#2D8CFF;
+    }
+    
+}
+@media screen and (max-width:991px) {
+    .logosection{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        &__list{
+            width: 720px;
         }
-        &:nth-child(2){
-            &:hover{
-                & svg path{
-                    fill:#1ED760 ;
-                }
-            }
-            padding: 33px 32px !important;
-        }
-        &:nth-child(3){
-            &:hover{
-                & svg path{
-                    fill:black ;
-                }
-            }
-            padding: 31px 39px 31px 40px !important;
-        }
-        &:nth-child(4){
-            &:hover{
-                & svg path{
-                    fill:#0061ff ;
-                }
-            }
-            padding: 31px 23px 31px 24px !important;
-        }
-        &:nth-child(5){
-            &:hover{
-                & svg path{
-                    fill:#4353ff ;
-                }
-            }
-            padding: 37.5px 41px !important;
-        }
-        &:last-child{
-            &:hover{
-                & svg path{
-                    fill:#2D8CFF;
-                }
-            }
-            padding: 40.5px 48px !important;
-            margin-right: 0;
+        &__item{
+            width: 216px !important;
+            height: 100px !important;
         }
     }
 }
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   background: #fff;
-
-//   /* Center slide text vertically */
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: -webkit-flex;
-//   display: flex;
-//   -webkit-box-pack: center;
-//   -ms-flex-pack: center;
-//   -webkit-justify-content: center;
-//   justify-content: center;
-//   -webkit-box-align: center;
-//   -ms-flex-align: center;
-//   -webkit-align-items: center;
-//   align-items: center;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
+@media screen and (max-width:768px) {
+    .logosection{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        &__list{
+            width: 552px;
+        }
+        &__item{
+            width: 214px !important;
+            height: 100px !important;
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .logosection{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        &__list{
+            width: 456px;
+        }
+        &__item{
+            width: 160.5px !important;
+            height: 100px !important;
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .logosection{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        &__list{
+            width: 296px;
+        }
+        &__item{
+            width: 270px !important;
+            height: 100px !important;
+        }
+    }
+}

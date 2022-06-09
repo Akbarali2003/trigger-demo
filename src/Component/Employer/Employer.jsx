@@ -1,7 +1,7 @@
 import React from "react";
 import './Employer.scss';
-import { Star } from '../../Assets/Images/index';
-import MarksImg from '../../Assets/Images/marks.svg';
+import { StarColor,Star } from '../../Assets/Images/index';
+import MarksImg from '../../Assets/Images/mark.svg';
 import UserOne from '../../Assets/Images/user1.png';
 import UserTwo from '../../Assets/Images/user2.png';
 import UserThree from '../../Assets/Images/user3.png';
@@ -14,19 +14,19 @@ function Employer({lang}) {
                 <h3 className="employer__title">{content[lang].main[5].title}</h3>
                 <ul className="employer__list">
                     <li className="employer__item">
-                        <img className="employer__marksimg" src={MarksImg} alt="MarksImg" />
+                        <img className="employer__marksimg" width='20' height='18' src={MarksImg} alt="MarksImg" />
                         <p className="employer__discription">
-                            Amet minim mollit non deserunt ullamco <br />
-                            est sit aliqua dolor do amet sint. Velit <br />
-                            officia consequat duis enim velit mollit. <br />
-                            Exercitation veniam consequat sunt <br />
+                            Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit
+                            officia consequat duis enim velit mollit.
+                            Exercitation veniam consequat sunt
                             nostrud amet.
                         </p>
                         <span className="employer__star-group">
-                            <Star />
-                            <Star />
-                            <Star />
-                            <Star />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
                             <Star />
                         </span>
                         <span className="employer__user">
@@ -39,20 +39,20 @@ function Employer({lang}) {
 
                     </li>
                     <li className="employer__item">
-                        <img className="employer__marksimg" src={MarksImg} alt="MarksImg" />
+                        <img className="employer__marksimg" width='20' height='18' src={MarksImg} alt="MarksImg" />
                         <p className="employer__discription">
-                            Amet minim mollit non deserunt ullamco <br />
-                            est sit aliqua dolor do amet sint. Velit <br />
-                            officia consequat duis enim velit mollit. <br />
-                            Exercitation veniam consequat sunt <br />
+                            Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit
+                            officia consequat duis enim velit mollit.
+                            Exercitation veniam consequat sunt
                             nostrud amet.
                         </p>
                         <span className="employer__star-group">
-                            <Star />
-                            <Star />
-                            <Star />
-                            <Star />
-                            <Star />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
                         </span>
                         <span className="employer__user">
                             <img src={UserTwo} alt="UserTwo" />
@@ -63,19 +63,19 @@ function Employer({lang}) {
                         </span>
                     </li>
                     <li className="employer__item">
-                        <img className="employer__marksimg" src={MarksImg} alt="MarksImg" />
+                        <img className="employer__marksimg" width='20' height='18' src={MarksImg} alt="MarksImg" />
                         <p className="employer__discription">
-                            Amet minim mollit non deserunt ullamco <br />
-                            est sit aliqua dolor do amet sint. Velit <br />
-                            officia consequat duis enim velit mollit. <br />
-                            Exercitation veniam consequat sunt <br />
+                            Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit
+                            officia consequat duis enim velit mollit.
+                            Exercitation veniam consequat sunt
                             nostrud amet.
                         </p>
                         <span className="employer__star-group">
-                            <Star />
-                            <Star />
-                            <Star />
-                            <Star />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
+                            <StarColor />
                             <Star />
                         </span>
                         <span className="employer__user">

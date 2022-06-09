@@ -11,11 +11,12 @@ import Footer from './Component/Footer/Footer';
 
 export default function App() {
     const [lang, setLang] = React.useState('ru')
+    const [color, setColor] = React.useState(0);
     return (
-        <>
-            <Header lang={lang} setLang={setLang} />
-            <Main lang={lang} setLang={setLang} />
-            <Footer lang={lang} setLang={setLang} />
-        </>
+        <React.Fragment >
+            <Header lang={lang} setLang={setLang} color={color} setColor={setColor} />
+            <Main lang={lang} setLang={setLang} color={color} setColor={setColor} />
+            <Footer lang={lang} setLang={setLang} color={color} setColor={setColor} />
+        </React.Fragment>
     );
 }

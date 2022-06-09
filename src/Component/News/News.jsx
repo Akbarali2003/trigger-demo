@@ -7,7 +7,7 @@ function News({lang}) {
         <div className="news">
             <div className="container">
                 <h3 className="news__title">{content[lang].main[6].title}</h3>
-                <Swiper/>
+                <Swiper lang={lang} />
             </div>
         </div>
     )

@@ -10,19 +10,19 @@ import Employer from "../Employer/Employer";
 import News from "../News/News";
 import Support from "../Support/Support";
 import Subscribe from "../Subscribe/Subscribe";
-function Main({ lang }) {
+function Main({ lang ,color,setColor }) {
     return (
         <main className="main">
-            <CheckSection lang={lang} />
-            <Pakcage lang={lang} />
-            <AbouteUs lang={lang} />
-            <ChooseSection lang={lang} />
-            <Service lang={lang} />
-            <LogoSection lang={lang} />
-            <Employer lang={lang} />
-            <News lang={lang} />
-            <Support lang={lang} />
-            <Subscribe lang={lang} />
+            <CheckSection lang={lang} color={color} setColor={setColor} />
+            <Pakcage lang={lang} color={color} setColor={setColor} />
+            <AbouteUs lang={lang} color={color} setColor={setColor} />
+            <ChooseSection lang={lang} color={color} setColor={setColor} />
+            <Service lang={lang} color={color} setColor={setColor} />
+            <LogoSection lang={lang} color={color} setColor={setColor} />
+            <Employer lang={lang} color={color} setColor={setColor} />
+            <News lang={lang} color={color} setColor={setColor} />
+            <Support lang={lang} color={color} setColor={setColor} />
+            <Subscribe lang={lang} color={color} setColor={setColor} />
         </main>
     )
 

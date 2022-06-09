@@ -30,6 +30,9 @@
     url('./Assets/Fonts/inter-v11-latin-700.woff2') format('woff2'),
     url('./Assets/Fonts/inter-v11-latin-700.woff') format('woff');
 }
+// *, *::before, *::after {
+//     box-sizing: border-box;
+// }
 body{
     font-family:'Inter',Arial, sans-serif !important;
     margin: 0;
@@ -56,7 +59,36 @@ h6{
 input{
     outline: none !important;
 }
+.light{
+    .text{
+        
+    }
+}
 .container{
     width: 1140px;
     margin: 0 auto;
+}
+@media screen and (max-width:991px) {
+    .container{
+        width: 720px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:768px) {
+    .container{
+        width: 552px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:576px) {
+    .container{
+        width: 456px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:320px) {
+    .container{
+        width: 296px;
+        margin: 0 auto;
+    }
 }

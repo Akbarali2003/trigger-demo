@@ -3,26 +3,30 @@
     padding-top: 212px;
     padding-bottom: 48px; 
     z-index: 1;   
+
     &__list{
+        width: 1140px;
         display: flex;
-        align-items: start;
+        justify-content: space-between;
         margin-bottom: 92px;
     }
     &__item{
-        margin-right: 96px;
-        
-        &:nth-child(2){
-            width: 160px;
-            display: flex;
-            flex-direction: column;
-        }
-        &:nth-child(3){
-            width: 160px;
-            display: flex;
-            flex-direction: column;
-        }
         &:last-child{
             margin-right: 0;
+        }
+    }
+    
+    &__ellist{
+        display: flex;
+        align-items: start;
+    }
+    
+    &__elitem{
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        &:last-child{
+            width: 212px;
         }
     }
     
@@ -33,8 +37,8 @@
         line-height: 24px;  
         color: #FFFFFF;
         margin-bottom: 16px;
+        transition: 0.35s;
         &:hover{
-            transition: 0.5s;
             cursor: pointer;
             color: rgba(255, 255, 255, 0.65);
         }
@@ -47,11 +51,11 @@
         line-height: 24px;
         color: rgba(255, 255, 255, 0.65);
         margin-bottom: 12px;
+        transition: 0.35s;
         &:last-child{
             margin-bottom: 0;
         }
         &:hover{
-            transition: 0.5s;
             cursor: pointer;
             color: #fff;
         }
@@ -93,12 +97,14 @@
         & span{
             display: flex;
             align-items: start;
+            
             & a{
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.65);
+                transition: 0.35s;
                 margin-left: 8px;
                 &:hover{
                     transition: 0.5s;
@@ -124,6 +130,8 @@
         width: 1140px;
         height: 1px;
         border: none;
+        margin: 0;
+        margin-bottom: 48px;
         background:rgba(255, 255, 255, 0.15);
     }
     
@@ -147,8 +155,8 @@
             line-height: 24px;
             color: rgba(255, 255, 255, 0.7);
             margin-right: 32px;
+            transition: 0.35s;
             &:hover{
-                transition: 0.5s;
                 cursor: pointer;
                 color: #fff;
             }
@@ -160,10 +168,330 @@
             font-size: 16px;
             line-height: 24px;
             color: rgba(255, 255, 255, 0.7);
+            transition: 0.35s;
             &:hover{
-                transition: 0.5s;
                 cursor: pointer;
                 color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .footer{
+        padding-top: 164px;
+        &__list{
+            width: 720px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__item{
+            &:nth-child(1){
+                width: 720px;
+            }
+        }
+        
+        &__discription{
+            width: 680px;
+        }
+        
+        &__logos{
+            margin-bottom: 18px;
+        }
+
+        &__ellist{
+            width: 720px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        &__line{
+            width: 720px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            margin-bottom: 48px;
+            background:rgba(255, 255, 255, 0.15);
+        }
+        &__links{
+            display: flex;
+            flex-wrap: wrap;
+            &-one{
+                width: 720px;
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+            &-two{
+                width: 249px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 32px;
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            &-three{
+                width: 196px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .footer{
+        padding-top: 164px;
+        &__list{
+            width: 720px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 64px;
+        }
+        &__item{
+            &:nth-child(1){
+                width: 552px;
+            }
+        }
+        
+        &__discription{
+            width: 552px;
+        }
+        
+        &__logos{
+            margin-bottom: 18px;
+        }
+
+        &__ellist{
+            width: 552px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        &__line{
+            width: 552px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            margin-bottom: 48px;
+            background:rgba(255, 255, 255, 0.15);
+        }
+        &__links{
+            display: flex;
+            flex-wrap: wrap;
+            &-one{
+                width: 552px;
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+            &-two{
+                width: 249px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 32px;
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            &-three{
+                width: 196px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .footer{
+        padding-top: 164px;
+        &__list{
+            width: 456px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 64px;
+        }
+        &__item{
+            &:nth-child(1){
+                width: 456px;
+            }
+        }
+        
+        &__discription{
+            width: 456px;
+        }
+        
+        &__logos{
+            margin-bottom: 18px;
+        }
+
+        &__ellist{
+            width: 456px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        &__line{
+            width: 456px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            margin-bottom: 48px;
+            background:rgba(255, 255, 255, 0.15);
+        }
+        &__links{
+            display: flex;
+            flex-wrap: wrap;
+            &-one{
+                width: 720px;
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+            &-two{
+                width: 240px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 19px;
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            &-three{
+                width: 196px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .footer{
+        padding-top: 164px;
+        &__list{
+            width: 296px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 64px;
+        }
+        &__item{
+            &:nth-child(1){
+                width: 296px;
+            }
+        }
+        
+        &__discription{
+            width: 294px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        
+        &__logos{
+            margin-bottom: 18px;
+        }
+
+        &__ellist{
+            width: 296px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__elitem{
+            width: 99px;
+            &:last-child{
+                width: 296px;
+                margin-top: 24px;
+            }
+        }
+
+        &__web-link{
+            width: 280px;
+        }
+
+
+        &__line{
+            width: 296px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            margin-bottom: 48px;
+            background:rgba(255, 255, 255, 0.15);
+        }
+        &__links{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &-one{
+                width: 296px;
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+            &-two{
+                width: 240px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 19px;
+                transition: 0.35s;
+                text-align: center;
+                margin: 0;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            &-three{
+                width: 196px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
             }
         }
     }

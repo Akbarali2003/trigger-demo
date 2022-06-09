@@ -1,9 +1,23 @@
 .service{
-    
     margin-top: 120px;
+    height: 537px;
+    &__content-global{
+        position: relative;
+        height: 537px;
+    }
     &__content{
         display: flex;
         align-items: center;
+        z-index: 1;
+        height: 537px;
+    }
+    &__content-slide{
+        width: 1140px;
+        height: 537px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
     }
     &__title{
         width: 440px;
@@ -22,15 +36,16 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 24px;
+        transition: 0.3s;   
         &:hover{
             cursor: pointer;
-        }
-        &:hover>.service__img{
-            
             transition: 0.3s;
-            transform: translateX(8px);
             
         }
+        &:hover .service__img{
+            transform: translateX(8px);
+        }
+        
     }
     
     &__subtitle{
@@ -46,57 +61,296 @@
     }
     
     &__text{
+        width: 500px;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
         color: #6B7A8C;
     }
+    &__img-family{
+        width: 640px;
+        height: 480px;
+        border-radius: 30px;
+    }
+    .swiper-slide{
+        opacity: 0 !important;
+    }
+    .swiper-slide-active{
+        opacity: 1 !important;
+    }
+    .swiper-button-prev{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin-top: 203px;
+    }
+    .swiper-button-next{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 60px;
+        margin-top:200px;
+        
+    }
     &__btns{
         width: 88px;
         display: flex;
         align-items: center;
         margin-top: 57px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
     }
-    &__prev{
-     
-        display: flex;
-        align-items: center;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
-        border: none;
-        border-radius: 50%;
-        padding: 13px 15px;
-        margin-right: 16px;
-        &:hover svg path{
-            fill:#fff;
+}
+
+@media screen and (max-width:991px) {
+    .service{
+        margin-top: 80px;
+        height: 790px;
+        text-align: left;
+        &__content-global{
+            position: relative;
+            height: 790px;
         }
-        &:hover{
-            cursor: pointer;
-            transition:350ms;
-            background: #3E96FC;
-            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+        &__content{
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            height: 790px;
+        }
+        &__content-slide{
+            width: 720px;
+            height: 790px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &__title{
+            width: 720px;
+            font-size: 34.4px;
+            line-height: 48px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        &__box{
+            width: 366px;
+            margin-bottom: 20px;
+        }
+        &__img-family{
+            width: 648px;
+            height: 480px;
+            border-radius: 30px;
+        }
+        &__text{
+            width: 720px;
+            font-size: 15px;
+            line-height: 24px;
+            height: 96px;
+        }
+        .swiper-button-prev{
+            &::after{
+                width: 36px;
+                height: 36px;
+                content: 'prev';
+            }
+            position: absolute;
+            top: 0;
+        }
+        .swiper-button-next{
+            position: absolute;
+            top: 0;
+            
         }
     }
-    &__next{
-        display: flex;
-        align-items: center;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
-        border: none;
-        border-radius: 50%;
-        padding: 13px 15px;
-        &:hover svg path{
-            fill:#fff;
+}
+@media screen and (max-width:768px) {
+    .service{
+        margin-top: 80px;
+        height: 837px;
+        text-align: left;
+        &__content-global{
+            position: relative;
+            height: 837px;
         }
-        &:hover{
-            cursor: pointer;
-            transition:350ms;
-            background: #3E96FC;
-            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+        &__content{
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            height: 837px;
+        }
+        &__content-slide{
+            width: 552px;
+            height: 837px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &__title{
+            width: 552px;
+            font-size: 34.4px;
+            line-height: 48px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        &__box{
+            width: 410px;
+            margin-bottom: 20px;
+        }
+        &__img-family{
+            width: 496px;
+            height: 480px;
+            border-radius: 30px;
+        }
+        &__text{
+            width: 552px;
+            height: 108px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .swiper-button-prev{
+            &::after{
+                width: 36px;
+                height: 36px;
+                content: 'prev';
+            }
+            position: absolute;
+            top: 0;
+            margin-top: 245px;
+        }
+        .swiper-button-next{
+            position: absolute;
+            top: 0;
+            margin-top: 248px;
+            
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .service{
+        margin-top: 80px;
+        height: 829px;
+        text-align: left;
+        &__content-global{
+            position: relative;
+            height: 829px;
+        }
+        &__content{
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            height: 837px;
+        }
+        &__content-slide{
+            width: 456px;
+            height: 837px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &__title{
+            width: 456px;
+            font-size: 34.4px;
+            line-height: 48px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        &__box{
+            width: 410px;
+            margin-bottom: 20px;
+        }
+        &__img-family{
+            width: 410.5px;
+            height: 400px;
+            border-radius: 30px;
+        }
+        &__text{
+            width: 456px;
+            height: 136px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .swiper{
+            height: 829px;
+        }
+        .swiper-button-prev{
+            &::after{
+                width: 36px;
+                height: 36px;
+                content: 'prev';
+            }
+            position: absolute;
+            top: 0;
+            margin-top: 335px;
+        }
+        .swiper-button-next{
+            position: absolute;
+            top: 0;
+            margin-top: 338px;
+            
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .service{
+        margin-top: 80px;
+        height: 829px;
+        text-align: left;
+        &__content-global{
+            position: relative;
+            height: 885px;
+        }
+        &__content{
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            height: 885px;
+        }
+        &__content-slide{
+            width: 296px;
+            height: 885px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &__title{
+            width: 296px;
+            font-size: 32px;
+            line-height: 48px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        &__box{
+            width: 296px;
+            margin-bottom: 20px;
+        }
+        &__img-family{
+            width: 266.4px;
+            height: 360px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        &__text{
+            width: 296px;
+            height: 136px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .swiper{
+            height: 829px;
+        }
+        .swiper-button-prev{
+            &::after{
+                width: 36px;
+                height: 36px;
+                content: 'prev';
+            }
+            position: absolute;
+            top: 0;
+            margin-top: 409px;
+        }
+        .swiper-button-next{
+            position: absolute;
+            top: 0;
+            margin-top: 412px;
+            
         }
     }
 }

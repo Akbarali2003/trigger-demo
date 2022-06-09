@@ -49,9 +49,154 @@
         background: #3E96FC;
         border-radius: 0px 10px 10px 0px;
         border: none;
+        transition: 0.35s;
+        cursor: pointer;
         &:hover{
-            cursor: pointer;
             background: #2263ae;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .subscribe{
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 68px 60px;
+        &__title{
+            width: 426px;
+            font-size: 32px;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 433px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .subscribe{
+        width: 432px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 68px 60px;
+        &__title{
+            width: 426px;
+            font-size: 32px;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 265.5px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .subscribe{
+        width: 432px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        margin-bottom: -100px; 
+        &__title{
+            width: 426px;
+            font-size: 32px;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 265.5px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:320px) {
+    .subscribe{
+        width: 272px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        margin-bottom: -100px; 
+        &__title{
+            width:272px;
+            font-size: 24px;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 135.7px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112.2px;
+            padding: 11px 10px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
         }
     }
 }

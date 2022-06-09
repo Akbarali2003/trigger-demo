@@ -1,13 +1,12 @@
 import React from "react";
 import './CheckSection.scss';
-import SwiperImg from "../../Assets/Images/swiper.png";
-import Swiper1 from '../Swiper1/Swiper1';
+import Swiper2 from '../Swiper2/Swiper2';
 import content from "../Localization/content";
 
-function CheckSection({lang}) {
+function CheckSection({lang,color,setColor}) {
 
     return (
-        <section className="checksection">
+        <section className="checksection" style={{backgroundColor:(color==0)?'#0C2F62':'#2B2B2B'}} >
             <div className="container">
                 <div className="checksection__global">
                     <div>
@@ -20,12 +19,11 @@ function CheckSection({lang}) {
                                 <option value="DDB">DDB</option>
                             </select>
                             <input className="checksection__input" type="text" placeholder={content[lang].main[0].placeholder} />
-                            <button className="checksection__btn" >{content[lang].main[0].btn}</button>
+                            <button className="checksection__btn" style={{backgroundColor:(color==0)?'#3E96FC':'#8B8B8B',color:(color==0)?'#fff':'#ECECEC'}} >{content[lang].main[0].btn}</button>
                         </form>
                     </div>
                     <div className="checksection__slide">
-                        <img src={SwiperImg} alt="" />
-                        {/* <Swiper1/> */}
+                        <Swiper2 color={color}/>
                     </div>
                 </div>
             </div>

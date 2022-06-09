@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import './LogoSection.scss';
 import {
@@ -13,34 +13,22 @@ import {
 } from '../../Assets/Images/index';
 function LogoSection() {
     return (
-
-        <>
-            {/* <div className="logosection">
-                <div className="container">
-                    <ul className="logosection__list">
-                        <li className="logosection__item"><Coinbase /></li>
-                        <li className="logosection__item"><Spotify /></li>
-                        <li className="logosection__item"><Slack /></li>
-                        <li className="logosection__item"><Dropbox /></li>
-                        <li className="logosection__item"><Webflow /></li>
-                        <li className="logosection__item"> <Zoom /></li>
-                    </ul>
-                </div>
-            </div> */}
-            
-            <div className="logosection">
-                <div className="container">
-                    <Swiper className="logosection__list">
-                        <SwiperSlide className="logosection__item"><Coinbase /></SwiperSlide>
-                        <SwiperSlide className="logosection__item"><Spotify /></SwiperSlide>
-                        <SwiperSlide className="logosection__item"><Slack /></SwiperSlide>
-                        <SwiperSlide className="logosection__item"><Dropbox /></SwiperSlide>
-                        <SwiperSlide className="logosection__item"><Webflow /></SwiperSlide>
-                        <SwiperSlide className="logosection__item"> <Zoom /></SwiperSlide>
-                    </Swiper>
-                </div>
+        <div className="logosection">
+            <div className="container">
+                <Swiper className="logosection__list"
+                    loop={true}
+                    slidesPerView={6}
+                    spaceBetween={24}
+                    modules={[Pagination, Navigation]}>
+                    <SwiperSlide className="logosection__item logosection__coinbase"><Coinbase  /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__spotify"><Spotify /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__slack"><Slack /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__dropbox"><Dropbox /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__webflow"><Webflow /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__zoom"> <Zoom /></SwiperSlide>
+                </Swiper>
             </div>
-        </>
-    )
+        </div>
+    ) 
 }
 export default LogoSection;
