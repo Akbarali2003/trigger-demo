@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import './Service.scss';
-import ArrowRight from '../../Assets/Images/arrow-right.svg';
+import { ArrowRight } from "../../Assets/Images/index";
 import content from "../Localization/content";
-import { FiChevronLeft, FiChevronRight } from '../../Assets/Images/index';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
@@ -12,7 +11,19 @@ import Family1 from '../../Assets/Images/family1.png'
 import Family2 from '../../Assets/Images/family2.png'
 import { Pagination, Navigation, EffectFade } from "swiper";
 function Service({ lang }) {
+    // let sbPrev = document.getElementsByClassName('swiper-button-prev')
+    // let sbNext = document.getElementsByClassName('swiper-button-next')
 
+    // sbPrev.addEventListener('click', function () {
+    //     current = document.getElementsByClassName('active');
+    //     current.className = current.className.replace("active", "");
+    //     this.className += "active";
+    // })
+    // sbNext.addEventListener('click', function () {
+    //     current = document.getElementsByClassName('active');
+    //     current.className = current.className.replace("active", "");
+    //     this.className += "active";
+    // })
     return (
         <div className="service">
             <div className="container">
@@ -27,12 +38,12 @@ function Service({ lang }) {
                         modules={[Pagination, Navigation, EffectFade]}
                         className="service__content">
 
-                        <SwiperSlide  className="service__content-slide">
+                        <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
                                 <span className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[0]}</h4>
-                                    <img className="service__img" src={ArrowRight} alt="ArrowRight" />
+                                    <ArrowRight />
                                 </span>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla
@@ -46,12 +57,12 @@ function Service({ lang }) {
                             </div>
                             <img src={Family2} className='service__img-family' alt="Family2" />
                         </SwiperSlide>
-                        <SwiperSlide  className="service__content-slide">
+                        <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
                                 <span className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[1]}</h4>
-                                    <img className="service__img" src={ArrowRight} alt="ArrowRight" />
+                                    <ArrowRight />
                                 </span>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla
@@ -65,12 +76,12 @@ function Service({ lang }) {
                             </div>
                             <img src={Family1} className='service__img-family' alt="Family1" />
                         </SwiperSlide>
-                        <SwiperSlide   className="service__content-slide">
+                        <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
                                 <span className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[2]}</h4>
-                                    <img className="service__img" src={ArrowRight} alt="ArrowRight" />
+                                    <ArrowRight />
                                 </span>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla

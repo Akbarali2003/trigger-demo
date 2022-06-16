@@ -1,6 +1,6 @@
 import React from "react";
 import './Header.scss';
-import LogoImg from '../../Assets/Images/logo.svg';
+import {LogoImg} from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
 import { ArrowButton, } from '../../Assets/Images/index';
@@ -14,7 +14,7 @@ function Header({ lang, setLang, color, setColor }) {
     const icon2 = React.useRef();
     const elView = React.useRef();
     return (
-        <header className="header" style={{ backgroundColor: (color == 0) ? '#0C2F62' : '#2B2B2B' }} onClick={(evt) => {
+        <header className="header" onClick={(evt) => {
             if (evt.target.matches('.header')) {
                 elModal.current.classList.remove('header__nav-openmodal')
             }
@@ -43,17 +43,22 @@ function Header({ lang, setLang, color, setColor }) {
                 show={show}
                 icon1={icon1}
                 icon2={icon2}
+                elDropdown1={elDropdown1}
+                elDropdown2={elDropdown2}
                 color={color}
                 setColor={setColor}
-                elView={elView}/>
+                elView={elView} />
             <div className="container">
                 <div className="header__package">
-                    <a href="/"> <img className="header__logoimg" src={LogoImg} alt="" /></a>
+                    <a href="/"> <LogoImg /></a>
                     <ul className="header__list">
                         <li className="header__item">
-                            <a className="header__select" href="#" style={{ backgroundColor: (color == 0) ? '#0C2F62' : '#2B2B2B' }} onClick={(() => {
+                            <a className="header__select" href="#" onClick={(() => {
                                 elDropdown1.current.classList.add('header__dropdown-one-open')
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
+                                elSearch.current.classList.remove('header__nav-opensearch')
+                                elView.current.classList.remove('header__nav-openview')
+                                elModal.current.classList.remove('header__nav-openmodal')
                             })}>
                                 {content[lang].header.text[0]}
                                 <span className="header__arrow"><ArrowButton /></span>
@@ -66,9 +71,12 @@ function Header({ lang, setLang, color, setColor }) {
                             </ul>
                         </li>
                         <li className="header__item">
-                            <a className="header__select header__close-item-one" href="#" style={{ backgroundColor: (color == 0) ? '#0C2F62' : '#2B2B2B' }} onClick={(() => {
+                            <a className="header__select header__close-item-one" href="#" onClick={(() => {
                                 elDropdown2.current.classList.add('header__dropdown-two-open')
                                 elDropdown1.current.classList.remove('header__dropdown-one-open')
+                                elSearch.current.classList.remove('header__nav-opensearch')
+                                elView.current.classList.remove('header__nav-openview')
+                                elModal.current.classList.remove('header__nav-openmodal')
                             })}>
                                 {content[lang].header.text[1]}
                                 <span className="header__arrow"><ArrowButton />    </span>

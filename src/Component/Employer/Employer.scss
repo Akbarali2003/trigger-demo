@@ -5,6 +5,7 @@
     background-position: top right;
     background-position-y: 0px;
     background-position-x: 1320px;
+    padding-bottom: 120px;
     &__title{
         font-style: normal;
         font-weight: 700;
@@ -96,6 +97,7 @@
     .employer{
         content: '';
         background-image: none;
+        padding-bottom: 80px;
         &__title{
             margin-bottom: 36px;
         }
@@ -105,7 +107,7 @@
             justify-content: space-between;
         }
         &__item{
-            height: 297px;
+            height: 233px;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
             position: relative;
@@ -149,6 +151,7 @@
     .employer{
         content: '';
         background-image: none;
+        padding-bottom: 80px;
         &__title{
             margin-bottom: 36px;
         }
@@ -202,6 +205,7 @@
     .employer{
         content: '';
         background-image: none;
+        padding-bottom: 80px;
         &__title{
             width: 456px;
             margin-bottom: 36px;
@@ -258,6 +262,7 @@
     .employer{
         content: '';
         background-image: none;
+        padding-bottom: 80px;
         &__title{
             width:296px;
             font-size: 33px;

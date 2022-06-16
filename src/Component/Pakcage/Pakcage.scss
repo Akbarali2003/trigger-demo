@@ -102,7 +102,7 @@
         flex-wrap: wrap;
     }
     &__item{
-        width: 240px;
+        width: 242px;
         height: 142px;
         box-sizing: border-box;
         text-align: center;
@@ -121,6 +121,7 @@
             border: 2px solid #3E96FC;
             cursor: pointer;
         }
+
     }
     @keyframes text {
         0%{opacity: 0;}
@@ -250,7 +251,6 @@
         &__btn1{
             width: 130px;
             font-size: 12px;
-            color: #1B283B;
             padding: 8px;
         }
         
@@ -259,7 +259,6 @@
             font-style: normal;
             font-weight: 400;
             font-size: 12px;
-            color: #1B283B;
             padding: 8px;
             
         }
@@ -267,7 +266,6 @@
         &__btn2{
             width: 130px;
             font-size: 12px;
-            color: #1B283B;
             background: #F5F8FC;
             border-radius: 10px;
             padding: 8px;

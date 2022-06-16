@@ -30,9 +30,6 @@
     url('./Assets/Fonts/inter-v11-latin-700.woff2') format('woff2'),
     url('./Assets/Fonts/inter-v11-latin-700.woff') format('woff');
 }
-// *, *::before, *::after {
-//     box-sizing: border-box;
-// }
 body{
     font-family:'Inter',Arial, sans-serif !important;
     margin: 0;
@@ -59,14 +56,682 @@ h6{
 input{
     outline: none !important;
 }
-.light{
-    .text{
-        
-    }
-}
 .container{
     width: 1140px;
     margin: 0 auto;
+}
+.white{
+    .header{
+        background-color: #0C2F62;
+        &__nav-lang-uz{
+            color: rgba(255, 255, 255, 0.65);
+        }
+        &__nav-lang-ru{
+            color: rgba(255, 255, 255, 0.65);
+            
+        }
+        &__nav-lang-en{
+            color: rgba(255, 255, 255, 0.65);
+        }
+        &__nav-phonenumber{
+            color: rgba(255, 255, 255, 0.65);
+        }
+        &__nav-text{
+            color: rgba(255, 255, 255, 0.65);
+        }
+        &__select{
+            color: #fff;
+            &:hover{
+                color: #0d6efd;
+            }
+            &:hover .header__arrow svg path{
+                fill:#0d6efd;
+            }
+        }
+        &__discription{
+            color: #fff;
+            &:hover{
+                color: #0d6efd;
+            }
+        }
+        &__btn{
+            color: #FFFFFF;
+            background: #3E96FC;
+            box-shadow:0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            &:hover{
+                box-shadow: none;
+            }
+        }
+        
+    }
+    .main{
+        background-color: #fff;
+        .checksection{
+            background-color: #0C2F62;
+            &__text{
+                color: rgba(255, 255, 255, 0.7);
+            }
+            &__select{
+                color: #96A1AC;
+                background: #FFFFFF;
+            }
+            &__btn{
+                background-color: #3E96FC;
+                &:hover{
+                    background: #2263ae;
+                }
+            }
+            &__slide{
+                &.swiper2{
+                    &__slide-images{
+                        &-one{
+                            & svg path:nth-child(1){
+                                fill: #3E96FC;
+                            }
+                            & svg path:nth-child(2){
+                                fill: #3E96FC;
+                            }
+                        }
+                        &-three{
+                            & svg path{
+                                fill: #F3745A;
+                            }
+                        }
+                        &-five{
+                            & svg path{
+                                fill: #33D1B5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pakcage{
+            &__item{
+                &:nth-child(1){
+                    & svg{
+                        & path :nth-child(1){
+                            fill: #D8EAFE;
+                        }
+                        & path :nth-child(2){
+                            fill: #3E96FC;
+                        }
+                        & path :nth-child(3){
+                            fill: #3E96FC;
+                        }
+                    }
+                }
+            } 
+        }
+        .aboutus{
+            background-color: #fff;
+            &__text{
+                color: #6B7A8C;
+            }
+            &__btn{
+                color: #FFFFFF;
+                background: #3E96FC;
+                box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                &:hover{
+                    box-shadow: none;
+                }
+            }
+            &__plus{
+                color: #3E96FC;
+            }
+        }
+        .choosesection{
+            background-color: #fff;
+            &__item:nth-child(1) svg path:nth-child(1){
+                fill: #3E96FC;
+            }
+            &__item:nth-child(2) svg path:nth-child(1){
+                fill: #3E96FC;
+            }
+            &__item:nth-child(3) svg path:nth-child(1){
+                fill: #3E96FC;
+            }
+            &__item:nth-child(4) svg path:nth-child(1){
+                fill: #3E96FC;
+            }
+            &__item-subtitle{
+                color: #1b283b;
+            }
+            &__item-discription{  
+                color: #6B7A8C;
+            }
+        }
+        .service{
+            background-color: #fff;
+            &__title{
+                color: #1B283B;
+            }
+            &__subtitle{
+                color: #1B283B;
+                &:hover{
+                    color:  #0d6efd;
+                }
+            }
+            &__text{
+                color: #6B7A8C;
+            }
+            .swiper-button-prev{
+                box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+                &:hover{
+                    background-color: #0d6efd;
+                    box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                    &::after{
+                        color: #fff;
+                    }
+                }
+            }
+            .swiper-button-next{
+                box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+                &:hover{
+                    background-color: #0d6efd;
+                    box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                    &::after{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .logosection{
+            &__item{
+                background: #FFFFFF;
+                border: 1px solid #E7EAEE;
+            }
+            &__coinbase:hover svg path{
+                fill:#0052ff !important;
+            }
+            &__spotify:hover svg path{
+                fill:#1ED760 ;
+            }
+            
+            &__slack:hover svg path:nth-child(1){
+                fill:#000 ;
+            }
+            &__slack:hover svg path:nth-child(2){
+                fill:#36C5F0 ;
+            }
+            &__slack:hover svg path:nth-child(3){
+                fill:#2EB67D ;
+            }
+            &__slack:hover svg path:nth-child(4){
+                fill:#ECB22E ;
+            }
+            &__slack:hover svg path:nth-child(5){
+                fill:#E01E5A ;
+            }
+            
+            &__dropbox:hover svg path:nth-child(1){
+                fill:#000 ;
+            }
+            &__dropbox:hover svg path:nth-child(2){
+                fill:#0061ff ;
+            }
+            &__webflow:hover svg path{
+                fill:#4353ff ;
+            }
+            &__zoom:hover svg path{
+                fill:#2D8CFF;
+            }
+        }
+        .employer{
+            background-color:#fff;
+            background-image: none;
+            &__title{
+                color: #1B283B;
+            }
+            &__marksimg{
+                background: #3E96FC;
+                box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            }
+            &__discription{
+                color: #6B7A8C;
+            }
+            &__item:nth-child(2){
+                .employer__star-group{
+                    & svg:nth-child(5) path{
+                        fill: #FFBA08;
+                    }
+                }
+            }
+            &__star-group{
+                & svg:nth-child(1) path{
+                    fill: #FFBA08;
+                }
+                & svg:nth-child(2) path{
+                    fill: #FFBA08;
+                }
+                & svg:nth-child(3) path{
+                    fill: #FFBA08;
+                }
+                & svg:nth-child(4) path{
+                    fill: #FFBA08;
+                }
+            }
+        }
+        //oirghughg5g
+        .support{
+            &__title{
+                color: #1B283B;
+            }
+            &__item{
+                & svg path{
+                    fill:#3E96FC;
+                }
+            }
+            &__subtitle{
+                color: #1B283B;
+            }
+            &__text{
+                color: #6B7A8C;
+            }
+            &__btn{
+                color: #FFFFFF;
+                background: #3E96FC;
+                box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: none;
+                }
+            }
+        }
+        .subscribe{
+            background: #0C2F62;
+            &__btn{ 
+                background: #3E96FC;
+                &:hover{
+                    background: #2263ae;
+                }
+            }
+        }
+    }
+}
+.black{
+    .header{
+        background-color: #2B2B2B ;
+        &__package{
+            & svg path:nth-child(1){
+                fill: #888888;
+            }
+            & svg path:nth-child(4){
+                fill: #494949;
+                height: 36px;
+            }
+        }
+        &__nav-lang-uz{
+            color: #919191
+        }
+        &__nav-lang-ru{
+            color: #919191
+        }
+        &__nav-lang-en{
+            color: #919191
+        }
+        &__nav-phonenumber{
+            color: #919191;
+        }
+        &__nav-text{
+            color: #919191;
+        }
+        &__select{
+            color: #FCFCFC;
+            &:hover{
+                color: #8B8B8B;
+            }
+            &:hover .header__arrow svg path{
+                fill:#8B8B8B;
+            }
+        }
+        &__discription{
+            color: #FCFCFC;
+            &:hover{
+                color: #8B8B8B;
+            }
+        }
+        &__btn{
+            color: #FFFFFF;
+            background: #8B8B8B;
+            box-shadow: 0px 6px 12px -6px ;
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    }
+    .main{
+        background-color: #A9A9A9;
+        .checksection{
+            background-color: #2B2B2B ;
+            &__text{
+                color: #C0C0C0;
+            }
+            &__select{
+                color: #96A1AC;
+                background: #FFFFFF;
+            }
+            &__btn{
+                background-color: #8B8B8B;
+                &:hover{
+                    background: #5c5b5b;
+                }
+            }
+            &__slide{
+                .swiper2{
+                    &__slide-images{
+                        &-one{
+                            & svg path:nth-child(1){
+                                fill: #8B8B8B;
+                            }
+                            & svg path:nth-child(2){
+                                fill: #8B8B8B;
+                            }
+                        }
+                        &-three{
+                            & svg path{
+                                fill:#8B8B8B ;
+                            }
+                        }
+                        &-five{
+                            & svg path{
+                                fill:#8B8B8B ;
+                            }
+                        }
+                    }
+                    &__slide-image-img{
+                        background-color: #8B8B8B;
+                    }
+                    &__slide-image-text{
+                        color: #272727;
+                    }
+                    .swiper-pagination-bullet{
+                        background-color: #BFBFBF !important;
+                    }
+                    .swiper-pagination-bullet-active{
+                        background-color: #6E6E6E !important;
+                    }
+                }
+            }
+        }
+        .pakcage{
+            &__item{
+                &:nth-child(1) svg path:nth-child(1){
+                    fill: #D8EAFE ;
+                }
+                &:nth-child(1) svg path:nth-child(2){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(1) svg path:nth-child(3){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(2) svg path:nth-child(1){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(2) svg path:nth-child(2){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(2) svg path:nth-child(3){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(3) svg path:nth-child(1){
+                    fill: #8B8B8B ;
+                }
+                &:nth-child(3) svg path:nth-child(2){
+                    fill: #E8E8E8 ;
+                }
+                &:nth-child(3) svg path:nth-child(3){
+                    fill: #E8E8E8 ;
+                }
+                &:last-child svg path:nth-child(1){
+                    fill:  #E8E8E8;
+                    stroke:#8B8B8B ;
+                }
+                &:hover{
+                    border-color: #8B8B8B;
+                }
+            }   
+            &__text{
+                color: #787878;
+            }
+        }
+        .aboutus{
+            background-color: #A9A9A9;
+            &__text{
+                color: #6B899D;
+            }
+            &__decor-right{
+                display: none;
+            }
+            &__decor-left{
+                display: none;
+            }
+            &__btn{
+                color: #FFFFFF;
+                background-color: #8B8B8B;
+                box-shadow: 0px 8px 18px -8px rgba(85, 85, 86, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                &:hover{
+                    box-shadow: none;
+                }
+            }
+            &__plus{
+                color: #8B8B8B;
+            }
+        }
+        .choosesection{
+            background-color: #A9A9A9;
+            &__item:nth-child(1) svg path:nth-child(1){
+                fill: #8B8B8B;
+            }
+            &__item:nth-child(2) svg path:nth-child(1){
+                fill: #8B8B8B;
+            }
+            &__item:nth-child(3) svg path:nth-child(1){
+                fill: #8B8B8B;
+            }
+            &__item:nth-child(4) svg path:nth-child(1){
+                fill: #8B8B8B;
+            }
+            &__item-subtitle{
+                color: #272727;
+            }
+            &__item-discription{
+                color: #838383;
+            }
+        }
+        .service{
+            background-color: #A9A9A9;
+            &__title{
+                color: #272727;
+            }
+            &__box{
+                & svg path{
+                    fill: #8B8B8B;
+                }
+            }
+            &__subtitle{
+                color: #272727;
+                &:hover{
+                    color:  #5e5d5d;
+                }
+            }
+            &__text{
+                color: #898989;
+            }
+            .swiper-button-prev{
+                &::after{
+                    color: #A9A9A9;
+                }
+                background-color:#fff ;
+                box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+                &:hover{
+                    background-color: #898989;
+                    box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                    &::after{
+                        color: #fff;
+                    }
+                }
+            }
+            .swiper-button-next{
+                &::after{
+                    color: #A9A9A9;
+                }
+                background-color: #fff;
+                box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+                &:hover{
+                    background-color: #898989;
+                    box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                    &::after{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .logosection{
+            background-color: #A9A9A9;
+            &__coinbase:hover svg path{
+                fill:#898989 !important;
+            }
+            &__spotify:hover svg path{
+                fill:#898989;
+            }
+            
+            &__slack:hover svg path:nth-child(1){
+                fill:#898989; 
+            }
+            &__slack:hover svg path:nth-child(2){
+                fill:#898989;
+            }
+            &__slack:hover svg path:nth-child(3){
+                fill:#898989;
+            }
+            &__slack:hover svg path:nth-child(4){
+                fill:#898989;
+            }
+            &__slack:hover svg path:nth-child(5){
+                fill:#898989;
+            }
+            
+            &__dropbox:hover svg path:nth-child(1){
+                fill:#898989;
+            }
+            &__dropbox:hover svg path:nth-child(2){
+                fill:#898989;
+                
+            }
+            &__webflow:hover svg path{
+                fill:#898989;
+            }
+            &__zoom:hover svg path{
+                fill:#898989;
+            }
+        }
+        .employer{
+            background-color:#A9A9A9;
+            background-image: none;
+            &__title{
+                color:#272727;
+            }
+            &__marksimg{
+                background:#8B8B8B;
+                box-shadow: 0px 8px 18px -8px rgba(113, 114, 114, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            }
+            &__discription{
+                color: #878787;
+            }
+            &__item:nth-child(2){
+                .employer__star-group{
+                    & svg:nth-child(5) path{
+                        fill: #BCBCBC;
+                    }
+                }
+            }
+            &__star-group{
+                & svg:nth-child(1) path{
+                    fill: #BCBCBC;
+                }
+                & svg:nth-child(2) path{
+                    fill: #BCBCBC;
+                }
+                & svg:nth-child(3) path{
+                    fill: #BCBCBC;
+                }
+                & svg:nth-child(4) path{
+                    fill: #BCBCBC;
+                }
+            }
+        }
+        .news{
+            background-color: #F6F6F6;
+            &__title{
+                color: #272727;
+            }
+            .swiper1{
+                &__information{
+                    background-color: #FFFFFF;
+                }
+                &__job{
+                    color: #444444;
+                }
+                &__subtitle{
+                    color: #272727;
+                }
+                .swiper-pagination-bullet{
+                    background-color: #CACACA !important;
+                }
+                .swiper-pagination-bullet-active{
+                    background-color: #ABABAB !important;
+                }
+            }
+        }
+        .support{
+            background-color: #A9A9A9;
+            &__decor6{
+                display: none;
+            }
+            &__decor5{
+                display: none;
+            }
+            &__title{
+                color: #272727;
+            }
+            &__item{
+                & svg path{
+                    fill: #8B8B8B;
+                }
+            }
+            &__subtitle{
+                color: #272727;
+            }
+            &__text{
+                color: #979797;
+            }
+            &__btn{
+                color: #FFFFFF;
+                background: #8B8B8B;
+                box-shadow: 0px 8px 18px -8px rgba(85, 85, 86, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: none;
+                }
+            }
+        }
+        .subscribe{
+            background: #2B2B2B;
+            &__btn{ 
+                background: #8B8B8B;
+                &:hover{
+                    background: #4e4e4e;
+                }
+            }
+        }
+    }
+    .footer{
+        background: #252525;
+        &__discription{
+            color: #4A6E8C;
+        }
+    }
 }
 @media screen and (max-width:991px) {
     .container{

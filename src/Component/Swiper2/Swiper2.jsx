@@ -21,21 +21,18 @@ import {
 } from "../../Assets/Images/index";
 import { Pagination, Navigation, EffectFade } from "swiper";
 
-function Swiper2({ color }) {
-    let fill
-
-    (color==1)?fill='#3E96FC':fill='#8B8B8B'
+function Swiper2() {
     return (
         <section className="swiper2">
             <div className="swiper2__content">
                 <div >
                     <div className="swiper2__slide">
                         <div className="swiper2__slide-images">
-                            <span className="swiper2__slide-images-one"><Lock fill={fill} /></span>
+                            <span className="swiper2__slide-images-one"><Lock /></span>
                             <img className="swiper2__slide-images-two" src={Vektor1Img} alt="Vektor1Img" />
-                            <span className="swiper2__slide-images-three" ><Check/></span>
+                            <span className="swiper2__slide-images-three" ><Check /></span>
                             <img className="swiper2__slide-images-four" src={Vektor2Img} alt="Vektor2Img" />
-                            <span className="swiper2__slide-images-five"><Starr/></span>
+                            <span className="swiper2__slide-images-five"><Starr /></span>
                         </div>
 
                         <Swiper className="swiper2__list"
@@ -58,7 +55,7 @@ function Swiper2({ color }) {
                             <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarSeven} alt="CarSeven" /></SwiperSlide>
                         </Swiper>
                         <div className="swiper2__slide-image" >
-                            <div className="swiper2__slide-image-img" style={{ backgroundColor: (color == 0) ? '#33D1B5' : '#8B8B8B' }}>
+                            <div className="swiper2__slide-image-img" >
                                 <Checked />
                             </div>
                             <h3 className="swiper2__slide-image-text">Официально застрахован</h3>

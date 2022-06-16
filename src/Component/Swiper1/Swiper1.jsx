@@ -17,8 +17,27 @@ function Swiper1({ lang }) {
         <section className="swiper1">
             <div className="swiper1__content">
                 <Swiper className="swiper1__list"
-                    slidesPerView={1}
-                    slidesPerGroup={1}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                        },
+                        576: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        },
+                        991: {
+                            slidesPerView: 3,
+                            spaceBetween: 16,
+                        },
+                        1140: {
+                            slidesPerView: 3,
+                            spaceBetween: 16,
+                        }
+                    }}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     pagination={{
@@ -28,59 +47,51 @@ function Swiper1({ lang }) {
                     modules={[Pagination, Navigation]}
                 >
                     <SwiperSlide className='swiper1__item'>
-                        <a href="#" id='scroll-up'>
-                            <img className="swiper1__img" src={UserImg1} alt='Userimg1' />
-                            <div className="swiper1__information">
-                                <span className="swiper1__span">
-                                    <span className="swiper1__job-box">
-                                        <p className="swiper1__job">{content[lang].main[6].list[0].jobs[0]}</p>
-                                        <p className="swiper1__job">{content[lang].main[6].list[0].jobs[1]}</p>
-                                    </span>
-                                    <p className="swiper1__date">{content[lang].main[6].list[0].date}</p>
+                        <img className="swiper1__img" src={UserImg1} alt='Userimg1' />
+                        <div className="swiper1__information">
+                            <span className="swiper1__span">
+                                <span className="swiper1__job-box">
+                                    <p className="swiper1__job">{content[lang].main[6].list[0].jobs[0]}</p>
+                                    <p className="swiper1__job">{content[lang].main[6].list[0].jobs[1]}</p>
                                 </span>
-                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[0].text}</h3>
-                                <p className="swiper1__text">{content[lang].main[6].list[0].discription}</p>
-                            </div>
-                        </a>
+                                <p className="swiper1__date">{content[lang].main[6].list[0].date}</p>
+                            </span>
+                            <h3 className="swiper1__subtitle">{content[lang].main[6].list[0].text}</h3>
+                            <p className="swiper1__text">{content[lang].main[6].list[0].discription}</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className='swiper1__item'>
-                        <a href="#">
-                            <img className="swiper1__img" src={UserImg2} alt='UserImg2' />
-                            <div className="swiper1__information">
-                                <span className="swiper1__span">
-                                    <p className="swiper1__job">{content[lang].main[6].list[1].jobs[0]}</p>
-                                    <p className="swiper1__date">{content[lang].main[6].list[1].date}</p>
-                                </span>
-                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[1].text}</h3>
-                                <p className="swiper1__text">{content[lang].main[6].list[1].discription}</p>
-                            </div>
-                        </a>
+                        <img className="swiper1__img" src={UserImg2} alt='UserImg2' />
+                        <div className="swiper1__information">
+                            <span className="swiper1__span">
+                                <p className="swiper1__job">{content[lang].main[6].list[1].jobs[0]}</p>
+                                <p className="swiper1__date">{content[lang].main[6].list[1].date}</p>
+                            </span>
+                            <h3 className="swiper1__subtitle">{content[lang].main[6].list[1].text}</h3>
+                            <p className="swiper1__text">{content[lang].main[6].list[1].discription}</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className='swiper1__item'>
-                        <a href="#">
-                            <img className="swiper1__img" src={UserImg3} alt='UserImg3' />
-                            <div className="swiper1__information">
-                                <span className="swiper1__span">
-                                    <p className="swiper1__job">{content[lang].main[6].list[2].jobs[0]}</p>
-                                    <p className="swiper1__date">{content[lang].main[6].list[2].date}</p>
-                                </span>
-                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[2].text}</h3>
-                                <p className="swiper1__text">{content[lang].main[6].list[2].discription}</p>
-                            </div>
-                        </a>
+                        <img className="swiper1__img" src={UserImg3} alt='UserImg3' />
+                        <div className="swiper1__information">
+                            <span className="swiper1__span">
+                                <p className="swiper1__job">{content[lang].main[6].list[2].jobs[0]}</p>
+                                <p className="swiper1__date">{content[lang].main[6].list[2].date}</p>
+                            </span>
+                            <h3 className="swiper1__subtitle">{content[lang].main[6].list[2].text}</h3>
+                            <p className="swiper1__text">{content[lang].main[6].list[2].discription}</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide className='swiper1__item'>
-                        <a href="#">
-                            <img className="swiper1__img" src={UserImg4} alt='UserImg4' />
-                            <div className="swiper1__information">
-                                <span className="swiper1__span">
-                                    <p className="swiper1__job">{content[lang].main[6].list[3].jobs[0]}</p>
-                                    <p className="swiper1__date">{content[lang].main[6].list[3].date}</p>
-                                </span>
-                                <h3 className="swiper1__subtitle">{content[lang].main[6].list[3].text}</h3>
-                                <p className="swiper1__text">{content[lang].main[6].list[3].discription}</p>
-                            </div>
-                        </a>
+                        <img className="swiper1__img" src={UserImg4} alt='UserImg4' />
+                        <div className="swiper1__information">
+                            <span className="swiper1__span">
+                                <p className="swiper1__job">{content[lang].main[6].list[3].jobs[0]}</p>
+                                <p className="swiper1__date">{content[lang].main[6].list[3].date}</p>
+                            </span>
+                            <h3 className="swiper1__subtitle">{content[lang].main[6].list[3].text}</h3>
+                            <p className="swiper1__text">{content[lang].main[6].list[3].discription}</p>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
             </div>

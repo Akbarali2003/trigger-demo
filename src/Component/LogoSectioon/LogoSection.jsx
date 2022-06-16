@@ -17,10 +17,29 @@ function LogoSection() {
             <div className="container">
                 <Swiper className="logosection__list"
                     loop={true}
-                    slidesPerView={6}
-                    spaceBetween={24}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                        },
+                        576: {
+                            slidesPerView:2,
+                            spaceBetween: 0,
+                        },
+                        768: {
+                            slidesPerView:3,
+                            spaceBetween: 0,
+                        },
+                        991: {
+                            slidesPerView:3,
+                            spaceBetween: 0,
+                        },
+                        1140:{
+                            slidesPerView:6,
+                            spaceBetween:24,
+                        }
+                    }}
                     modules={[Pagination, Navigation]}>
-                    <SwiperSlide className="logosection__item logosection__coinbase"><Coinbase  /></SwiperSlide>
+                    <SwiperSlide className="logosection__item logosection__coinbase"><Coinbase /></SwiperSlide>
                     <SwiperSlide className="logosection__item logosection__spotify"><Spotify /></SwiperSlide>
                     <SwiperSlide className="logosection__item logosection__slack"><Slack /></SwiperSlide>
                     <SwiperSlide className="logosection__item logosection__dropbox"><Dropbox /></SwiperSlide>
@@ -28,7 +47,10 @@ function LogoSection() {
                     <SwiperSlide className="logosection__item logosection__zoom"> <Zoom /></SwiperSlide>
                 </Swiper>
             </div>
+            <script>
+
+            </script>
         </div>
-    ) 
+    )
 }
 export default LogoSection;

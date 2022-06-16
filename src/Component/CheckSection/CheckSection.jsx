@@ -3,10 +3,10 @@ import './CheckSection.scss';
 import Swiper2 from '../Swiper2/Swiper2';
 import content from "../Localization/content";
 
-function CheckSection({lang,color,setColor}) {
+function CheckSection({ lang, color, setColor }) {
 
     return (
-        <section className="checksection" style={{backgroundColor:(color==0)?'#0C2F62':'#2B2B2B'}} >
+        <section className="checksection" >
             <div className="container">
                 <div className="checksection__global">
                     <div>
@@ -19,11 +19,11 @@ function CheckSection({lang,color,setColor}) {
                                 <option value="DDB">DDB</option>
                             </select>
                             <input className="checksection__input" type="text" placeholder={content[lang].main[0].placeholder} />
-                            <button className="checksection__btn" style={{backgroundColor:(color==0)?'#3E96FC':'#8B8B8B',color:(color==0)?'#fff':'#ECECEC'}} >{content[lang].main[0].btn}</button>
+                            <button className="checksection__btn" >{content[lang].main[0].btn}</button>
                         </form>
                     </div>
                     <div className="checksection__slide">
-                        <Swiper2 color={color}/>
+                        <Swiper2 />
                     </div>
                 </div>
             </div>

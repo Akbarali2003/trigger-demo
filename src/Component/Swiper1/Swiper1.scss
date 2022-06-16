@@ -3,6 +3,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+        overflow:auto;
         z-index: 1;
         &__content{
             width: 1140px;
@@ -12,6 +13,7 @@
             margin-top: 40px; 
             position: relative;
             z-index: 1;
+            overflow: auto;
         }
         
         &__list{
@@ -20,12 +22,13 @@
             display: flex;
             align-items: center; 
             z-index: 1;
+            overflow: auto;
         }
         &>.swiper{
             overflow: none !important;
         }
         &__item{
-            width: 332px !important;
+            width: 332px ;
             margin-right: 16px;
             cursor: pointer;
             & a{
@@ -43,6 +46,7 @@
             padding: 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
+            box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.05), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.02);
         }
         &__span{
             width: 284px;
@@ -113,34 +117,42 @@
             width: 36px;
             height: 36px;
             position: absolute;
+            background-color: #fff;
             box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
             border: none;
-            z-index: 982;
-            box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
-            &:hover svg path{
-                fill:#fff;
-            }
-            &:hover{
-                cursor: pointer;
-                transition:350ms;
-                background: #3E96FC;
-                box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-            }
+            border-radius: 50%;
+            z-index: 10;
+            &::after{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 6px;
+                height: 10px;
+                font-size: var(--swiper-button-prev);
+                content: icon;
+                color: black;
+            }    
             
         }
         .swiper-button-next{
+            width: 36px;
+            height: 36px;
             position:absolute;
+            background-color: #fff;
             box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
             border: none;
-            &:hover svg path{
-                fill:#fff;
-            }
-            &:hover{
-                cursor: pointer;
-                transition:350ms;
-                background: #3E96FC;
-                box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-            }
+            border-radius: 50%;
+            z-index: 10;
+            &::after{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 6px;
+                height: 10px;
+                font-size: var(--swiper-button-next);
+                content:icon;
+                color: black;
+            }  
         }
     }
     
@@ -157,13 +169,11 @@
             }
             &__list{
                 width: 626px !important;
-                height: 492px;
                 display: flex;
-                align-items: center; 
-                z-index: 1;
+                align-items: center;
             }
             &__item{
-                width: 300px !important;
+                width: 304px !important;
             }
             &__information{
                 width: 256px;   

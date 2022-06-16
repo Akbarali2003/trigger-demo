@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-left: 60px;
+    height: 550px;
     &__content{
         width: 550px;
         display: flex;
@@ -88,6 +89,7 @@
         border-radius: 12px;
         padding: 11px 12px ;
         margin-right: 16px;
+        background-color: #33D1B5
     }
     &__slide-image-text{
         font-weight: 500;

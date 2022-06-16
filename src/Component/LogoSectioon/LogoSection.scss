@@ -1,14 +1,15 @@
 .logosection{
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     &__list{
+        height: 104px;
         display: flex;
         align-items: center;
         transform: translate3d(0,0,0) !important;
     }
     &__item{
         width: 168px !important;
-        height: 102px !important;
+        height: 104px !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,6 +62,9 @@
         margin-bottom: 80px;
         &__list{
             width: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &__item{
             width: 216px !important;
@@ -76,7 +80,7 @@
             width: 552px;
         }
         &__item{
-            width: 214px !important;
+            width: 160px !important;
             height: 100px !important;
         }
     }
@@ -89,7 +93,7 @@
             width: 456px;
         }
         &__item{
-            width: 160.5px !important;
+            width: 206px !important;
             height: 100px !important;
         }
     }

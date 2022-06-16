@@ -1,6 +1,7 @@
 .checksection{   
     padding-bottom: 162px;
     height: 550px;
+    
     &__global{
         width: 1140px;
         height: 550px;
@@ -26,7 +27,6 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
-        color: rgba(255, 255, 255, 0.7);
         margin: 0;
         margin-bottom: 48px;
     }
@@ -39,10 +39,9 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        color: #96A1AC;
-        background: #FFFFFF;
         border-radius: 10px 0px 0px 10px;
         padding: 17px 16px;
+        padding-bottom: 17.4px;
         border: none;
         outline: none;
         transition: 0.35s;
@@ -74,9 +73,12 @@
         border: none;
         cursor: pointer;
         transition: 0.35s;
-        &:hover{
-            background: #2263ae;
-        }
+     
+        
+    }
+    &__slide{
+        width: 550px;
+        height: 550px;
     }
 }
 
@@ -91,7 +93,7 @@
             flex-direction: column; 
         }
         &__title{
-            width: 720px;
+            width: 460px;
         }
         &__text{
             width: 400px;
@@ -109,7 +111,7 @@
             background: #FFFFFF;
             border-radius: 10px 0px 0px 10px;
             padding: 17px 16px;
-            padding-bottom: 17.5px;
+            padding-bottom: 17.4px;
             border: none;
             outline: none;
             transition: 0.35s;
