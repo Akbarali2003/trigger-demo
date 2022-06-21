@@ -13,7 +13,7 @@
         width: 550px;
         font-style: normal;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 2.5em;
         line-height: 56px;
         display: flex;
         align-items: center;
@@ -25,7 +25,7 @@
         width: 550px;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 26px;
         margin: 0;
         margin-bottom: 48px;
@@ -73,8 +73,6 @@
         border: none;
         cursor: pointer;
         transition: 0.35s;
-     
-        
     }
     &__slide{
         width: 550px;
@@ -192,7 +190,7 @@
             align-items: center;
         }
         &__select{
-            width: 80px;
+            width: 70px;
             font-size: 12px;
             line-height: 18px;
             color: #96A1AC;
@@ -214,7 +212,7 @@
             border: none;
         }
         &__btn{
-            font-size: 12px;
+            font-size: 0.75em;
             line-height: 16px;
             text-align: center;
             color: #FFFFFF;
@@ -223,6 +221,10 @@
             border: none;
             cursor: pointer;
             transition: 0.35s;
+        }
+        &__slide{
+            width: 296px;
+            height: 480px;
         }
     }
 }

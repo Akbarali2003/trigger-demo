@@ -1,10 +1,10 @@
 import React from "react";
 import './Header.scss';
-import {LogoImg} from '../../Assets/Images/index';
+import { LogoImg } from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
 import { ArrowButton, } from '../../Assets/Images/index';
-function Header({ lang, setLang, color, setColor }) {
+function Header({ lang, setLang, color, setColor, size, setSize }) {
     const elModal = React.useRef();
     const elDropdown1 = React.useRef();
     const elDropdown2 = React.useRef();
@@ -13,6 +13,12 @@ function Header({ lang, setLang, color, setColor }) {
     const icon1 = React.useRef();
     const icon2 = React.useRef();
     const elView = React.useRef();
+    const elBar1 = React.useRef();
+    const elBar2 = React.useRef();
+    const elBar3 = React.useRef();
+    const [x, setX] = React.useState(1);
+    const openList=React.useRef();
+    const openNav=React.useRef();
     return (
         <header className="header" onClick={(evt) => {
             if (evt.target.matches('.header')) {
@@ -47,11 +53,14 @@ function Header({ lang, setLang, color, setColor }) {
                 elDropdown2={elDropdown2}
                 color={color}
                 setColor={setColor}
-                elView={elView} />
+                elView={elView}
+                size={size}
+                setSize={setSize}
+                openNav={openNav} />
             <div className="container">
-                <div className="header__package">
+                <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }}>
                     <a href="/"> <LogoImg /></a>
-                    <ul className="header__list">
+                    <ul className="header__list" ref={openList} >
                         <li className="header__item">
                             <a className="header__select" href="#" onClick={(() => {
                                 elDropdown1.current.classList.add('header__dropdown-one-open')
@@ -93,12 +102,30 @@ function Header({ lang, setLang, color, setColor }) {
                         <li className="header__item"><a href="#" className="header__discription">{content[lang].header.text[4]}</a></li>
                         <li className="header__item"><a href="#" className="header__discription">{content[lang].header.text[5]}</a></li>
                     </ul>
-                    <button className="header__btn" style={{ width: lang == 'ru' ? '138px' : '' }}>{content[lang].header.btn[0]}</button>
-                    <button className="header__bar-toggle">
-                        <div className="header__hamburger">
-                            <span className="header__bar bar1"></span>
-                            <span className="header__bar bar2"></span>
-                            <span className="header__bar bar3"></span>
+                    <button className="header__btn ">{content[lang].header.btn[0]}</button>
+                    <button className="header__bar-toggle" onClick={() => {
+
+                        if (x == 1) {
+                            elBar1.current.classList.add('bar1')
+                            elBar2.current.classList.add('bar2')
+                            elBar3.current.classList.add('bar3')
+                            openList.current.classList.add('header__list-open')
+                            openNav.current.classList.add('header__nav-open')
+                            setX(0)
+                        } else {
+                            elBar1.current.classList.remove('bar1')
+                            elBar2.current.classList.remove('bar2')
+                            elBar3.current.classList.remove('bar3')
+                            openList.current.classList.remove('header__list-open')
+                            openNav.current.classList.remove('header__nav-open')
+                            setX(1)
+                        }
+
+                    }}>
+                        <div className="header__hamburger" >
+                            <span className="header__bar" ref={elBar1}></span>
+                            <span className="header__bar" ref={elBar2}></span>
+                            <span className="header__bar" ref={elBar3}></span>
                         </div>
                     </button>
                 </div>

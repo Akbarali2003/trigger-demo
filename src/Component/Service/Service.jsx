@@ -10,20 +10,7 @@ import "swiper/css/navigation";
 import Family1 from '../../Assets/Images/family1.png'
 import Family2 from '../../Assets/Images/family2.png'
 import { Pagination, Navigation, EffectFade } from "swiper";
-function Service({ lang }) {
-    // let sbPrev = document.getElementsByClassName('swiper-button-prev')
-    // let sbNext = document.getElementsByClassName('swiper-button-next')
-
-    // sbPrev.addEventListener('click', function () {
-    //     current = document.getElementsByClassName('active');
-    //     current.className = current.className.replace("active", "");
-    //     this.className += "active";
-    // })
-    // sbNext.addEventListener('click', function () {
-    //     current = document.getElementsByClassName('active');
-    //     current.className = current.className.replace("active", "");
-    //     this.className += "active";
-    // })
+function Service({ lang,size }) {
     return (
         <div className="service">
             <div className="container">
@@ -36,6 +23,7 @@ function Service({ lang }) {
                         loop={true}
                         navigation={true}
                         modules={[Pagination, Navigation, EffectFade]}
+                        style={{ fontSize: `${16 + size}` + 'px'}}
                         className="service__content">
 
                         <SwiperSlide className="service__content-slide">

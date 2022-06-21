@@ -11,11 +11,11 @@ import FluentCall from '../../Assets/Images/fluent-call.svg';
 import FluentEmail from '../../Assets/Images/fluent-email.svg';
 import FluentLocation from '../../Assets/Images/fluent-location.svg';
 import content from "../Localization/content";
-function Footer({ lang }) {
+function Footer({ lang, size }) {
     return (
         <footer className="footer">
             <div className="container">
-                <ul className="footer__list">
+                <ul className="footer__list" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <li className="footer__item">
                         <a href="/"> <img src={FooterLogo} alt="FooterLogo" /></a>
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
@@ -97,9 +97,9 @@ function Footer({ lang }) {
                         </ul>
                     </li>
                 </ul>
-                <p className="footer__web-link">{content[lang].footer[5].text}</p>
+                <p className="footer__web-link" style={{ fontSize: `${16 + size}` + 'px' }}>{content[lang].footer[5].text}</p>
                 <hr className="footer__line" />
-                <span className="footer__links">
+                <span className="footer__links" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <p className="footer__links-one">{content[lang].footer[5].links[0]}</p>
                     <p className="footer__links-two">{content[lang].footer[5].links[1]}</p>
                     <p className="footer__links-three">{content[lang].footer[5].links[2]}</p>

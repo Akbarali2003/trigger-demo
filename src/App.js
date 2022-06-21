@@ -9,8 +9,8 @@ import Footer from './Component/Footer/Footer';
 export default function App() {
     const [lang, setLang] = React.useState('ru')
     const [color, setColor] = React.useState(0);
+    const [size, setSize] = React.useState(0);
     const elRoot = document.querySelector('#root');
-
     if (color == 0) {
         elRoot.classList.add('white');
         elRoot.classList.remove('black');
@@ -21,9 +21,9 @@ export default function App() {
 
     return (
         <React.Fragment >
-            <Header lang={lang} setLang={setLang} color={color} setColor={setColor} />
-            <Main lang={lang} setLang={setLang} color={color} setColor={setColor} />
-            <Footer lang={lang} setLang={setLang} color={color} setColor={setColor} />
+            <Header size={size} setSize={setSize} lang={lang} setLang={setLang} color={color} setColor={setColor} />
+            <Main size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
+            <Footer size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
         </React.Fragment>
     );
 }

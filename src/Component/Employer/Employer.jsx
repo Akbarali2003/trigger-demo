@@ -7,9 +7,9 @@ import UserTwo from '../../Assets/Images/user2.png';
 import UserThree from '../../Assets/Images/user3.png';
 import content from "../Localization/content";
 
-function Employer({lang}) {
+function Employer({lang,size}) {
     return (
-        <div className="employer">
+        <div className="employer" style={{ fontSize: `${16 + size}` + 'px'}}>
             <div className="container">
                 <h3 className="employer__title">{content[lang].main[5].title}</h3>
                 <ul className="employer__list">

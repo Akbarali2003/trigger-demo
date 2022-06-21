@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "./Swiper1.scss";
 import { Pagination, Navigation } from "swiper";
 
-function Swiper1({ lang }) {
+function Swiper1({ lang, size }) {
     return (
         <section className="swiper1">
             <div className="swiper1__content">
@@ -26,11 +26,11 @@ function Swiper1({ lang }) {
                             spaceBetween: 0,
                         },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 0,
                         },
                         991: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             spaceBetween: 16,
                         },
                         1140: {
@@ -45,6 +45,7 @@ function Swiper1({ lang }) {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
+                    style={{ fontSize: `${16 + size}` + 'px' }}
                 >
                     <SwiperSlide className='swiper1__item'>
                         <img className="swiper1__img" src={UserImg1} alt='Userimg1' />

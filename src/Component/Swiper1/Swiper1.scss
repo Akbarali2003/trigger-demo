@@ -29,7 +29,6 @@
         }
         &__item{
             width: 332px ;
-            margin-right: 16px;
             cursor: pointer;
             & a{
                 transition: 1s ease-in-out;
@@ -64,7 +63,7 @@
         &__job{
             font-style: normal;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 0.875em;
             line-height: 16px;
             color: #3E4265;
             display: flex;
@@ -75,16 +74,15 @@
         &__date{
             font-style: normal;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 0.875em;
             line-height: 24px;
-            
             color: #9397AD;
         }
         &__subtitle{
             width: 284px;
             font-style: normal;
             font-weight: 600;
-            font-size: 20px;
+            font-size: 1.25em;
             line-height: 28px;
             margin-bottom: 16px;
             color: #1B283B;
@@ -92,7 +90,7 @@
         &__text{
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1em;
             line-height: 26px;
             color: #6B7A8C;
         }
@@ -113,7 +111,7 @@
             margin: 0 !important;
             margin-left: 12px !important;
         }
-        & .swiper-button-prev{
+        .swiper-button-prev{
             width: 36px;
             height: 36px;
             position: absolute;
@@ -173,7 +171,7 @@
                 align-items: center;
             }
             &__item{
-                width: 304px !important;
+                width: 313px !important;
             }
             &__information{
                 width: 256px;   
@@ -224,7 +222,8 @@
                 z-index: 1;
             }
             &__item{
-                width: 300px !important;
+                width: 340px !important;
+                margin-right: 0;
             }
             &__information{
                 width: 256px;   

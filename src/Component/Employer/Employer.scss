@@ -9,7 +9,7 @@
     &__title{
         font-style: normal;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 2.5em;
         line-height: 56px;
         text-align: center;
         color: #1B283B;
@@ -49,7 +49,7 @@
         width: 316px;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 26px;
         color: #6B7A8C;
         margin-bottom: 16px;
@@ -76,7 +76,7 @@
     &__user-name{
         font-style: normal;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 0.875em;
         line-height: 17px;
         color: #1B283B;
         margin: 0;
@@ -86,7 +86,7 @@
     &__user-position{
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 0.75em;
         line-height: 15px;
         color: #9397AD;
         margin: 0;
@@ -158,9 +158,11 @@
         &__list{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            // justify-content: space-between;
+            justify-content: center;
         }
         &__item{
+            box-sizing: border-box;
             height: 297px;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
@@ -218,7 +220,7 @@
             justify-content: center;
         }
         &__item{
-            height: 297px;
+            height: 323px !important;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
             position: relative;

@@ -1,14 +1,14 @@
 import React from "react";
 import './CheckSection.scss';
-import Swiper2 from '../Swiper2/Swiper2';
+import Swiper from '../Swiper2/Swiper2';
 import content from "../Localization/content";
 
-function CheckSection({ lang, color, setColor }) {
+function CheckSection({ lang, size }) {
 
     return (
         <section className="checksection" >
             <div className="container">
-                <div className="checksection__global">
+                <div className="checksection__global"  style={{ fontSize: `${16 + size}` + 'px' }}>
                     <div>
                         <h2 className="checksection__title">{content[lang].main[0].title}</h2>
                         <p className="checksection__text">{content[lang].main[0].text}</p>
@@ -23,7 +23,7 @@ function CheckSection({ lang, color, setColor }) {
                         </form>
                     </div>
                     <div className="checksection__slide">
-                        <Swiper2 />
+                        <Swiper size={size} />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .support{
     text-align: center;
-    padding-bottom: 236px;
+    padding-bottom: 120px;
     &__content{
         position: relative;
     }
@@ -18,7 +18,7 @@
         width: 700px;
         font-style: normal;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 2.5em;
         line-height: 56px;
         text-align: center;
         color: #1B283B;
@@ -27,6 +27,7 @@
         
     }
     &__list{
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,7 +47,7 @@
     &__subtitle{
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.25em;
         line-height: 24px;
         color: #1B283B;
         margin: 32px 0 16px 0;
@@ -54,9 +55,11 @@
     
     &__text{
         width: 291px;
+        margin: 0 auto;
+        text-align: center;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 26px;
         color: #6B7A8C;
         margin-bottom: 32px;
@@ -67,7 +70,7 @@
         width: 164px;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         color: #FFFFFF;
         padding: 11px 16px;
@@ -81,7 +84,7 @@
 
 @media screen and (max-width:991px) {
     .support{
-        padding-bottom: 166px;
+        padding-bottom: 0px;
         &__decor6{
             display: none;
         }
@@ -99,7 +102,24 @@
 }
 @media screen and (max-width:768px) {
     .support{
-        padding-bottom: 80px;
+        padding-bottom: 0px;
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        &__item{
+            width: 478px;
+            margin: 0;
+            &:nth-child(1){
+                margin-bottom: 24px;   
+            }
+        }
+        &__text{
+            width: 478px;
+            font-size: 1em;
+        }
         &__decor6{
             display: none;
         }
@@ -117,7 +137,7 @@
 }
 @media screen and (max-width:576px) {
     .support{
-        padding-bottom: 80px;
+        padding-bottom: 0px;
         &__decor6{
             display: none;
         }
@@ -132,6 +152,7 @@
             
         }
         &__list{
+            max-width: 100%;
             width: 430px;
             display: flex;
             flex-direction: column;
@@ -152,7 +173,7 @@
 }
 @media screen and (max-width:320px) {
     .support{
-        padding-bottom: 80px;
+        padding-bottom: 0px;
         &__content{
             display: flex;
             flex-direction: column;
@@ -172,10 +193,11 @@
             
         }
         &__list{
+            max-width: 100%;
             width: 270px;
             display: flex;
             flex-direction: column;
-          align-items: center;
+            align-items: center;
         }
         &__item{
             text-align: center;

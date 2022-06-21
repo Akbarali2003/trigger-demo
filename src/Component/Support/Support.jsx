@@ -4,11 +4,11 @@ import { PhoneCall, Customer } from "../../Assets/Images";
 import content from "../Localization/content";
 import Decor5 from '../../Assets/Images/decor5.svg';
 import Decor6 from '../../Assets/Images/decor6.svg';
-function Support({ lang }) {
+function Support({ lang, size }) {
     return (
         <div className="support">
             <div className="container">
-                <div className="support__content">
+                <div className="support__content" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <span className="support__decor5">
                         <img src={Decor5} alt="Decor5" />
                     </span>

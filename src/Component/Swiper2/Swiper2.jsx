@@ -21,10 +21,10 @@ import {
 } from "../../Assets/Images/index";
 import { Pagination, Navigation, EffectFade } from "swiper";
 
-function Swiper2() {
+function Swiper2({ size }) {
     return (
         <section className="swiper2">
-            <div className="swiper2__content">
+            <div className="swiper2__content" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                 <div >
                     <div className="swiper2__slide">
                         <div className="swiper2__slide-images">

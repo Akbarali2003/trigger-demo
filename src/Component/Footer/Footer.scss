@@ -11,6 +11,7 @@
         margin-bottom: 92px;
     }
     &__item{
+        max-width: 100%;
         &:last-child{
             margin-right: 0;
         }
@@ -33,7 +34,7 @@
     &__txt{
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.25em;
         line-height: 24px;  
         color: #FFFFFF;
         margin-bottom: 16px;
@@ -47,7 +48,7 @@
     &__link{
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         color: rgba(255, 255, 255, 0.65);
         margin-bottom: 12px;
@@ -65,7 +66,7 @@
         width: 320px;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 26px;
         color: #6B7A8C;
         margin: 32px 0 40px 0;
@@ -101,7 +102,7 @@
             & a{
                 font-style: normal;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.65);
                 transition: 0.35s;
@@ -118,7 +119,7 @@
     &__web-link{
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 26px;
         text-decoration-line: underline;
         color: rgba(255, 255, 255, 0.7);
@@ -142,7 +143,7 @@
             width: 638px;
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1em;
             line-height: 24px;
             color: rgba(255, 255, 255, 0.7);
             margin-right: 32px;
@@ -151,7 +152,7 @@
             width: 249px;
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1em;
             line-height: 24px;
             color: rgba(255, 255, 255, 0.7);
             margin-right: 32px;
@@ -165,7 +166,7 @@
             width: 196px;
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1em;
             line-height: 24px;
             color: rgba(255, 255, 255, 0.7);
             transition: 0.35s;
@@ -181,11 +182,12 @@
     .footer{
         padding-top: 164px;
         &__list{
-            width: 720px;
+            width: 100%;
             display: flex;
             flex-direction: column;
         }
         &__item{
+            max-width: 100%;
             &:nth-child(1){
                 width: 720px;
             }
@@ -256,12 +258,13 @@
     .footer{
         padding-top: 164px;
         &__list{
-            width: 720px;
+            width: 552px;
             display: flex;
             flex-direction: column;
             margin-bottom: 64px;
         }
         &__item{
+            max-width: 100%;
             &:nth-child(1){
                 width: 552px;
             }
@@ -330,7 +333,7 @@
 }
 @media screen and (max-width:576px) {
     .footer{
-        padding-top: 164px;
+        padding-top: 140px;
         &__list{
             width: 456px;
             display: flex;
@@ -338,6 +341,7 @@
             margin-bottom: 64px;
         }
         &__item{
+            max-width: 100%;
             &:nth-child(1){
                 width: 456px;
             }
@@ -406,7 +410,7 @@
 }
 @media screen and (max-width:320px) {
     .footer{
-        padding-top: 164px;
+        padding-top: 140px;
         &__list{
             width: 296px;
             display: flex;
@@ -414,6 +418,7 @@
             margin-bottom: 64px;
         }
         &__item{
+            max-width: 100%;
             &:nth-child(1){
                 width: 296px;
             }

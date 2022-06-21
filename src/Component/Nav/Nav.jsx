@@ -16,75 +16,22 @@ import {
     ArrowButton,
 } from '../../Assets/Images/index';
 
-function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2 }) {
+function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
     const elLangActive = React.useRef();
-    const [size, setSize] = React.useState(0);
-    function add() {
-        localStorage.setItem('color', color)
+    const ChangeSize = React.useRef()
+    let tr = false
+    if (size == 12) {
+        ChangeSize.current.classList.add('header__nav-font-size2')
+        tr = false
     }
-    function changeFontSize(type) {
-        let ids = ["#navTop"];
-        let plus5Max = 28;
-        let minus5Min = 16;
-        let decrease = document.querySelector(".decremet");
-        let increase = document.querySelector(".increment");
-        let currentSize = document.getElementById("currentSize");
-        ids.forEach(id => {
-            // Get element
-            let el = document.querySelector(id); // Get font-size
-
-            let fontSize = window.getComputedStyle(el, null).getPropertyValue("font-size"); // Convert to float
-
-            fontSize = parseFloat(fontSize);
-            // fontSizeLocalStorage = localStorage.getItem("fontSize"); // Increase / Decrease font-size
-
-            if (type === "increase") {
-                decrease.classList.remove('active-last');
-                decrease.classList.add('visibile');
-
-                if (fontSize !== plus5Max) {
-                    el.style.fontSize = fontSize + 2 + "px";
-                    el.style.wordWrap = "break-word";
-                    el.style.wordBreak = "break-all";
-                    localStorage.setItem("fontSize", el.style.fontSize);
-                } else {
-                    increase.classList.add('active-last');
-                    increase.classList.add('visibile-hide');
-                }
-            } else if (type === "decrease") {
-                increase.classList.remove('active-last');
-                increase.classList.remove('visibile-hide');
-
-                if (fontSize != minus5Min) {
-                    el.style.fontSize = fontSize - 2 + "px";
-                    el.style.wordWrap = "break-word";
-                    el.style.wordBreak = "break-all";
-                    localStorage.setItem("fontSize", el.style.fontSize);
-                } else {
-                    decrease.classList.add('active-last');
-                    decrease.classList.remove('visibile');
-                }
-            } else if (type === "autosize") {
-                decrease.classList.remove('active-last');
-                decrease.classList.remove('visibile');
-                increase.classList.remove('active-last');
-                increase.classList.remove('visibile-hide');
-                el.style.fontSize = "16px";
-                el.style.wordWrap = "normal";
-                el.style.wordBreak = "normal";
-                localStorage.setItem("fontSize", el.style.fontSize);
-            }
-
-
-
-            currentSize.innerText = el.style.fontSize;
-        });
+    if (tr == true) {
+        ChangeSize.current.classList.remove('header__nav-font-size2')
     }
 
-
+    window.localStorage.setItem('color', JSON.stringify(color));
 
     return (
-        <nav className="header__nav" onClick={(evt) => {
+        <nav className="header__nav" ref={openNav} onClick={(evt) => {
             if (evt.target.matches('.header__nav-form-btn')
                 || evt.target.matches('.header__nav')
                 || evt.target.matches('.container')
@@ -111,7 +58,7 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
             }
         }}>
             <div className="container">
-                <ul className="header__nav-lists">
+                <ul className="header__nav-lists" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <li className="header__nav-items">
                         {lang == 'uz' ? (
                             <a href="#" className="header__nav-lang-uz" ref={elLangActive} onClick={(() => {
@@ -163,9 +110,9 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
 
 
                         <hr className="header__nav-line" />
-                        <span className="header__nav-phonespan">
+                        <span className="header__nav-phonespan" >
                             <a href="#" className="header__nav-icon-phone"><Phone /></a>
-                            <a className="header__nav-phonenumber" to="tel:+99871 231-20-02">+99871 231-20-02</a>
+                            <a className="header__nav-phonenumber" href="tel:+99871 231-20-02">+99871 231-20-02</a>
                         </span>
                         <div className="header__nav-closemodal" ref={elModal} onClick={(evt) => {
                             elModal.current.classList.remove('header__nav-openmodal')
@@ -194,42 +141,46 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                         <ul className="header__nav-list" id="nav">
                             <li className="header__nav-item">
                                 <a href="#" className="header__nav-icon"><Home /></a>
-                                <a href="#" className="header__nav-text" style={{ width: lang == 'ru' ? '48px' : '37px' }}>{content[lang].nav.link[0]}</a>
+                                <a href="#" className="header__nav-text" >{content[lang].nav.link[0]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
                                 <a href="#" className="header__nav-icon"><Karta /></a>
-                                <a href="#" className="header__nav-text" style={{ width: '71px' }}>{content[lang].nav.link[1]}</a>
+                                <a href="#" className="header__nav-text">{content[lang].nav.link[1]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
                                 <a href="#" className="header__nav-icon"><Email /></a>
-                                <a href="#" className="header__nav-text" style={{ width: lang == 'ru' ? '36px' : '40px' }}>{content[lang].nav.link[2]}</a>
+                                <a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
                                 <a href="#" className="header__nav-icon"><Voice /></a>
-                                <a href="#" className="header__nav-text" style={{ width: '28px' }}>{content[lang].nav.link[3]}</a>
+                                <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item view" onClick={() => {
                                 elView.current.classList.add('header__nav-openview')
                                 elSearch.current.classList.remove('header__nav-opensearch')
-                                show.current.classList.remove('show')
-                                icon1.current.classList.remove('icon')
-                                icon2.current.classList.remove('icon')
                                 elModal.current.classList.remove('header__nav-openmodal')
                                 elDropdown1.current.classList.remove('header__dropdown-one-open')
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
                             }}>
                                 <a href="#" className="header__nav-icon" ><Eye /></a>
-                                <a href="#" className="header__nav-text" style={{ fontSize:'`${14+size}`+px', width: lang == 'ru' ? '23px' : '48px' }}>{content[lang].nav.link[4]} </a>
+                                <a href="#" className="header__nav-text" >{content[lang].nav.link[4]} </a>
                                 <ul className="header__nav-closeview" ref={elView}>
                                     <li>
                                         <a href="#" className="header__nav-view">
                                             <div className="header__nav-viewdarkmode">
-                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onChange={() => {
+                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
                                                     color == 0 ? setColor(1) : setColor(0)
+                                                    if (color == 1) {
+                                                        evt.currentTarget.classList.add('toggle')
+                                                    }
+                                                    if (color == 0) {
+                                                        evt.currentTarget.classList.remove('toggle')
+                                                    }
+                                                    window.localStorage.setItem('color', JSON.stringify(color));
                                                 }} />
                                             </div>
                                         </a>
@@ -237,7 +188,7 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                     <li><hr className="header__nav-viewline" /></li>
                                     <li className="header__nav-changesize">
                                         <div className="header__nav-my-size">{`${16 + size}`}px</div>
-                                        <span className="header__nav-font-size" style={{}}>
+                                        <span className="header__nav-font-size" ref={ChangeSize}>
                                             {size != 0 ? (
                                                 <a href="#" className="header__nav-decremet decremet" onClick={() => {
                                                     setSize(size - 2)
@@ -263,7 +214,7 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
                             }}>
                                 <a href="#" className="header__nav-icon"><Search icon1={icon1} icon2={icon2} /></a>
-                                <a href="#" ref={show} className='header__nav-text search-text' style={{ width: lang == 'ru' ? '37px' : '53px' }}>{content[lang].nav.link[5]}</a>
+                                <a href="#" ref={show} className='header__nav-text search-text'>{content[lang].nav.link[5]}</a>
                                 <div className="header__nav-closesearch" ref={elSearch}>
                                     <form className="header__nav-form">
                                         <input type="text" className="header__nav-form-input" placeholder="Поиск..." />

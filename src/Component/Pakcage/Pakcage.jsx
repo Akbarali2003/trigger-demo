@@ -2,22 +2,34 @@ import React from "react";
 import './Pakcage.scss';
 import content from "../Localization/content";
 import { CarImg, PropertyImg, TravelImg, InsuranceImg } from './../../Assets/Images/index';
-function Pakcage({ lang, color }) {
+function Pakcage({ lang, color, size }) {
 
     const [change, setChange] = React.useState(0);
     const [page, setPage] = React.useState(0);
     return (
         <section className="pakcage">
             <div className="container">
-                <div className="pakcage__content">
+                <div className="pakcage__content" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <h3 className="pakcage__subtitle">{content[lang].main[1].title}</h3>
                     <span className="pakcage__btns">
-                        <button className={change == 0 ? 'pakcage__btn1-check1' : 'pakcage__btn1'} style={{ color: (color == 0) ? '#1B283B' : '#272727' }} onClick={() => {
+                        <button className='pakcage__btn1' onClick={(evt) => {
                             setChange(0)
+                            if (change == 0) {
+                                evt.currentTarget.classList.add('a')
+                            }
+                            if (change == 1) {
+                                evt.currentTarget.classList.remove('a')
+                            }
                             setPage(0)
                         }}>{content[lang].main[1].btn1}</button>
-                        <button className={change == 1 ? 'pakcage__btn2-check2' : 'pakcage__btn1'} style={{ color: (color == 0) ? '#1B283B' : '#272727' }} onClick={() => {
+                        <button className='pakcage__btn1' onClick={(evt) => {
                             setChange(1)
+                            if (change == 1) {
+                                evt.currentTarget.classList.add('a')
+                            }
+                            if (change == 0) {
+                                evt.currentTarget.classList.remove('a')
+                            }
                             setPage(1)
                         }}>{content[lang].main[1].btn2}</button>
                     </span>

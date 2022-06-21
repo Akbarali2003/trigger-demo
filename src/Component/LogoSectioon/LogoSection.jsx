@@ -20,22 +20,23 @@ function LogoSection() {
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
+                            spaceBetween:0,
                         },
                         576: {
-                            slidesPerView:2,
+                            slidesPerView: 2,
                             spaceBetween: 0,
                         },
                         768: {
-                            slidesPerView:3,
+                            slidesPerView: 3,
                             spaceBetween: 0,
                         },
                         991: {
-                            slidesPerView:3,
+                            slidesPerView: 3,
                             spaceBetween: 0,
                         },
-                        1140:{
-                            slidesPerView:6,
-                            spaceBetween:24,
+                        1140: {
+                            slidesPerView: 6,
+                            spaceBetween: 24,
                         }
                     }}
                     modules={[Pagination, Navigation]}>

@@ -27,11 +27,16 @@
             padding: 16px 17px;
             border-radius: 50%;
             background-color: #fff;
+            animation-name: oneimg;
+            animation-duration: 2s;
         }
         &-two{
             position: relative;
             top: 5px;
             left: -25px;
+            animation-name: twoimg;
+            animation-delay: 2s;
+            animation-duration: 2s;
         }
         &-three{
             position: relative;
@@ -42,10 +47,13 @@
             background-color: #fff;
             width: 22px;
             height: 25px;
+            animation-name: threeimg;
+            animation-delay: 4s;
+            animation-duration: 2s;
         }
         &-four{
             position: relative;
-            left: 0px;
+            top: 0;
             
         }
         &-five{
@@ -57,9 +65,38 @@
             background-color: #fff;
         }
     }
+    @keyframes oneimg {
+        0%{
+            opacity: 0;
+            
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes twoimg {
+        0%{
+            opacity: 0;
+            display: none;
+            
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes threeimg {
+        0%{
+            opacity: 0;
+            
+        }
+        100%{
+            opacity: 1;
+        }
+    }
     &__carimage{
         width: 550px;
         height: 550px;
+        object-fit: contain;
     }
     
     &__slide-image{
@@ -93,7 +130,7 @@
     }
     &__slide-image-text{
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 28px;
     }
     &__list{
@@ -186,6 +223,7 @@
 @media screen and (max-width:768px) {
     .swiper2{
         margin: 0;
+        height: 480px;
         &__content{
             width: 480px;
             height: 480px;
@@ -311,6 +349,65 @@
                 left:65px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
+            }
+        }
+        &__slide-images{
+            position: absolute;
+            top:65px;
+            z-index: 10;
+            &-one{
+                position: absolute;
+                top: 55px;
+                left:-40px;
+                padding: 6px 8px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                & svg{
+                    height: 22px;
+                }
+            }
+            &-two{
+                width: 80px;
+                height: 30px;
+                position: relative;
+                top: 20px;
+                left: -20px;
+                animation-name: twoimg;
+                animation-delay: 2s;
+                animation-duration: 2s;
+            }
+            &-three{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+                left: 50px;
+                padding: 10px 10px 8px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 22px;
+                height: 25px;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 110px;
+                height: 30px;
+                position: relative;
+                top: 20px;
+                left: 10px;
+                
+            }
+            &-five{
+                position: absolute;
+                top: 50px;
+                right: -35px;
+                padding: 8px;
+                border-radius: 50%;
+                background-color: #fff;
             }
         }
     }
