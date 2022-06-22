@@ -172,6 +172,7 @@
             }
             &__item{
                 width: 313px !important;
+                margin-right: 8px !important;
             }
             &__information{
                 width: 256px;   
@@ -183,7 +184,6 @@
             &__span{
                 width: 256px;
             }
-            
             &__img{
                 width: 304px;
                 height: 240px;
@@ -215,15 +215,15 @@
                 z-index: 1;
             }
             &__list{
-                width: 458px !important;
+                width: 474px !important;
                 height: 492px;
                 display: flex;
                 align-items: center; 
                 z-index: 1;
             }
             &__item{
-                width: 340px !important;
-                margin-right: 0;
+                width: 304px !important;
+                margin-right: 12px !important;
             }
             &__information{
                 width: 256px;   
@@ -235,7 +235,6 @@
             &__span{
                 width: 256px;
             }
-            
             &__img{
                 width: 304px;
                 height: 240px;
@@ -274,7 +273,8 @@
                 z-index: 1;
             }
             &__item{
-                width: 300px !important;
+                width: 304px !important;
+                margin-right: 0px !important;
             }
             &__information{
                 width: 256px;   
@@ -286,7 +286,6 @@
             &__span{
                 width: 256px;
             }
-            
             &__img{
                 width: 304px;
                 height: 240px;
@@ -327,6 +326,7 @@
             }
             &__item{
                 width: 296px !important;
+                margin-right: 0px !important;
             }
             &__information{
                 width: 248px;   

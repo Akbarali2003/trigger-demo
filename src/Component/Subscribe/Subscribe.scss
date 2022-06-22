@@ -37,14 +37,13 @@
             color: #96A1AC;
         }
     }
-    
     &__btn{
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
         line-height: 24px;
         color: #FFFFFF;
-        padding: 13.5px 16px;
+        padding: 13px 16px;
         border: none;
         background: #3E96FC;
         border-radius: 0px 10px 10px 0px;
@@ -56,7 +55,6 @@
         }
     }
 }
-
 @media screen and (max-width:991px) {
     .subscribe{
         width: 600px;

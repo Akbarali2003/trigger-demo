@@ -71,10 +71,8 @@
         color: #6B7A8C;
     }
     &__img-family{
-        width: 640px;
-        height: 480px;
         border-radius: 30px;
-        object-fit:contain;
+        object-fit:contain !important;
     }
     .swiper-slide{
         opacity: 0 !important;
@@ -158,9 +156,8 @@
             margin-bottom: 20px;
         }
         &__img-family{
-            width: 648px;
-            height: 480px;
             border-radius: 30px;
+            object-fit:cover;
         }
         &__text{
             width: 720px;
@@ -211,21 +208,21 @@
 @media screen and (max-width:768px) {
     .service{
         padding-top: 80px;
-        height: 729px;
+        height: 837px;
         text-align: left;
         &__content-global{
             position: relative;
-            height: 729px;
+            height: 837px;
         }
         &__content{
             display: flex;
             align-items: center;
             z-index: 1;
-            height: 729px;
+            height: 837px;
         }
         &__content-slide{
             width: 552px;
-            height: 729px;
+            height: 837px;
             display: flex;
             flex-direction: column;
             
@@ -243,8 +240,9 @@
         }
         &__img-family{
             width: 496px;
-            height: 375px;
-            border-radius: 30px;
+            height: 480px;
+            border-radius: 30px !important;
+            object-fit:cover !important;
         }
         &__text{
             width: 552px;
@@ -258,7 +256,7 @@
             align-items: center;
             width: 36px;
             height: 36px;
-            margin-top: -110px;
+            margin-top: -150px;
             position: absolute;
             left: 0;
             border-radius: 50%;
@@ -276,7 +274,7 @@
             box-sizing: border-box;
             width: 36px;
             height: 36px;
-            margin-top: -110px;
+            margin-top: -150px;
             position: absolute;
             left: 52px;
             border-radius: 50%;
@@ -336,6 +334,7 @@
             width: 410.5px;
             height: 400px;
             border-radius: 30px;
+            object-fit: cover !important;
         }
         &__text{
             width: 456px;
@@ -427,7 +426,7 @@
             width: 266.4px;
             height: 360px;
             border-radius: 30px;
-            overflow: hidden;
+            object-fit:cover!important;
         }
         &__text{
             width: 296px;

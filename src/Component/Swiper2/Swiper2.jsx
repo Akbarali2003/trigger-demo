@@ -49,9 +49,9 @@ function Swiper2({ size }) {
                             <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarOne} alt="CarOne" /></SwiperSlide>
                             <SwiperSlide className="swiper2__item"> <img className="swiper2__carimage" src={CarTwo} alt="CarTwo" /></SwiperSlide>
                             <SwiperSlide className="swiper2__item"> <img className="swiper2__carimage" src={CarThree} alt="CarThree" /></SwiperSlide>
-                            {/* <SwiperSlide className="swiper2__item"> <img className="swiper2__carimage" src={CarFour} alt="CarFour" /></SwiperSlide> */}
-                            {/* <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarFive} alt="CarFive" /></SwiperSlide> */}
-                            {/* <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarSix} alt="CarSix" /></SwiperSlide> */}
+                            <SwiperSlide className="swiper2__item"> <img className="swiper2__carimage" src={CarFour} alt="CarFour" /></SwiperSlide>
+                            <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarFive} alt="CarFive" /></SwiperSlide>
+                            <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarSix} alt="CarSix" /></SwiperSlide>
                             <SwiperSlide className="swiper2__item"><img className="swiper2__carimage" src={CarSeven} alt="CarSeven" /></SwiperSlide>
                         </Swiper>
                         <div className="swiper2__slide-image" >

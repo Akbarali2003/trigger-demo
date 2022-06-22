@@ -22,16 +22,16 @@ function Swiper1({ lang, size }) {
                             slidesPerView: 1,
                         },
                         576: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 0,
                         },
                         768: {
-                            slidesPerView: 1,
+                            slidesPerView: 1.5,
                             spaceBetween: 0,
                         },
                         991: {
                             slidesPerView: 2,
-                            spaceBetween: 16,
+                            spaceBetween: 0,
                         },
                         1140: {
                             slidesPerView: 3,

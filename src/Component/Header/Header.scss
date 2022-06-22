@@ -6,6 +6,7 @@
     &__package{
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     &__logoimg{
         width: 117px;
@@ -13,8 +14,8 @@
     &__list{
         display: flex;
         align-items: center;
-        margin-left: 122px;
-        margin-right: 110px;
+        margin-left: 12px;
+        // margin-right: 110px;
     }
     &__item{
         margin: 0 4px 0 4px;
@@ -338,9 +339,7 @@
                 width: 100px;
                 height: 48px;
                 & svg{
-                    vertical-align:middle;
-                    width: 100px;
-                    height: 48px;
+                    object-fit: fill;
                 }
             }
         }
@@ -350,7 +349,47 @@
         &__list{
             display: none;
         }
-        
+        &__list-open{
+            box-sizing: border-box;
+            width: 320px;
+            height: 288px;
+            display: block;
+            position: absolute;
+            top: 436px;
+            left: 0px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            box-sizing: border-box;
+            width: 280px;
+            height: 40px;
+            margin: 0;
+            padding: 8px 6px;
+            border-radius: 8px;
+            &:hover{
+                background-color: #0A2041;
+            }
+        }
+        &__select{
+            height: 24px !important;
+        }
+        &__dropdown-one-open{
+            width: 187px;
+            height: 113px;
+            padding: 8px 0;
+            transform: translate3d(0px, 40px, 0px);
+        }
+        &__dropdown-two-open{
+            width: 187px;
+            height: 113px;
+            transform: translate3d(0px, 80px, 0px);
+            z-index: 10;
+        }
         &__btn{
             font-size: 0.75em;
             margin-left: 21px;

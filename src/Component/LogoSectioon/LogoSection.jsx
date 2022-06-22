@@ -23,7 +23,7 @@ function LogoSection() {
                             spaceBetween:0,
                         },
                         576: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 0,
                         },
                         768: {

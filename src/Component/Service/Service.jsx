@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import Family1 from '../../Assets/Images/family1.png'
 import Family2 from '../../Assets/Images/family2.png'
 import { Pagination, Navigation, EffectFade } from "swiper";
-function Service({ lang,size }) {
+function Service({ lang, size }) {
     return (
         <div className="service">
             <div className="container">
@@ -23,9 +23,8 @@ function Service({ lang,size }) {
                         loop={true}
                         navigation={true}
                         modules={[Pagination, Navigation, EffectFade]}
-                        style={{ fontSize: `${16 + size}` + 'px'}}
+                        style={{ fontSize: `${16 + size}` + 'px' }}
                         className="service__content">
-
                         <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>

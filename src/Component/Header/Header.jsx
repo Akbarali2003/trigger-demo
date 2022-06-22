@@ -17,8 +17,8 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
     const elBar2 = React.useRef();
     const elBar3 = React.useRef();
     const [x, setX] = React.useState(1);
-    const openList=React.useRef();
-    const openNav=React.useRef();
+    const openList = React.useRef();
+    const openNav = React.useRef();
     return (
         <header className="header" onClick={(evt) => {
             if (evt.target.matches('.header')) {
@@ -58,7 +58,7 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                 setSize={setSize}
                 openNav={openNav} />
             <div className="container">
-                <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }}>
+                <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }} >
                     <a href="/"> <LogoImg /></a>
                     <ul className="header__list" ref={openList} >
                         <li className="header__item">
@@ -104,7 +104,6 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                     </ul>
                     <button className="header__btn ">{content[lang].header.btn[0]}</button>
                     <button className="header__bar-toggle" onClick={() => {
-
                         if (x == 1) {
                             elBar1.current.classList.add('bar1')
                             elBar2.current.classList.add('bar2')
@@ -120,7 +119,6 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                             openNav.current.classList.remove('header__nav-open')
                             setX(1)
                         }
-
                     }}>
                         <div className="header__hamburger" >
                             <span className="header__bar" ref={elBar1}></span>
