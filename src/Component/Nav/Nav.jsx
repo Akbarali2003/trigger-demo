@@ -15,6 +15,7 @@ import {
     Search,
     ArrowButton,
 } from '../../Assets/Images/index';
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
     const elLangActive = React.useRef();
@@ -174,13 +175,14 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                             <div className="header__nav-viewdarkmode">
                                                 <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
                                                     color == 0 ? setColor(1) : setColor(0)
+                                                    window.localStorage.setItem('color', JSON.stringify(color));    
                                                     if (color == 1) {
                                                         evt.currentTarget.classList.add('toggle')
                                                     }
                                                     if (color == 0) {
                                                         evt.currentTarget.classList.remove('toggle')
                                                     }
-                                                    window.localStorage.setItem('color', JSON.stringify(color));
+                                                  
                                                 }} />
                                             </div>
                                         </a>

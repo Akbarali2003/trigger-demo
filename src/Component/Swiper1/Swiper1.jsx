@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Swiper1.scss";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation,Autoplay } from "swiper";
 
 function Swiper1({ lang, size }) {
     return (
@@ -20,6 +20,7 @@ function Swiper1({ lang, size }) {
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
+                            spaceBetween: 0,
                         },
                         576: {
                             slidesPerView: 1,
@@ -45,8 +46,9 @@ function Swiper1({ lang, size }) {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    style={{ fontSize: `${16 + size}` + 'px' }}
-                >
+                    style={{
+                        fontSize: `${16 + size}` + 'px'
+                    }}>
                     <SwiperSlide className='swiper1__item'>
                         <img className="swiper1__img" src={UserImg1} alt='Userimg1' />
                         <div className="swiper1__information">

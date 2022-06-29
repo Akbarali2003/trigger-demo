@@ -71,8 +71,10 @@
         color: #6B7A8C;
     }
     &__img-family{
-        border-radius: 30px;
-        object-fit:contain !important;
+        width: 640px;
+        height: 480px;
+        border-radius: 30px !important;
+        object-fit:cover !important;
     }
     .swiper-slide{
         opacity: 0 !important;
@@ -146,7 +148,7 @@
         }
         &__title{
             width: 720px;
-            font-size: 34.4px;
+            font-size: 2.15em;
             line-height: 48px;
             margin: 0;
             margin-bottom: 36px;
@@ -156,12 +158,14 @@
             margin-bottom: 20px;
         }
         &__img-family{
+            width: 640px;
+            height: 480px;
             border-radius: 30px;
             object-fit:cover;
         }
         &__text{
             width: 720px;
-            font-size: 15px;
+            font-size: 0.9375em;
             line-height: 24px;
             height: 96px;
         }
@@ -229,7 +233,7 @@
         }
         &__title{
             width: 552px;
-            font-size: 34.4px;
+            font-size: 2.15em;
             line-height: 48px;
             margin: 0;
             margin-bottom: 36px;
@@ -247,7 +251,7 @@
         &__text{
             width: 552px;
             height: 108px;
-            font-size: 15px;
+            font-size: 0.9375em;
             line-height: 20px;
         }
         .swiper-button-prev{
@@ -314,7 +318,7 @@
         }
         &__title{
             width: 456px;
-            font-size: 34.4px;
+            font-size: 2.15em;
             line-height: 48px;
             margin: 0;
             margin-bottom: 36px;
@@ -339,7 +343,7 @@
         &__text{
             width: 456px;
             height: 136px;
-            font-size: 15px;
+            font-size: 0.9375em;
             line-height: 20px;
         }
         .swiper{
@@ -409,7 +413,7 @@
         }
         &__title{
             width: 296px;
-            font-size: 32px;
+            font-size: 2em;
             line-height: 48px;
             margin: 0;
             margin-bottom: 36px;
@@ -431,7 +435,7 @@
         &__text{
             width: 296px;
             height: 136px;
-            font-size: 15px;
+            font-size: 0.9375em;
             line-height: 20px;
         }
         .swiper{

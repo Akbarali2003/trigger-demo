@@ -1,14 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./App.scss";
 import Header from './Component/Header/Header';
 import Main from './Component/Main/Main';
 import Footer from './Component/Footer/Footer';
-
 export default function App() {
     const [lang, setLang] = React.useState('ru')
-    const [color, setColor] = React.useState(0);
+    const [color, setColor] = useState(
+        JSON.parse(localStorage.getItem("color")) || 0,
+    );
     const [size, setSize] = React.useState(0);
     const elRoot = document.querySelector('#root');
     if (color == 0) {
@@ -18,7 +19,9 @@ export default function App() {
         elRoot.classList.add('black');
         elRoot.classList.remove('white');
     }
-
+    useEffect(() => {
+        localStorage.setItem("color", JSON.stringify(color));
+    }, [color]);
     return (
         <React.Fragment >
             <Header size={size} setSize={setSize} lang={lang} setLang={setLang} color={color} setColor={setColor} />

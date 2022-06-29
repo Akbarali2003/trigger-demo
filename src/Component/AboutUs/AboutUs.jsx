@@ -1,6 +1,6 @@
 import React from "react";
 import './AboutUs.scss';
-import FamilyImg from '../../Assets/Images/family1.png';
+import FamilyImg from '../../Assets/Images/family1.jpg';
 import decor2 from '../../Assets/Images/decor2.png';
 import decor1 from '../../Assets/Images/decor1.png';
 import content from "../Localization/content";
@@ -11,7 +11,7 @@ function AboutUs({ lang, size }) {
             <div className="container">
                 <div className="aboutus__content" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <div className="aboutus__image">
-                        <img src={FamilyImg} alt="FamilyImg" />
+                       <div style={{borderRadius:'30px'}}> <img src={FamilyImg} alt="FamilyImg" /></div>
                         <div className="aboutus__decor-right">
                             <img src={decor2} alt="" />
                         </div>

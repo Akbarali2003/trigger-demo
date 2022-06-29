@@ -17,6 +17,7 @@ function LogoSection() {
             <div className="container">
                 <Swiper className="logosection__list"
                     loop={true}
+                    grabCursor={true}
                     breakpoints={{
                         320: {
                             slidesPerView: 1,

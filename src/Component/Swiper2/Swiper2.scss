@@ -52,8 +52,8 @@
         z-index: 10;
         &-one{
             position: absolute;
-            top: 55px;
-            left:-80px;
+            top: 50px;
+            left:-70px;
             padding: 16px 17px;
             border-radius: 50%;
             background-color: #fff;
@@ -63,9 +63,8 @@
         &-two{
             position: relative;
             top: 5px;
-            left: -25px;
+            left: -15px;
             animation-name: twoimg;
-            // animation-delay: 2s;
             animation-duration: 2s;
         }
         &-three{
@@ -88,8 +87,8 @@
         }
         &-five{
             position: absolute;
-            top: 40px;
-            right: -60px;
+            top: 45px;
+            right: -50px;
             padding: 16px 15px 15px 17px;
             border-radius: 50%;
             background-color: #fff;

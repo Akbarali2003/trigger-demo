@@ -5,7 +5,7 @@
     z-index: 1;   
 
     &__list{
-        width: 1140px;
+        max-width: 1140px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 92px;
@@ -228,7 +228,7 @@
                 width: 249px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 margin-right: 32px;
@@ -242,7 +242,7 @@
                 width: 196px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 transition: 0.35s;
@@ -305,7 +305,7 @@
                 width: 249px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 margin-right: 32px;
@@ -319,7 +319,7 @@
                 width: 196px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 transition: 0.35s;
@@ -382,7 +382,7 @@
                 width: 240px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 margin-right: 19px;
@@ -396,7 +396,7 @@
                 width: 196px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 transition: 0.35s;
@@ -426,7 +426,7 @@
         
         &__discription{
             width: 294px;
-            font-size: 16px;
+            font-size: 1em;
             line-height: 26px;
         }
         
@@ -473,7 +473,7 @@
                 width: 240px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 margin-right: 19px;
@@ -489,7 +489,7 @@
                 width: 196px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 1em;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.7);
                 transition: 0.35s;

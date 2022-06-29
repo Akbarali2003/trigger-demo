@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import Family1 from '../../Assets/Images/family1.png'
+import Family1 from '../../Assets/Images/family1.jpg'
 import Family2 from '../../Assets/Images/family2.png'
-import { Pagination, Navigation, EffectFade } from "swiper";
+import { Pagination, Navigation, EffectFade,Autoplay } from "swiper";
 function Service({ lang, size }) {
     return (
         <div className="service">
@@ -22,7 +22,11 @@ function Service({ lang, size }) {
                         effect={"fade"}
                         loop={true}
                         navigation={true}
-                        modules={[Pagination, Navigation, EffectFade]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: true,
+                        }}
+                        modules={[Pagination, Navigation, EffectFade,Autoplay]}
                         style={{ fontSize: `${16 + size}` + 'px' }}
                         className="service__content">
                         <SwiperSlide className="service__content-slide">
@@ -61,7 +65,7 @@ function Service({ lang, size }) {
                                     sint deserunt ut voluptate aute id deserunt nisi.2
                                 </p>
                             </div>
-                            <img src={Family1} className='service__img-family' alt="Family1" />
+                           <div style={{borderRadius:'30px'}}> <img src={Family1} className='service__img-family' alt="Family1" /></div>
                         </SwiperSlide>
                         <SwiperSlide className="service__content-slide">
                             <div>
