@@ -81,6 +81,27 @@
         transition: 0.35s;
     }
 }
+
+@media screen and (max-width:1024px) {
+    .support{
+        padding-bottom: 0;
+        &__title{
+            font-size: 2.25em;
+            line-height: 48px;
+            margin-bottom: 36px;
+        }
+        &__item{
+            padding: 49px 24px;
+        }
+        &__decor6{
+            display: none;
+        }
+        &__decor5{
+            display: none;
+        }
+    }
+}
+
 @media screen and (min-width:992px) {
     .support{
         &__decor6{
@@ -180,6 +201,76 @@
         }
     }
 }
+
+@media screen and(max-width:415px) {
+    .support{
+        &__title{
+            width: 390px;
+            font-size: 2em;
+        }
+        &__list{
+            width: 390px;
+        }
+        &__item{
+            width: 316px;
+        }
+        &__text{
+            width: 316px;
+        }
+    }
+}
+@media screen and(max-width:394px) {
+    .support{
+        &__title{
+            width: 369px;
+            font-size: 2em;
+        }
+        &__list{
+            width: 369px;
+        }
+        &__item{
+            width: 295px;
+        }
+        &__text{
+            width: 295px;
+        }
+    }
+}
+@media screen and(max-width:376px) {
+    .support{
+        &__title{
+            width: 351px;    
+            font-size: 2em;
+        }
+        &__list{
+            width: 351px;    
+        }
+        &__item{
+            width: 277px;
+        }
+        &__text{
+            width: 277px;
+        }
+    }
+}
+@media screen and(max-width:361px) {
+    .support{
+        &__title{
+            width: 336px;    
+            font-size: 2em;
+        }
+        &__list{
+            width: 336px;    
+        }
+        &__item{
+            width: 262px;
+        }
+        &__text{
+            width: 262px;
+        }
+    }
+}
+
 @media screen and (max-width:320px) {
     .support{
         padding-bottom: 0px;

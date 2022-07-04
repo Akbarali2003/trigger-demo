@@ -1,8 +1,8 @@
 .main{
     position: relative;
+    border: none;
     z-index: 1;
 }
-
 @media screen and (max-width:991px) {
     .main{
         display: block;

@@ -3,7 +3,7 @@ import './Header.scss';
 import { LogoImg } from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
-import { ArrowButton,ScrollUp } from '../../Assets/Images/index';
+import { ArrowButton, ScrollUp } from '../../Assets/Images/index';
 function Header({ lang, setLang, color, setColor, size, setSize }) {
     const elModal = React.useRef();
     const elDropdown1 = React.useRef();
@@ -28,7 +28,6 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                 || evt.target.matches('.header__dropdown-one-open')
                 || evt.target.matches('.header__dropdown-item-custom1')
                 || evt.target.matches('.header__close-item-one')) {
-                console.log(evt.target);
                 elDropdown1.current.classList.remove('header__dropdown-one-open')
                 elSearch.current.classList.remove('header__nav-opensearch')
                 show.current.classList.remove('show')
@@ -42,7 +41,6 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                 elDropdown2.current.classList.remove('header__dropdown-two-open')
             }
         }}>
-            {/* <div className="scrollup"><ScrollUp/></div> */}
             <Nav
                 lang={lang}
                 setLang={setLang}

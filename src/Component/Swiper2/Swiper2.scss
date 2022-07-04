@@ -177,6 +177,35 @@
     }
 }
 
+@media screen and(max-width:1024px) {
+    .swiper2{
+        margin-left: 20px;
+        &__content{
+            width: 480px;
+            height: 480px;
+        }
+        &__list{
+            display: flex;
+            width: 480px;
+            height: 480px;
+        }
+        &__item{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 480px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+}
+
 @media screen and (max-width:991px) {
     .swiper2{
         margin: 0;
@@ -306,6 +335,386 @@
                 left:65px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
+            }
+        }
+    }
+}
+@media screen and (max-width:415px) {
+    .swiper2{
+        &__content{
+            width: 390px;
+        }
+        &__list{
+            display: flex;
+            width: 390px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 390px;
+            height: 480px;
+        }
+        &__slide-images{
+            position: absolute;
+            top:65px;
+            z-index: 10;
+            &-one{
+                position: absolute;
+                top: 55px;
+                left:-70px;
+                padding: 10px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                & svg{
+                    height: 22px;
+                }
+            }
+            &-two{
+                width: 100px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: -40px;
+                animation-name: twoimg;
+                animation-delay: 2s;
+                animation-duration: 2s;
+            }
+            &-three{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+                left: 60px;
+                padding: 10px 10px 8px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 22px;
+                height: 25px;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 130px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: 10px;
+                
+            }
+            &-five{
+                position: absolute;
+                top: 50px;
+                right: -60px;
+                padding: 8px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 30px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 52px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                padding: 8px 6px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width:394px) {
+    .swiper2{
+        &__content{
+            width: 369px;
+        }
+        &__list{
+            display: flex;
+            width: 369px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 369px;
+            height: 480px;
+        }
+        &__slide-images{
+            position: absolute;
+            top:65px;
+            z-index: 10;
+            &-one{
+                position: absolute;
+                top: 55px;
+                left:-60px;
+                padding: 10px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                & svg{
+                    height: 22px;
+                }
+            }
+            &-two{
+                width: 100px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: -30px;
+                animation-name: twoimg;
+                animation-delay: 2s;
+                animation-duration: 2s;
+            }
+            &-three{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+                left: 65px;
+                padding: 10px 10px 8px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 22px;
+                height: 25px;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 130px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: 15px;
+                
+            }
+            &-five{
+                position: absolute;
+                top: 50px;
+                right: -55px;
+                padding: 8px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 50px;
+            right:10px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 52px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                padding: 8px 6px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width:376px) {
+    .swiper2{
+        &__content{
+            width: 351px;
+        }
+        &__list{
+            display: flex;
+            width: 351px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 351px;
+            height: 480px;
+        }
+        &__slide-images{
+            position: absolute;
+            top:65px;
+            z-index: 10;
+            &-one{
+                position: absolute;
+                top: 60px;
+                left:-50px;
+                padding: 10px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                & svg{
+                    height: 22px;
+                }
+            }
+            &-two{
+                width: 100px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: -25px;
+                animation-name: twoimg;
+                animation-delay: 2s;
+                animation-duration: 2s;
+            }
+            &-three{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+                left: 70px;
+                padding: 10px 10px 8px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 22px;
+                height: 25px;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 130px;
+                height: 40px;
+                position: relative;
+                top: 25px;
+                left: 18px;
+                transform:rotate(5deg);
+            }
+            &-five{
+                position: absolute;
+                top: 65px;
+                right: -50px;
+                padding: 8px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 50px;
+            right:10px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 52px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                padding: 8px 6px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width:361px) {
+    .swiper2{
+        &__content{
+            width: 336px;
+        }
+        &__list{
+            display: flex;
+            width: 336px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 336px;
+            height: 480px;
+        }
+        &__slide-images{
+            position: absolute;
+            top:65px;
+            z-index: 10;
+            &-one{
+                position: absolute;
+                top: 60px;
+                left:-50px;
+                padding: 10px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                & svg{
+                    height: 22px;
+                }
+            }
+            &-two{
+                width: 100px;
+                height: 40px;
+                position: relative;
+                top: 20px;
+                left: -25px;
+                animation-name: twoimg;
+                animation-delay: 2s;
+                animation-duration: 2s;
+            }
+            &-three{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+                left: 70px;
+                padding: 10px 10px 8px 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 22px;
+                height: 25px;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 130px;
+                height: 40px;
+                position: relative;
+                top: 25px;
+                left: 18px;
+                transform:rotate(5deg);
+            }
+            &-five{
+                position: absolute;
+                top: 65px;
+                right: -50px;
+                padding: 8px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 50px;
+            right:10px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 50px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                padding: 8px 6px;
+                margin-right: 12px;
             }
         }
     }

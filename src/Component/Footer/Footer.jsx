@@ -2,7 +2,7 @@ import React from "react";
 import './Footer.scss';
 import FooterLogo from '../../Assets/Images/footer-logo.svg';
 import TwitterImg from '../../Assets/Images/twitter.svg';
-import InstagramImg from '../../Assets/Images/instagram.svg';
+import LinkedImg from '../../Assets/Images/instagram.svg';
 import FaceBookImg from '../../Assets/Images/facebook.svg';
 import GithubImg from '../../Assets/Images/github.svg';
 import FingerImg from '../../Assets/Images/finger.svg';
@@ -21,7 +21,7 @@ function Footer({ lang, size }) {
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
                         <span className="footer__logos">
                             <a target='_blank' href="https://twitter.com"><img src={TwitterImg} alt="TwitterImg" /></a>
-                            <a target='_blank' href="https://instagram.com"><img src={InstagramImg} alt="InstagramImg" /></a>
+                            <a target='_blank' href="https://linkedin.com"><img src={LinkedImg} alt="LinkedImg" /></a>
                             <a target='_blank' href="https://facebook.com"><img src={FaceBookImg} alt="FaceBookImg" /></a>
                             <a target='_blank' href="https://github.com"><img src={GithubImg} alt="GithubImg" /></a>
                             <a target='_blank' href=""><img src={FingerImg} alt="FingerImg" /></a>

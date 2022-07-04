@@ -30,9 +30,17 @@ function Swiper1({ lang, size }) {
                             slidesPerView: 1.5,
                             spaceBetween: 0,
                         },
+                        820:{
+                            slidesPerView:2,
+                            spaceBetween:0,
+                        },
                         991: {
                             slidesPerView: 2,
                             spaceBetween: 0,
+                        },
+                        1024:{
+                            slidesPerView:2,
+                            spaceBetween:0,
                         },
                         1140: {
                             slidesPerView: 3,

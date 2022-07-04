@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react"; 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./App.scss";
@@ -30,3 +30,5 @@ export default function App() {
         </React.Fragment>
     );
 }
+
+

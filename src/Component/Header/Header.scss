@@ -4,6 +4,7 @@
     flex-direction: column;
     padding-bottom: 72px;
     position: relative;
+    border: none;
     &__package{
         max-width: 1140px;
         display: flex;
@@ -253,8 +254,8 @@
 }
 @media screen and (max-width:768px) {
     .header{
-        padding-top: 36px;
-        padding-bottom: 55px;
+        padding-top: 32px;
+        padding-bottom: 36px;
         &__list{
             display: none;
         }
@@ -285,15 +286,15 @@
             }
         }
         &__btn{
-            margin-left: 240px;
+            margin-left: 236px;
             margin-right: 8px;
         }
     }
 }
 @media screen and (max-width:576px) {
     .header{
-        padding-top: 36px;
-        padding-bottom: 52px;
+        padding-top: 32px;
+        padding-bottom: 36px;
         &__list{
             display: none;
         }
@@ -329,9 +330,155 @@
         }
     }
 }
+@media screen and (max-width:540px) {
+    .header{
+        &__list{
+            display: none;
+        }
+        &__list-open{
+            box-sizing: border-box;
+            width: 480px;
+            height: 278px;
+            display: block;
+            position: absolute;
+            top: 437px;
+            left: 40px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            width: 436px;
+        }
+    }
+}
+@media screen and (max-width:415px) {
+    .header{
+        &__package{
+            width: 390px;
+        }
+        &__list-open{
+            box-sizing: border-box;
+            width: 480px;
+            height: 278px;
+            display: block;
+            position: absolute;
+            top: 437px;
+            left: 0px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            width: 378px;
+        }
+        &__btn{
+            margin-left: 75px;
+            margin-right: 8px;
+        }
+    }
+}
+@media screen and (max-width:394px) {
+    .header{
+        &__package{
+            width: 369px;
+        }
+        &__list-open{
+            box-sizing: border-box;
+            width:393px;
+            height: 278px;
+            display: block;
+            position: absolute;
+            top: 415px;
+            left: 0px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            width: 357px;
+        }
+        &__btn{
+            font-size: 0.75em;
+            margin-left: 75px;
+            margin-right: 8px;
+        }
+    }
+}
+@media screen and (max-width:376px) {
+    .header{
+        &__package{
+            width: 351px;
+        }
+        &__list-open{
+            box-sizing: border-box;
+            width:375px;
+            height: 278px;
+            display: block;
+            position: absolute;
+            top: 415px;
+            left: 0px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            width: 335px;
+            padding: 8px 6px;
+        }
+        &__btn{
+            font-size: 0.75em;
+            margin-left: 60px;
+            margin-right: 8px;
+        }
+    }
+}
+@media screen and (max-width:361px) {
+    .header{
+        &__package{
+            width: 336px;
+        }
+        &__list-open{
+            box-sizing: border-box;
+            width:360px;
+            height: 278px;
+            display: block;
+            position: absolute;
+            top: 415px;
+            left: 0px;
+            z-index: 3;
+            background-color: #0D2851;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom:20px;
+            margin: 0;
+        }
+        &__item{
+            width: 320px;
+            padding: 8px 6px;
+        }
+        &__btn{
+            font-size: 0.75em;
+            margin-left: 45px;
+            margin-right: 8px;
+        }
+    }
+}
 @media screen and (max-width:320px) {
     .header{
-        padding-top: 36px;
+        padding-top: 34px;
         padding-bottom: 40px;
         &__package{
             display: flex;

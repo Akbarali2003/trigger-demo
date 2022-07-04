@@ -21,7 +21,15 @@ function LogoSection() {
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
-                            spaceBetween:0,
+                            spaceBetween: 0,
+                        },
+                        394: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                        },
+                        415: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
                         },
                         576: {
                             slidesPerView: 1,
@@ -33,6 +41,10 @@ function LogoSection() {
                         },
                         991: {
                             slidesPerView: 3,
+                            spaceBetween: 0,
+                        },
+                        1024: {
+                            slidesPerView: 6,
                             spaceBetween: 0,
                         },
                         1140: {
@@ -52,7 +64,7 @@ function LogoSection() {
             <script>
 
             </script>
-        </div>
+        </div >
     )
 }
 export default LogoSection;

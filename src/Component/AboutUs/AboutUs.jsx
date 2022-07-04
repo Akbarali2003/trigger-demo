@@ -9,7 +9,7 @@ function AboutUs({ lang, size }) {
     return (
         <section className="aboutus">
             <div className="container">
-                <div className="aboutus__content" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
+                <div className="aboutus__content" style={{ fontSize: `${16 + size}` + 'px'}}>
                     <div className="aboutus__image">
                        <div style={{borderRadius:'30px'}}> <img src={FamilyImg} alt="FamilyImg" /></div>
                         <div className="aboutus__decor-right">
@@ -24,11 +24,11 @@ function AboutUs({ lang, size }) {
                         <p className="aboutus__text">{content[lang].main[2].text}</p>
                         <button className="aboutus__btn">{content[lang].main[2].btn}</button>
                         <ul className="aboutus__list" >
-                            <li className="aboutus__item" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
+                            <li className="aboutus__item" style={{ fontSize: `${16 + size}` + 'px'}}>
                                 <span className="aboutus__count">300 <p className="aboutus__plus">+</p></span>
                                 <p className="aboutus__discription">{content[lang].main[2].discription[0]}</p>
                             </li>
-                            <li className="aboutus__item" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
+                            <li className="aboutus__item" style={{ fontSize: `${16 + size}` + 'px'}}>
                                 <span className="aboutus__count">500 <p className="aboutus__plus">+</p></span>
                                 <p className="aboutus__discription">{content[lang].main[2].discription[1]}</p>
                             </li>

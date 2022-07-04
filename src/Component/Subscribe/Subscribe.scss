@@ -55,6 +55,21 @@
         }
     }
 }
+
+@media screen and (max-width:1024px) {
+    .subscribe{
+        width: 840px;
+        transform: translateY(80px);
+        padding: 68px 60px;
+        &__title{
+            font-size: 2em;
+            line-height: 48px;
+            margin-right: 27px;
+            
+        }
+    }
+}
+
 @media screen and (max-width:991px) {
     .subscribe{
         width: 600px;
@@ -160,6 +175,106 @@
             &:hover{
                 background: #2263ae;
             }
+        }
+    }
+}
+@media screen and(max-width:415px) {
+    .subscribe{
+        width: 366px;
+        &__title{
+            width: 320px;
+            font-size: 1.5em;
+        }
+        &__email{
+            width: 230px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 122px;
+            font-size: 0.9em;
+            padding: 10.5px 10px;
+        }
+    }
+}
+@media screen and(max-width:394px) {
+    .subscribe{
+        width: 345px;
+        &__title{
+            width: 320px;
+            font-size: 1.5em;
+        }
+        &__email{
+            width: 209px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            font-size: 0.9em;
+            padding: 10.5px 10px;
+        }
+    }
+}
+@media screen and(max-width:376px) {
+    .subscribe{
+        width: 327px;
+        &__title{
+            width: 320px;
+            font-size: 1.5em;
+        }
+        &__email{
+           width: 190px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            font-size: 0.9em;
+            padding: 11px 10px;
+        }
+    }
+}
+@media screen and(max-width:361px) {
+    .subscribe{
+        width: 312px;
+        &__title{
+            width: 312px;
+            font-size: 1.5em;
+        }
+        &__email{
+           width: 175px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            font-size: 0.9em;
+            padding: 10px 10px;
         }
     }
 }
