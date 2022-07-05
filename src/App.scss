@@ -70,6 +70,7 @@ input{
     border: 3px solid #0c2f62;
 }
 .white{
+    overflow: hidden;
     filter: grayscale(0);
     .header{
         background-color: #0C2F62;
@@ -402,6 +403,7 @@ input{
     }
 }
 .black{
+    overflow: hidden;
     filter: grayscale(1);
     .header{
         background-color: #2B2B2B ;
@@ -844,7 +846,7 @@ input{
 }
 @media screen and (max-width:768px) {
     .container{
-        width: 552px;
+        width: 720px;
         margin: 0 auto;
     }
 }

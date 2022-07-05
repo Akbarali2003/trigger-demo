@@ -283,7 +283,7 @@
     .footer{
         padding-top: 164px;
         &__list{
-            width: 552px;
+            width: 720px;
             display: flex;
             flex-direction: column;
             margin-bottom: 64px;
@@ -291,12 +291,12 @@
         &__item{
             max-width: 100%;
             &:nth-child(1){
-                width: 552px;
+                width: 720px;
             }
         }
         
         &__discription{
-            width: 552px;
+            width: 720px;
         }
         
         &__logos{
@@ -304,14 +304,14 @@
         }
         
         &__ellist{
-            width: 552px;
+            width: 720px;
             display: flex;
             justify-content: space-between;
         }
         
         
         &__line{
-            width: 552px;
+            width: 720px;
             height: 1px;
             border: none;
             margin: 0;
@@ -322,7 +322,7 @@
             display: flex;
             flex-wrap: wrap;
             &-one{
-                width: 552px;
+                width: 720px;
                 margin-bottom: 24px;
                 margin-right: 0px;
             }

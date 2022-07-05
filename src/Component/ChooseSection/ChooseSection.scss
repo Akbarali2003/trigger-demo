@@ -107,28 +107,35 @@
             flex-wrap: wrap
         }
         &__item{
-            width: 350px;
+            width: 345px;
             height: 206px;
-            margin-right: 14.4px;
             padding: 23px 24px;
+            margin: 0;
             &:nth-child(2n){
                 margin-right: 0;
             }
             &:nth-child(1){
-                margin-bottom: 14.4px;
+                margin: 7.2px;
             }
             &:nth-child(2){
-                margin-bottom: 14.4px;
+                margin: 7.2px;
+            }
+            &:nth-child(3){
+                margin: 7.2px;
+            }
+            &:last-child{
+                margin: 7.2px;
             }
         }
         &__item-subtitle{
-            width: 310px;
+            width: 295px;
             height: 24px;
+            font-size: 1.125em;
             line-height: 24px;
             margin-top: 12px;
         }
         &__item-discription{
-            width: 300px !important;
+            width: 295px !important;
         }
     }
 }
@@ -170,7 +177,7 @@
             flex-wrap: wrap
         }
         &__item{
-            width: 343px;
+            width: 345px;
             height: 230px;
             margin-right: 14.4px;
             padding: 23px 24px;
@@ -178,11 +185,24 @@
                 margin-right: 0;
             }
             &:nth-child(1){
-                margin-bottom: 14.4px;
+                margin: 0;
+                margin-left: 7.2px;
                 margin-right: 14.4px;
+                margin-bottom: 11px;
             }
             &:nth-child(2){
+                margin: 0;
+                margin-left: 7.2px;
                 margin-bottom: 14.4px;
+            }
+            &:nth-child(3){
+                margin: 0;
+                margin-left: 7.2px;
+                margin-right: 14.4px;
+            }
+            &:last-child{
+                margin: 0;
+                margin-left: 7.2px;
             }
         }
         &__item-subtitle{
@@ -200,33 +220,43 @@
             margin-bottom: 36px;
         }
         &__list{
-            width:552px;
+            width: 720px;
             display: flex;
             flex-wrap: wrap
         }
         &__item{
-            width: 265px;
-            height: 230px;
+            width: 345px;
+            height: 206px;
             margin-right: 14.4px;
             padding: 23px 24px;
             &:nth-child(2n){
                 margin-right: 0;
             }
             &:nth-child(1){
+                margin: 0;
+                margin-right: 14.4px;
                 margin-bottom: 11px;
             }
             &:nth-child(2){
+                margin: 0;
                 margin-bottom: 14.4px;
+            }
+            &:nth-child(3){
+                margin: 0;
+                margin-right: 14.4px;
+            }
+            &:last-child{
+                margin: 0;
             }
         }
         &__item-subtitle{
-            width: 215px;
-            height: 48px;
+            width: 295px;
+            height: 24px;
             line-height: 24px;
             margin-top: 12px;
         }
         &__item-discription{
-            width: 215px !important;
+            width: 295px !important;
             font-size: 1em;
             line-height: 24px;
         }
@@ -322,6 +352,9 @@
         &__item{
             width: 382px;
         }
+        &__item-subtitle{
+            width: 332px;
+        }
         &__item-discription{
             width: 332px !important;
         }
@@ -339,8 +372,11 @@
         &__item{
             width: 370px;
         }
+        &__item-subtitle{
+            width: 320px;
+        }
         &__item-discription{
-            width: 312px !important;
+            width: 320px !important;
         }
     }
 }
@@ -378,7 +414,7 @@
             width: 329px;
             height: 204px !important;
             margin: 3.5px !important;
-           
+            
         }
         &__item-subtitle{
             width: 279px;

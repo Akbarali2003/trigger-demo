@@ -27,7 +27,7 @@ function Swiper1({ lang, size }) {
                             spaceBetween: 0,
                         },
                         768: {
-                            slidesPerView: 1.5,
+                            slidesPerView: 2,
                             spaceBetween: 0,
                         },
                         820:{

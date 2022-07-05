@@ -1,6 +1,6 @@
 .support{
     text-align: center;
-    padding-bottom: 120px;
+    padding-bottom: 4px;
     &__content{
         position: relative;
     }
@@ -86,7 +86,6 @@
     .support{
         padding-bottom: 0;
         &__title{
-            font-size: 2.25em;
             line-height: 48px;
             margin-bottom: 36px;
         }
@@ -130,6 +129,17 @@
         }
     }
 }
+@media screen and (max-width:820px) {
+    .support{
+        &__title{
+            width: 700px;
+            font-size: 2.5em;
+            line-height: 48px;
+            margin-bottom: 36px;
+            
+        }
+    }
+}
 @media screen and (max-width:768px) {
     .support{
         padding-bottom: 0px;
@@ -137,17 +147,16 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
         }
         &__item{
-            width: 478px;
+            width: 289px;
             margin: 0;
             &:nth-child(1){
-                margin-bottom: 24px;   
+                margin-right: 24px; 
             }
         }
         &__text{
-            width: 478px;
+            width: 289px;
             font-size: 1em;
         }
         &__decor6{
@@ -157,7 +166,7 @@
             display: none;
         }
         &__title{
-            width: 552px;
+            width: 720px;
             font-size: 2.15em;
             line-height: 48px;
             margin-bottom: 36px;
@@ -264,6 +273,7 @@
         }
         &__item{
             width: 262px;
+            margin-right: 0 !important;
         }
         &__text{
             width: 262px;
@@ -290,7 +300,6 @@
             font-size: 2em;
             line-height: 48px;
             margin-bottom: 36px;
-            
         }
         &__list{
             max-width: 100%;
@@ -302,7 +311,7 @@
         &__item{
             text-align: center;
             width: 222px;
-            margin-right: 0;
+            margin-right: 0px !important;
             margin-bottom: 24px;
             &:last-child{
                 margin-bottom: 0;

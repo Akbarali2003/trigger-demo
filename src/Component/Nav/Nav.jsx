@@ -16,6 +16,7 @@ import {
     ArrowButton,
 } from '../../Assets/Images/index';
 import { getValue } from "@testing-library/user-event/dist/utils";
+import { scryRenderedDOMComponentsWithTag } from "react-dom/test-utils";
 
 function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
     const elLangActive = React.useRef();
@@ -73,9 +74,8 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
                             })}>
                                 <span className="header__nav-icon-flag"><img src={UZFlagImg} alt="flag-uz" /></span>
-                                Узб
+                                Uz
                                 <span className="header__nav-icon-arrow"><ArrowButton /></span>
-
                             </a>
                         ) : (lang == 'ru') ? (
                             <a href="#" className="header__nav-lang-ru" ref={elLangActive} onClick={(() => {
@@ -89,7 +89,7 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
                             })}>
                                 <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
-                                Рус
+                                RU
                                 <span className="header__nav-icon-arrow"><ArrowButton /></span>
                             </a>
                         ) : (lang == 'en') ? (
@@ -104,7 +104,7 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                 elDropdown2.current.classList.remove('header__dropdown-two-open')
                             })}>
                                 <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
-                                Инг
+                                Eng
                                 <span className="header__nav-icon-arrow"><ArrowButton /></span>
                             </a>
                         ) : null}
@@ -115,26 +115,26 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                             <a href="#" className="header__nav-icon-phone"><Phone /></a>
                             <a className="header__nav-phonenumber" href="tel:+99871 231-20-02">+99871 231-20-02</a>
                         </span>
-                        <div className="header__nav-closemodal" ref={elModal} onClick={(evt) => {
+                        <div className="header__nav-closemodal" ref={elModal} onClick={() => {
                             elModal.current.classList.remove('header__nav-openmodal')
                         }}>
                             <a href="#" className="header__nav-otherlang" onClick={() => {
                                 setLang('uz')
                             }}>
                                 <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-uz" /></span>
-                                узбекча (лотин)
+                                O`zbekcha
                             </a>
                             <a href="#" className="header__nav-otherlang" onClick={() => {
                                 setLang('ru')
                             }}>
                                 <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
-                                русча
+                                Русский
                             </a>
                             <a href="#" className="header__nav-otherlang" onClick={() => {
                                 setLang('en')
                             }}>
                                 <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
-                                ингилизча
+                                English
                             </a>
                         </div>
                     </li>
@@ -175,14 +175,14 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                             <div className="header__nav-viewdarkmode">
                                                 <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
                                                     color == 0 ? setColor(1) : setColor(0)
-                                                    window.localStorage.setItem('color', JSON.stringify(color));    
+                                                    window.localStorage.setItem('color', JSON.stringify(color));
                                                     if (color == 1) {
                                                         evt.currentTarget.classList.add('toggle')
                                                     }
                                                     if (color == 0) {
                                                         evt.currentTarget.classList.remove('toggle')
                                                     }
-                                                  
+
                                                 }} />
                                             </div>
                                         </a>

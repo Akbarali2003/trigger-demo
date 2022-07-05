@@ -42,6 +42,9 @@
         cursor: pointer;
         right: 152px;
         z-index: 10;
+        &:active{
+            background-color: #fff;
+        }
     }
     
     &__btn1-check1{
@@ -143,6 +146,9 @@
 
 @media screen and (max-width:991px) {
     .pakcage{
+        &__content{
+            width: 620px;
+        }
         &__list{
             width: 620px;
             display: flex;
@@ -207,20 +213,21 @@
 @media screen and (max-width:768px) {
     .pakcage{
         &__content{
-            width: 450px;
+            width: 620px;
+            left: 24px;
         }
         &__list{
-            width: 450px;
+            width: 620px;
             display: flex;
             align-items: center; 
             flex-wrap: wrap;
         }
         &__item{
-            width: 212px;
+            width: 296px;
             height: 142px;
             text-align: center;
             margin-right: 0px;
-            
+            padding: 32px 20px 20px 20px;
             &:nth-child(1){
                 margin-bottom: 24px;
                 margin-right: 24px;
@@ -282,6 +289,7 @@
         &__content{
             width: 356px;
             padding: 32px 16px 16px 16px ;
+            left: 13.2px;
         }
         &__list{
             width: 356px;
@@ -321,6 +329,7 @@
         &__content{
             width: 338px;
             padding: 32px 16px 16px 16px ;
+            left: 11.8px;
         }
         &__list{
             width: 338px;
@@ -360,6 +369,7 @@
         &__content{
             width: 319px;
             padding: 32px 16px 16px 16px ;
+            left: 12.1px;
         }
         &__list{
             width: 319px;
@@ -399,6 +409,7 @@
         &__content{
             width: 304px;
             padding: 32px 16px 16px 16px ;
+            left: 12px;
         }
         &__btns{
             width: 296px;
@@ -477,8 +488,10 @@
         &__content{
             width: 264px;
             padding: 32px 16px 16px 16px;
+            left: 11.6px;
         }
         &__btns{
+            width: 250px;
             border-radius: 10px;
             margin-bottom: 48px;
             padding: 4px;

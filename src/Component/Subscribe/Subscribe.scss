@@ -108,14 +108,14 @@
 }
 @media screen and (max-width:768px) {
     .subscribe{
-        width: 432px;
+        width: 600px;
         display: flex;
         flex-direction: column;
         text-align: center;
         padding: 68px 60px;
         transform: translateY(95px);
         &__title{
-            width: 426px;
+            width: 600px;
             font-size: 2em;
             line-height: 48px;
             color: #FFFFFF;
@@ -123,7 +123,7 @@
             margin-bottom: 24px;
         }
         &__email{
-            width: 265.5px;
+            width:433px;
             &::placeholder{
                 font-style: normal;
                 font-weight: 400;

@@ -553,7 +553,7 @@
         }
         &__nav-open{
             display: block;
-            left: 50px;
+            left:47px;
         }
         &__nav-lists{
             padding-left: 14px;
@@ -574,7 +574,7 @@
             display: none;
         }
         &__nav-open{
-            width: 572px;
+            width: 744px;
             box-sizing: border-box;
             display: block;
             padding: 0;
@@ -584,19 +584,19 @@
             position: absolute;
             z-index: 10;
             top: 95px;
-            left: 95px;
+            left: 12px;
         }
         &__nav-lists{
-            width: 528px;
+            width: 696px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             padding: 24px;
-            padding-left: 14px;
+            padding-left: 10px;
             padding-bottom: 0;
         }
         &__nav-items{
-            width: 504px;
+            width: 680px;
             height: 74px;
             margin-bottom: 8px;
             display: flex;
@@ -613,7 +613,7 @@
             
         }
         &__nav-item{
-            width: 504px;
+            width: 680px;
             height: 38px;
             border-radius: 8px;
             box-sizing: border-box;
@@ -630,7 +630,7 @@
             
         }
         &__nav-phonespan{
-            width: 504px;
+            width: 680px;
             border-radius: 8px;
             display: flex;
             justify-content: start;
@@ -640,7 +640,7 @@
             }
         }
         &__nav-lang-ru{
-            width: 504px;
+            width: 680px;
             padding: 10px 8px ;
             border-radius: 8px;
             &:hover{
@@ -648,7 +648,7 @@
             }
         }
         &__nav-lang-uz{
-            width: 504px;
+            width: 680px;
             padding: 10px 8px ;
             border-radius: 8px;
             &:hover{
@@ -656,7 +656,7 @@
             }
         }
         &__nav-lang-en{
-            width: 504px;
+            width: 680px;
             padding: 10px 8px ;
             border-radius: 8px;
             &:hover{
@@ -671,9 +671,9 @@
             
         }
         &__nav-opensearch{
-            width: 552px;
+            width:696px;
             height: 53px;
-            transform: translate3d(-30px,250px, 0px);
+            transform: translate3d(0px,235px, 0px);
             z-index: 10;
             
         }
@@ -684,9 +684,9 @@
             align-items: center;
         }
         &__nav-form-input{
-            width: 473px;
-            height: 40px;
-            padding: 16px 16px;
+            width: 587px;
+            height: 21px;
+            padding: 14.5px 16px;
             outline: none;
             border: none;
             border-radius: 10px 0 0px 10px !important;
@@ -997,10 +997,10 @@
             width: 362px;
         }
         &__nav-form{
-            width: 374px;
+            width: 368px;
         }
         &__nav-form-input{
-            width: 266px;
+            width: 260px;
             height: 21px;
             padding: 16px 16px;
             outline: none;

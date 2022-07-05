@@ -106,7 +106,7 @@
             justify-content: space-between;
         }
         &__item{
-            width: 264px;
+            width: 298px;
             padding: 42px 22px 22px;
             margin-right: 0;
         }
@@ -188,11 +188,10 @@
         &__list{
             display: flex;
             flex-wrap: wrap;
-            // justify-content: space-between;
-            justify-content: center;
         }
         &__item{
             box-sizing: border-box;
+            width: 342px;
             height: 297px;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
@@ -369,7 +368,7 @@
             justify-content: center;
         }
         &__item{
-            height:259px;
+            height:325px !important;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
             position: relative;

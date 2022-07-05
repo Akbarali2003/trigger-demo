@@ -187,13 +187,13 @@
         height: 796px;
         padding-bottom: 125px;
         &__global{
-            width: 552px;
+            width: 720px;
             height: 756px;
             display: flex;
             flex-direction: column; 
         }
         &__title{
-            width: 552px;
+            width: 720px;
         }
         &__text{
             width: 400px;
@@ -256,7 +256,7 @@
             line-height: 48px;
         }
         &__text{
-            width: 373px;
+            width: 390px;
             font-size: 1em;
         }
         &__slide{
@@ -433,7 +433,7 @@
             color: #96A1AC;
             background: #FFFFFF;
             border-radius: 10px 0px 0px 10px;
-            padding: 12.5px 8px 12px 12px;
+            padding: 14px 8px 13.5px 12px;
             border: none;
             outline: none;
             transition: 0.35s;
@@ -444,8 +444,7 @@
         &__input{
             width: 136px;
             height: 14px !important;
-            padding: 13px 8px;
-            padding-bottom: 12.5px;
+            padding: 14px 8px;
             border: none;
         }
         &__btn{
@@ -454,7 +453,7 @@
             text-align: center;
             color: #FFFFFF;
             border-radius: 0px 10px 10px 0px;
-            padding: 12px 7px;
+            padding: 11px 7px;
             border: none;
             cursor: pointer;
             transition: 0.35s;

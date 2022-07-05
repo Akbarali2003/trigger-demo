@@ -158,6 +158,12 @@
     .swiper-button-next{
         display: none;
     }
+    .swiper-pagination-bullets{
+        height: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .swiper-pagination-bullet{
         width: 5px !important;
         height: 5px !important;
@@ -755,7 +761,7 @@
                 width: 15px;
                 height: 15px;
                 background: white;
-                bottom: 57px;
+                bottom: 52px;
                 left:65px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
