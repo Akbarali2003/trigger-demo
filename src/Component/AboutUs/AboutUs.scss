@@ -91,6 +91,11 @@
 
 @media screen and (max-width:1024px){
     .aboutus{
+        &__content{
+            &>div:nth-child(2){
+                width: 480px;
+            }
+        }
         &__image{
             width: 440px;
             height: 440px;
@@ -102,11 +107,13 @@
             }
         }
         &__subtitle{
+            width: 480px;
             font-size: 2.25em;
             line-height: 48px;
             margin-bottom: 28px;
         }
         &__text{
+            width: 480px;
             font-size: 0.9375em;
             line-height: 24px;
             margin-bottom: 40px;
@@ -143,10 +150,19 @@
             flex-wrap: wrap;
             justify-content: center;
             & div:last-child{
-                padding-left: 40px;
+                width: 546px;
+                padding-left: 0px;
             }
         }
         &__image{
+            width: 546px;
+            height: 546px;
+            margin-right: 0px; 
+            position: relative;
+            & div img{
+                width: 546px;
+                height: 546px;
+            }
             margin: 0;
             margin-bottom: 24px;
         }
@@ -157,11 +173,11 @@
             display: none;
         }
         &__subtitle{
-            width: 480px;
+            width: 546px;
             margin-bottom: 28px;
         }
         &__text{
-            width: 480px;
+            width: 546px;
             margin-bottom: 40px;
         }
         &__btn{
@@ -172,7 +188,7 @@
 @media screen and (max-width:912px) {
     .aboutus{
         &__content{
-            height: 1090px;
+            height: 980px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -184,6 +200,7 @@
         &__image{
             width: 546px;
             height: 546px;
+            margin-bottom: 0;
             & div{
                 & img{
                     width: 546px;
@@ -246,21 +263,58 @@
 }
 @media screen and (max-width:576px) {
     .aboutus{
-        padding-top: 860px;
+        padding-top: 520px;
         &__content{
+            height: 994px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
         &__image{
-            width: 410.5px;
-            height: 410.5px;
+            width: 496.8px;
+            height: 496.8px;
             & img{
-                width: 410.5px !important;
-                height: 410.5px !important;
+                width: 496.8px !important;
+                height: 496.8px !important;
             }
             margin: 0;
-            margin-bottom: 24px;
+        }
+        &__decor-right{
+            display: none;
+        }
+        &__decor-left{
+            display: none;
+        }
+        &__subtitle{
+            width: 552px;
+            font-size: 2.15em;
+            line-height: 48px;
+            margin-bottom: 28px;
+        }
+        &__text{
+            width: 552px;
+            line-height: 24px;
+            margin-bottom: 40px;
+        }
+        &__btn{
+            margin-bottom: 40px;
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .aboutus{
+        padding-top: 855px;
+        &__content{
+            height: 922px;
+        }
+        &__image{
+            width: 410.4px;
+            height: 410.4px;
+            & img{
+                width: 410.4px !important;
+                height: 410.4px !important;
+            }
+            margin: 0;
         }
         &__decor-right{
             display: none;
@@ -281,13 +335,6 @@
         }
         &__btn{
             margin-bottom: 40px;
-        }
-    }
-}
-@media screen and (max-width:540px) {
-    .aboutus{
-        &__content{
-            height: 922px;
         }
     }
 }
@@ -357,11 +404,11 @@
             }
         }
         &__image{
-            width:316px;
-            height:316px;
+            width:332.6px;
+            height:332.6px;
             & img {
-                width: 316px !important;
-                height: 316px !important;
+                width: 332.6px !important;
+                height: 332.6px !important;
             }   
         }
         &__subtitle{

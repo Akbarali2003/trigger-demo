@@ -23,12 +23,20 @@ function LogoSection() {
                             slidesPerView: 1,
                             spaceBetween: 0,
                         },
+                        376: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                        },
                         394: {
                             slidesPerView: 1,
                             spaceBetween: 0,
                         },
                         415: {
                             slidesPerView: 1,
+                            spaceBetween: 0,
+                        },
+                        540: {
+                            slidesPerView: 2,
                             spaceBetween: 0,
                         },
                         576: {

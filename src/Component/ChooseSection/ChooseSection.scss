@@ -100,7 +100,7 @@
 
 @media screen and (max-width:991px) {
     .choosesection{
-        padding-top: 104px;
+        padding-top: 80px;
         &__list{
             width: 720px;
             display: flex;
@@ -147,7 +147,7 @@
             flex-wrap: wrap
         }
         &__item{
-            width: 343px;
+            width: 345px;
             height: 206px;
             margin-right: 14.4px;
             padding: 23px 24px;
@@ -160,6 +160,9 @@
             }
             &:nth-child(2){
                 margin-bottom: 14.4px;
+            }
+            &:nth-child(3){
+                margin-right: 14.4px;
             }
         }
         &__item-subtitle{
@@ -222,6 +225,7 @@
         &__list{
             width: 720px;
             display: flex;
+            justify-content: center;
             flex-wrap: wrap
         }
         &__item{
@@ -266,16 +270,16 @@
     .choosesection{
         padding-top: 80px;
         &__subtitle{
-            width: 456px;
+            width: 552px;
             margin-bottom: 36px;
         }
         &__list{
-            width:456px;
+            width:552px;
             display: flex;
             flex-wrap: wrap
         }
         &__item{
-            width: 447px;
+            width: 540px;
             height: 182px;
             margin-right: 14.4px;
             padding: 23px 24px;
@@ -285,9 +289,14 @@
                 margin-right: 0;
             }
             &:nth-child(1){
+                margin-right: 0;
                 margin-bottom: 9px;
             }
             &:nth-child(2){
+                margin-bottom: 9px;
+            }
+            &:nth-child(3){
+                margin-right: 0;
                 margin-bottom: 9px;
             }
             &:last-child{
@@ -295,13 +304,13 @@
             }
         }
         &__item-subtitle{
-            width: 397px;
+            width: 490px;
             height: 24px;
             line-height: 24px;
             margin-top: 12px;
         }
         &__item-discription{
-            width: 397px !important;
+            width: 490px !important;
             font-size: 1em;
             line-height: 24px;
         }
@@ -309,6 +318,15 @@
 }
 @media screen and (max-width:540px) {
     .choosesection{
+        &__subtitle{
+            width: 456px;
+            margin-bottom: 36px;
+        }
+        &__list{
+            width:456px;
+            display: flex;
+            flex-wrap: wrap
+        }
         &__item{
             width:446px;
             height: 182px !important;
@@ -337,6 +355,17 @@
             &:last-child{
                 margin-bottom: 0;
             }
+        }
+        &__item-subtitle{
+            width: 396px;
+            height: 24px;
+            line-height: 24px;
+            margin-top: 12px;
+        }
+        &__item-discription{
+            width: 396px !important;
+            font-size: 1em;
+            line-height: 24px;
         }
     }
 }

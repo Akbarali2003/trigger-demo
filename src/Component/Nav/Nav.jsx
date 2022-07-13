@@ -4,21 +4,9 @@ import content from "../Localization/content";
 import RUFlagImg from '../../Assets/Images/flag-ru.svg';
 import UZFlagImg from '../../Assets/Images/flag-uz.svg';
 import ENFlagImg from '../../Assets/Images/flag-en.svg';
+import { Phone, Home, Karta, Email, Voice, Eye, Search, ArrowButton, } from '../../Assets/Images/index';
 
-import {
-    Phone,
-    Home,
-    Karta,
-    Email,
-    Voice,
-    Eye,
-    Search,
-    ArrowButton,
-} from '../../Assets/Images/index';
-import { getValue } from "@testing-library/user-event/dist/utils";
-import { scryRenderedDOMComponentsWithTag } from "react-dom/test-utils";
-
-function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
+function Nav({ lang, setLang, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
     const elLangActive = React.useRef();
     const ChangeSize = React.useRef()
     let tr = false
@@ -51,7 +39,6 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                 show.current.classList.add('show')
                 icon1.current.classList.add('icon')
                 icon2.current.classList.add('icon')
-                elModal.current.classList.remove('header__nav-openmodal')
             }
             if (evt.target.matches('.header__nav-lang-uz') ||
                 evt.target.matches('.header__nav-lang-ru') ||
@@ -63,80 +50,111 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                 <ul className="header__nav-lists" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <li className="header__nav-items">
                         {lang == 'uz' ? (
-                            <a href="#" className="header__nav-lang-uz" ref={elLangActive} onClick={(() => {
-                                elModal.current.classList.add('header__nav-openmodal')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                show.current.classList.remove('show')
-                                icon1.current.classList.remove('icon')
-                                icon2.current.classList.remove('icon')
-                                elView.current.classList.remove('header__nav-openview')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                            })}>
-                                <span className="header__nav-icon-flag"><img src={UZFlagImg} alt="flag-uz" /></span>
-                                Uz
-                                <span className="header__nav-icon-arrow"><ArrowButton /></span>
-                            </a>
+                            <div className="dropdown header__nav-item">
+                                <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                    UZ
+                                    <span className="header__arrow"><ArrowButton /></span>
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('uz')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-uz" /></span>
+                                            O`zbekcha
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('ru')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                            Русский
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button">
+                                            <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
+                                            English
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         ) : (lang == 'ru') ? (
-                            <a href="#" className="header__nav-lang-ru" ref={elLangActive} onClick={(() => {
-                                elModal.current.classList.add('header__nav-openmodal')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                show.current.classList.remove('show')
-                                icon1.current.classList.remove('icon')
-                                icon2.current.classList.remove('icon')
-                                elView.current.classList.remove('header__nav-openview')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                            })}>
-                                <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
-                                RU
-                                <span className="header__nav-icon-arrow"><ArrowButton /></span>
-                            </a>
+                            <div className="dropdown header__nav-item">
+                                <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                    RU
+                                    <span className="header__arrow"><ArrowButton /></span>
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('uz')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-uz" /></span>
+                                            O`zbekcha
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('ru')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                            Русский
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('en')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
+                                            English
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         ) : (lang == 'en') ? (
-                            <a href="#" className="header__nav-lang-en" ref={elLangActive} onClick={(() => {
-                                elModal.current.classList.add('header__nav-openmodal')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                show.current.classList.remove('show')
-                                icon1.current.classList.remove('icon')
-                                icon2.current.classList.remove('icon')
-                                elView.current.classList.remove('header__nav-openview')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                            })}>
-                                <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
-                                Eng
-                                <span className="header__nav-icon-arrow"><ArrowButton /></span>
-                            </a>
+                            <div className="dropdown header__nav-item">
+                                <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                    EN
+                                    <span className="header__arrow"><ArrowButton /></span>
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('uz')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-uz" /></span>
+                                            O`zbekcha
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('ru')
+                                        }}>
+                                            <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                            Русский
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item header__nav-otherlang" type="button">
+                                            <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
+                                            English
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         ) : null}
-
-
                         <hr className="header__nav-line" />
-                        <span className="header__nav-phonespan" >
-                            <a href="#" className="header__nav-icon-phone"><Phone /></a>
-                            <a className="header__nav-phonenumber" href="tel:+99871 231-20-02">+99871 231-20-02</a>
-                        </span>
-                        <div className="header__nav-closemodal" ref={elModal} onClick={() => {
-                            elModal.current.classList.remove('header__nav-openmodal')
-                        }}>
-                            <a href="#" className="header__nav-otherlang" onClick={() => {
-                                setLang('uz')
-                            }}>
-                                <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-uz" /></span>
-                                O`zbekcha
+                        <li className="header__nav-item">
+                            <a href="tel:+99871 231-20-02" className="header__nav-phonespan" >
+                                <span className="header__nav-icon-phone"><Phone /></span>
+                                <p className="header__nav-phonenumber" >+99871 231-20-02</p>
                             </a>
-                            <a href="#" className="header__nav-otherlang" onClick={() => {
-                                setLang('ru')
-                            }}>
-                                <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
-                                Русский
-                            </a>
-                            <a href="#" className="header__nav-otherlang" onClick={() => {
-                                setLang('en')
-                            }}>
-                                <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
-                                English
-                            </a>
-                        </div>
+                        </li>
                     </li>
                     <li className="header__nav-items">
                         <ul className="header__nav-list" id="nav">
@@ -160,19 +178,15 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                 <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
-                            <li className="header__nav-item view" onClick={() => {
-                                elView.current.classList.add('header__nav-openview')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                elModal.current.classList.remove('header__nav-openmodal')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                            }}>
-                                <a href="#" className="header__nav-icon" ><Eye /></a>
-                                <a href="#" className="header__nav-text" >{content[lang].nav.link[4]} </a>
-                                <ul className="header__nav-closeview" ref={elView}>
-                                    <li>
-                                        <a href="#" className="header__nav-view">
-                                            <div className="header__nav-viewdarkmode">
+                            <li className="header__nav-item view">
+                                <div className="dropdown">
+                                    <button className="btn text-light border-0 d-flex align-items-center p-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" className="header__nav-icon" ><Eye /></a>
+                                        <a href="#" className="header__nav-text" >{content[lang].nav.link[4]} </a>
+                                    </button>
+                                    <ul className="dropdown-menu" style={{width:'163px'}} aria-labelledby="dropdownMenu2">
+                                        <li>
+                                            <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button">
                                                 <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
                                                     color == 0 ? setColor(1) : setColor(0)
                                                     window.localStorage.setItem('color', JSON.stringify(color));
@@ -184,45 +198,46 @@ function Nav({ lang, setLang, elModal, elSearch, show, icon1, icon2, color, setC
                                                     }
 
                                                 }} />
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li><hr className="header__nav-viewline" /></li>
-                                    <li className="header__nav-changesize">
-                                        <div className="header__nav-my-size">{`${16 + size}`}px</div>
-                                        <span className="header__nav-font-size" ref={ChangeSize}>
-                                            {size != 0 ? (
-                                                <a href="#" className="header__nav-decremet decremet" onClick={() => {
-                                                    setSize(size - 2)
-                                                }}>A-</a>
-                                            ) : null}
-                                            <a href="#" className="header__nav-auto auto " onClick={() => {
-                                                setSize(0)
-                                            }}>auto</a>
-                                            {size != 12 ? (
-                                                <a href="#" className="header__nav-incremet incremet " onClick={() => {
-                                                    setSize(size + 2)
-                                                }}>A+</a>
-                                            ) : null}
-                                        </span>
-                                    </li>
-                                </ul>
+                                            </button>
+                                        </li>
+                                        <li><hr className="header__nav-viewline" /></li>
+                                        <li className="header__nav-changesize dropdown-not-close">
+                                            <div className="header__nav-my-size">{`${16 + size}`}px</div>
+                                            <span className="header__nav-font-size" ref={ChangeSize}>
+                                                {size != 0 ? (
+                                                    <span className="header__nav-decremet decremet" onClick={() => {
+                                                        setSize(size - 2)
+                                                    }}>A-</span>
+                                                ) : null}
+                                                <span className="header__nav-auto auto " onClick={() => {
+                                                    setSize(0)
+                                                }}>auto</span>
+                                                {size != 12 ? (
+                                                    <span className="header__nav-incremet incremet " onClick={() => {
+                                                        setSize(size + 2)
+                                                    }}>A+</span>
+                                                ) : null}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
-                            <li className="header__nav-item search" onClick={() => {
-                                elSearch.current.classList.add('header__nav-opensearch')
-                                elView.current.classList.remove('header__nav-openview')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                            }}>
-                                <a href="#" className="header__nav-icon"><Search icon1={icon1} icon2={icon2} /></a>
-                                <a href="#" ref={show} className='header__nav-text search-text'>{content[lang].nav.link[5]}</a>
-                                <div className="header__nav-closesearch" ref={elSearch}>
-                                    <form className="header__nav-form">
-                                        <input type="text" className="header__nav-form-input" placeholder="Поиск..." />
-                                        <button className="header__nav-form-btn" >Поиск</button>
-                                    </form>
-                                </div>
+                            <li className="header__nav-item search" >
+                                <li className="dropdown">
+                                    <button className="btn text-light border-0 d-flex align-items-center p-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" className="header__nav-icon"><Search /></a>
+                                        <a href="#" className='header__nav-text search-text'>{content[lang].nav.link[5]}</a>
+                                    </button>
+                                    <ul className="dropdown-menu header__nav-closesearch" style={{padding:'0',borderRadius:'10px'}} aria-labelledby="dropdownMenu2">
+                                        {/* <div className="header__nav-closesearch"> */}
+                                            <form className="header__nav-form">
+                                                <input type="text" className="header__nav-form-input" placeholder="Поиск..." />
+                                                <button className="header__nav-form-btn" >Поиск</button>
+                                            </form>
+                                        {/* </div> */}
+                                    </ul>
+                                </li>
                             </li>
                         </ul>
                     </li>

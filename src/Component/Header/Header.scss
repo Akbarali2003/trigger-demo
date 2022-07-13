@@ -34,9 +34,11 @@
         line-height: 24px;
         border: none;
         cursor: pointer;
-        margin: 0 12px 0 12px;
         transition: 0.35s;
-        
+        color: #fff;
+        &:hover{
+            color: #0d6efd;
+        }
     }
     &__arrow{
         display: flex;
@@ -44,7 +46,6 @@
         margin-left: 8px;
         & svg path{
             fill-opacity: 1;
-            
         }
     }
     &__dropdown-one-close{
@@ -129,7 +130,7 @@
         border-radius: 10px;
         cursor: pointer;
         transition: 0.35s;
-        
+        outline: none;
     }
     &__bar-toggle{
         display: none;
@@ -148,7 +149,7 @@
             height: 288px;
             display: block;
             position: absolute;
-            top: 492px;
+            top: 425px;
             z-index: 3;
             background-color: #0D2851;
             padding: 24px;
@@ -162,6 +163,10 @@
             height: 44px;
             margin: 0;
             padding: 10px 8px;
+            border-radius: 8px;
+            &:hover{
+                background-color: #0A2041 !important;
+            }
         }
         &__btn{
             margin-left: 401px;
@@ -170,6 +175,7 @@
         &__select{
             font-size: 0.75em;
             margin: 0;
+            padding: 0;
         }
         &__discription{
             font-size: 0.75em;
@@ -186,6 +192,9 @@
             background-color: transparent;
             border-radius: 0.25rem;
             transition: box-shadow 0.15s ease-in-out;
+            &:paused{
+                pointer-events: none;
+            }
         }
         &__hamburger{
             width: 30px;
@@ -311,12 +320,12 @@
         }
         &__list-open{
             box-sizing: border-box;
-            width: 480px;
+            width: 576px;
             height: 288px;
             display: block;
             position: absolute;
             top: 436px;
-            left: 50px;
+            left: 0px;
             z-index: 3;
             background-color: #0D2851;
             padding: 20px;
@@ -326,7 +335,7 @@
         }
         &__item{
             box-sizing: border-box;
-            width: 480px;
+            width: 536px;
             height: 44px;
             margin: 0;
             padding: 10px 8px;
@@ -336,7 +345,7 @@
             }
         }
         &__btn{
-            margin-left: 137.5px;
+            margin-left: 237px;
             margin-right: 8px;
         }
     }
@@ -362,7 +371,11 @@
             margin: 0;
         }
         &__item{
-            width: 436px;
+            width: 440px;
+        }
+        &__btn{
+            margin-left: 140px;
+            margin-right: 8px;
         }
     }
 }
@@ -545,8 +558,8 @@
             z-index: 10;
         }
         &__btn{
-            width: 79px !important;
-            height: 24px !important;
+            width: 111px !important;
+            height: 46px !important;
             font-size: 0.75em;
             margin-left: 0px;
             margin-right: 0px;

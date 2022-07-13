@@ -61,40 +61,26 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                 <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }} >
                     <a href="/"> <LogoImg /></a>
                     <ul className="header__list" ref={openList} >
-                        <li className="header__item">
-                            <a className="header__select" href="#" onClick={(() => {
-                                elDropdown1.current.classList.add('header__dropdown-one-open')
-                                elDropdown2.current.classList.remove('header__dropdown-two-open')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                elView.current.classList.remove('header__nav-openview')
-                                elModal.current.classList.remove('header__nav-openmodal')
-                            })}>
+                        <li className="dropdown header__item">
+                            <button className="btn header__select text-light border-0 d-flex align-items-center pt-0 pb-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                 {content[lang].header.text[0]}
                                 <span className="header__arrow"><ArrowButton /></span>
-                            </a>
-                            <ul className="header__dropdown-one-close" ref={elDropdown1}>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom1" href="#">Action</a></li>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom1" href="#">Another action</a></li>
-                                <li className="header__dropdown-item"><hr className="header__dropdown-line" /></li>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom1" href="#">Something else here</a></li>
+                            </button>
+                            <ul className="dropdown-menu" style={{zIndex:'1000'}} aria-labelledby="dropdownMenu2">
+                                <li><button className="dropdown-item" type="button">Action</button></li>
+                                <li><button className="dropdown-item" type="button">Another action</button></li>
+                                <li><button className="dropdown-item" type="button">Something else here</button></li>
                             </ul>
                         </li>
-                        <li className="header__item">
-                            <a className="header__select header__close-item-one" href="#" onClick={(() => {
-                                elDropdown2.current.classList.add('header__dropdown-two-open')
-                                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                                elSearch.current.classList.remove('header__nav-opensearch')
-                                elView.current.classList.remove('header__nav-openview')
-                                elModal.current.classList.remove('header__nav-openmodal')
-                            })}>
+                        <li className="dropdown header__item ">
+                            <button className="btn header__select text-light border-0 d-flex align-items-center pt-0 pb-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                 {content[lang].header.text[1]}
                                 <span className="header__arrow"><ArrowButton /></span>
-                            </a>
-                            <ul className="header__dropdown-two-close" ref={elDropdown2}>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom2" href="#">Action</a></li>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom2" href="#">Another action</a></li>
-                                <li className="header__dropdown-item"><hr className="header__dropdown-line" /></li>
-                                <li className="header__dropdown-item"><a className="header__dropdown-item-custom2" href="#">Something else here</a></li>
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><button className="dropdown-item" type="button">Action</button></li>
+                                <li><button className="dropdown-item" type="button">Another action</button></li>
+                                <li><button className="dropdown-item" type="button">Something else here</button></li>
                             </ul>
                         </li>
                         <li className="header__item"><a href="#" className="header__discription">{content[lang].header.text[2]}</a></li>

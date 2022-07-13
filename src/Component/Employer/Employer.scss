@@ -37,6 +37,8 @@
     }
     
     &__marksimg{
+        width: 44px;
+        height: 45px;
         position: absolute;
         top: -20px;
         left: 20px;
@@ -106,7 +108,7 @@
             justify-content: space-between;
         }
         &__item{
-            width: 298px;
+            width: 310px;
             padding: 42px 22px 22px;
             margin-right: 0;
         }
@@ -137,7 +139,8 @@
             justify-content: space-between;
         }
         &__item{
-            height: 233px;
+            width: 342px;
+            height: 300px;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
             position: relative;
@@ -238,6 +241,64 @@
         background-image: none;
         padding-bottom: 80px;
         &__title{
+            width: 552px;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+        &__list{
+            width: 552px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            width: 344px;
+            height: 300px !important;
+            margin-right: 0px;
+            padding: 42px 22px 22px 22px;
+            position: relative;
+            &:nth-child(1){
+                margin-bottom: 32px;
+            }
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__marksimg{
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            padding: 11px 10px ;
+            background: #3E96FC;
+            box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
+            border-radius: 10px;
+        }
+        &__discription{
+            width: 298px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 26px;
+            color: #6B7A8C;
+            margin-bottom: 16px;
+            
+        }
+        &__user{
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .employer{
+        content: '';
+        background-image: none;
+        padding-bottom: 80px;
+        &__title{
             width: 456px;
             margin-bottom: 36px;
             text-align: center;
@@ -249,7 +310,8 @@
             justify-content: center;
         }
         &__item{
-            height: 323px !important;
+            width: 344px;
+            height: 300px !important;
             margin-right: 0px;
             padding: 42px 22px 22px 22px;
             position: relative;

@@ -360,6 +360,92 @@
     .footer{
         padding-top: 140px;
         &__list{
+            width: 552px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 64px;
+        }
+        &__item{
+            max-width: 100%;
+            &:nth-child(1){
+                width: 552px;
+            }
+        }
+        
+        &__discription{
+            width: 552px;
+        }
+        
+        &__logos{
+            margin-bottom: 18px;
+        }
+        
+        &__ellist{
+            width: 552px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        
+        &__line{
+            width: 552px;
+            height: 1px;
+            border: none;
+            margin: 0;
+            margin-bottom: 48px;
+            background:rgba(255, 255, 255, 0.15);
+        }
+        &__links{
+            display: flex;
+            flex-wrap: wrap;
+            &-one{
+                width: 720px;
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+            &-two{
+                width: 240px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1em;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 19px;
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            &-three{
+                width: 196px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1em;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                transition: 0.35s;
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .footer{
+        padding-top: 140px;
+        &__ellist{
+            width: 456px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__elitem:nth-child(3){
+            width: 456px;
+            margin-top: 24px;
+        }
+        &__list{
             width: 456px;
             display: flex;
             flex-direction: column;

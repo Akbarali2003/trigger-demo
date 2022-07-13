@@ -42,6 +42,7 @@
         cursor: pointer;
         right: 152px;
         z-index: 10;
+        // pointer-events:  none;
         &:active{
             background-color: #fff;
         }
@@ -60,6 +61,7 @@
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        pointer-events: none;
     }
     &__btn2{
         font-style: normal;
@@ -72,6 +74,7 @@
         padding: 12px 20px 12px 16px;
         border: none;
         cursor: pointer;
+        pointer-events: none;
         left: 166px;
     }
     &__btn2-check2{
@@ -87,6 +90,7 @@
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        pointer-events: none;
     }
     &__list{
         width: 1040px;
@@ -102,7 +106,7 @@
         margin-right: 24px;
         padding: 37px 24px 23px 24px;
         background: #FFFFFF;
-        border: 2px solid #E7EAEE;
+        border: 1px solid #E7EAEE;
         border-radius: 18px;
         transition: 0.35s;
         &:last-child{
@@ -133,13 +137,14 @@
 @media screen and(max-width:1024px) {
     .pakcage{
         &__content{
-            width: 860px;
+            width: 960px;
         }
         &__list{
             width: 860px;
         }
         &__item{
             width: 197px;
+            padding: 32px 20px 20px 20px;
         }
     }
 }
@@ -147,7 +152,7 @@
 @media screen and (max-width:991px) {
     .pakcage{
         &__content{
-            width: 620px;
+            width: 720px;
         }
         &__list{
             width: 620px;
@@ -179,7 +184,7 @@
 @media screen and (max-width:912px) {
     .pakcage{
         &__content{
-            width: 620px;
+            width: 720px;
         }
         &__list{
             width: 620px;
@@ -188,7 +193,7 @@
             flex-wrap: wrap;
         }
         &__item{
-            width: 296px;
+            width: 298px;
             margin-right: 20px;
         }
     }
@@ -196,7 +201,7 @@
 @media screen and (max-width:820px) {
     .pakcage{
         &__content{
-            width: 620px;
+            width: 720px;
         }
         &__list{
             width: 620px;
@@ -205,7 +210,7 @@
             flex-wrap: wrap;
         }
         &__item{
-            width: 296px;
+            width: 298px;
             margin-right: 24px;
         }
     }
@@ -213,17 +218,18 @@
 @media screen and (max-width:768px) {
     .pakcage{
         &__content{
-            width: 620px;
+            width: 720px;
             left: 24px;
         }
         &__list{
             width: 620px;
             display: flex;
+            justify-content: center;
             align-items: center; 
             flex-wrap: wrap;
         }
         &__item{
-            width: 296px;
+            width: 298px;
             height: 142px;
             text-align: center;
             margin-right: 0px;
@@ -250,16 +256,58 @@
 @media screen and (max-width:576px) {
     .pakcage{
         &__content{
-            width: 356px;
+            width: 552px;
+            left: 12px;
         }
         &__list{
-            width: 356px;
+            width: 452px;
             display: flex;
             align-items: center; 
             flex-wrap: wrap;
         }
         &__item{
-            width: 362px;
+            width: 214px;
+            height: 142px;
+            text-align: center;
+            margin-right: 0px;
+            margin-bottom: 24px;
+            &:nth-child(1){
+                margin-bottom: 24px;
+                margin-right: 12px;
+            }
+            &:nth-child(2){
+                margin-left: 12px;
+                margin-bottom: 24px;
+            }
+            &:nth-child(3){
+                margin-right: 12px;
+                margin-bottom: 0;
+            }
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+            &:last-child{
+                margin-left: 12px;
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .pakcage{
+        &__content{
+            width: 456px;
+            left: auto;
+        }
+        &__list{
+            width: 452px;
+            display: flex;
+            align-items: center; 
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 356px;
             height: 142px;
             text-align: center;
             margin-right: 0px;
@@ -269,15 +317,18 @@
                 margin-right: 0px;
             }
             &:nth-child(2){
+                margin-left: 0px;
                 margin-bottom: 24px;
             }
             &:nth-child(3){
                 margin-right: 0px;
+                margin-bottom: 24px;
             }
             &:nth-child(2n){
                 margin-right: 0;
             }
             &:last-child{
+                margin-left: 0px;
                 margin-right: 0;
                 margin-bottom: 0;
             }
@@ -287,18 +338,18 @@
 @media screen and (max-width:415px) {
     .pakcage{
         &__content{
-            width: 356px;
+            width: 390px;
             padding: 32px 16px 16px 16px ;
             left: 13.2px;
         }
         &__list{
-            width: 356px;
+            width: 390px;
             display: flex;
             align-items: center; 
             flex-wrap: wrap;
         }
         &__item{
-            width: 362px;
+            width: 358px;
             height: 142px;
             text-align: center;
             padding:32px 20px 20px 20px ;
@@ -327,9 +378,9 @@
 @media screen and (max-width:394px) {
     .pakcage{
         &__content{
-            width: 338px;
+            width: 369px;
             padding: 32px 16px 16px 16px ;
-            left: 11.8px;
+            left: auto;
         }
         &__list{
             width: 338px;
@@ -367,18 +418,18 @@
 @media screen and (max-width:376px) {
     .pakcage{
         &__content{
-            width: 319px;
+            width: 351px;
             padding: 32px 16px 16px 16px ;
-            left: 12.1px;
+            left: auto;
         }
         &__list{
-            width: 319px;
+            width: 351px;
             display: flex;
             align-items: center; 
             flex-wrap: wrap;
         }
         &__item{
-            width: 319px;
+            width: 337px;
             height: 142px;
             text-align: center;
             padding:32px 20px 20px 20px ;
@@ -407,7 +458,7 @@
 @media screen and (max-width:361px) {
     .pakcage{
         &__content{
-            width: 304px;
+            width: 336px;
             padding: 32px 16px 16px 16px ;
             left: 12px;
         }
@@ -486,12 +537,12 @@
 @media screen and (max-width:320px) {
     .pakcage{
         &__content{
-            width: 264px;
+            width: 296px;
             padding: 32px 16px 16px 16px;
             left: 11.6px;
         }
         &__btns{
-            width: 250px;
+            width: 264px;
             border-radius: 10px;
             margin-bottom: 48px;
             padding: 4px;

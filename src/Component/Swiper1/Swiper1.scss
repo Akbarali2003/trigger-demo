@@ -35,8 +35,8 @@
         border-radius:18px 18px 0 0;
     }
     &__information{
-        width: 284px;   
-        height: 164px;
+        width: 332px;   
+        height: 212px;
         padding: 24px;
         background: #FFFFFF;
         border-radius:0px 0px 18px 18px;
@@ -179,13 +179,14 @@
             width: 375px;
         }
         &__information{
-            width: 375px;   
-            height: 164px;
+            width: 423px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
         }
         &__subtitle{
+            width: 375px;
             line-height: 24px;
         }
         .swiper-button-next{
@@ -216,8 +217,8 @@
             margin-right: 8px !important;
         }
         &__information{
-            width: 256px;   
-            height: 164px;
+            width: 304px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
@@ -263,8 +264,8 @@
             width: 256px;
         }
         &__information{
-            width: 256px;   
-            height: 164px;
+            width: 304px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
@@ -298,8 +299,8 @@
             margin-right: 12px !important;
         }
         &__information{
-            width: 256px;   
-            height: 164px;
+            width: 304px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
@@ -325,11 +326,11 @@
         }
         .swiper-button-prev{
             position: absolute;
-            left: 15px;
+            left: 10px;
         }
         .swiper-button-next{
             position: absolute;
-            right: 10px;
+            right: 15px;
         }
     }
 }
@@ -357,8 +358,58 @@
             margin-right: 0px !important;
         }
         &__information{
-            width: 256px;   
-            height: 164px;
+            width: 304px;   
+            height: 208px;
+            padding: 24px 24px 20px 24px;
+            background: #FFFFFF;
+            border-radius:0px 0px 18px 18px;
+        }
+        &__span{
+            width: 256px;
+        }
+        &__img{
+            width: 304px;
+            height: 240px;
+            border-radius:18px 18px 0 0;
+        }
+        &__subtitle{
+            width: 256px;
+            font-size: 1.125em;
+            line-height: 24px;
+        }
+        &__text{
+            height: 52px;
+            font-size: 1em;
+            line-height: 26px;
+            color: #6B7A8C;
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .swiper1{
+        &__content{
+            width: 456px;
+            display: flex;
+            align-items: center;
+            height: 492px;
+            margin-top: 36px; 
+            position: relative;
+            z-index: 1;
+        }
+        &__list{
+            width: 304px !important;
+            height: 492px;
+            display: flex;
+            align-items: center; 
+            z-index: 1;
+        }
+        &__item{
+            width: 304px !important;
+            margin-right: 0px !important;
+        }
+        &__information{
+            width: 304px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;
@@ -399,7 +450,7 @@
             width: 390px;
         }
         &__information{
-            width: 342px;
+            width: 390px;
         }
         &__subtitle{
             width: 342px;
@@ -433,7 +484,7 @@
             width: 369px;
         }
         &__information{
-            width: 321px;
+            width: 369px;
         }
         &__subtitle{
             width: 321px;
@@ -468,7 +519,7 @@
             width: 351px;
         }
         &__information{
-            width: 303px;
+            width: 351px;
         }
         &__subtitle{
             width: 303px;
@@ -503,7 +554,7 @@
             width: 336px;
         }
         &__information{
-            width: 288px;
+            width: 336px;
         }
         &__subtitle{
             width: 288px;
@@ -546,8 +597,8 @@
             margin-right: 0px !important;
         }
         &__information{
-            width: 248px;   
-            height: 164px;
+            width: 296px;   
+            height: 208px;
             padding: 24px 24px 20px 24px;
             background: #FFFFFF;
             border-radius:0px 0px 18px 18px;

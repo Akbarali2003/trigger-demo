@@ -68,14 +68,14 @@
             animation-duration: 2s;
         }
         &-three{
+            width:56px ;
+            height: 64px;
             position: relative;
-            top: -40px;
+            top: -25px;
             left: -10px;
-            padding: 26px 17px 13px 17px;
+            padding:18px 17px;
             border-radius: 50%;
             background-color: #fff;
-            width: 22px;
-            height: 25px;
             animation-name: threeimg;
             animation-delay: 4s;
             animation-duration: 2s;
@@ -102,13 +102,14 @@
     
     &__slide-image{
         position: absolute;
-        bottom: 55px;
-        right:80px;
+        bottom:52px;
+        right:90px;
         display: flex;
         align-items: center;
         background-color: #fff;
         border-radius: 18px;
         padding: 12px 24px 12px 12px;
+        z-index: 100;
         &::before{
             content: "";
             position: absolute;
@@ -122,8 +123,10 @@
         }
     }
     &__slide-image-img{
-        width: 16px;
-        height: 18px;
+        display: flex;
+        align-items: center;    
+        width: 40px;
+        height: 40px;
         border-radius: 12px;
         padding: 11px 12px ;
         margin-right: 16px;
@@ -215,6 +218,7 @@
 @media screen and (max-width:991px) {
     .swiper2{
         margin: 0;
+        height: 480px;
         &__content{
             width: 480px;
             height: 480px;
@@ -254,6 +258,14 @@
                 transform: rotate(56deg) skew(20deg);
             }
         }
+        .swiper-pagination-bullets{
+            height: 5px;
+            position: absolute;
+            bottom: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 @media screen and (max-width:768px) {
@@ -285,8 +297,8 @@
         }
         &__slide-image{
             position: absolute;
-            bottom: 30px;
-            right:0px;
+            bottom: 35px;
+            right:30px;
             &::before{
                 content: "";
                 position: absolute;
@@ -361,7 +373,7 @@
         }
         &__slide-images{
             position: absolute;
-            top:65px;
+            top: 60px;
             z-index: 10;
             &-one{
                 position: absolute;
@@ -387,6 +399,9 @@
                 animation-duration: 2s;
             }
             &-three{
+                width:42px ;
+                height: 43px;
+                box-sizing: border-box;
                 display: flex;
                 align-items: center;
                 position: absolute;
@@ -395,8 +410,6 @@
                 padding: 10px 10px 8px 10px;
                 border-radius: 50%;
                 background-color: #fff;
-                width: 22px;
-                height: 25px;
                 animation-name: threeimg;
                 animation-delay: 4s;
                 animation-duration: 2s;
@@ -420,7 +433,7 @@
         }
         &__slide-image{
             position: absolute;
-            bottom: 30px;
+            bottom: 60px;
             right:0px;
             &::before{
                 content: "";
@@ -428,14 +441,13 @@
                 width: 15px;
                 height: 15px;
                 background: white;
-                bottom: 52px;
+                bottom: 58px;
                 left:45px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
             }
             &-img{
-                padding: 8px 6px;
-                margin-right: 12px;
+                margin-right: 8px;
             }
         }
     }
@@ -490,8 +502,8 @@
                 padding: 10px 10px 8px 10px;
                 border-radius: 50%;
                 background-color: #fff;
-                width: 22px;
-                height: 25px;
+                width:42px ;
+                height: 43px;
                 animation-name: threeimg;
                 animation-delay: 4s;
                 animation-duration: 2s;
@@ -529,7 +541,6 @@
                 transform: rotate(56deg) skew(20deg);
             }
             &-img{
-                padding: 8px 6px;
                 margin-right: 12px;
             }
         }
@@ -577,6 +588,8 @@
                 animation-duration: 2s;
             }
             &-three{
+                width:42px ;
+                height: 43px;
                 display: flex;
                 align-items: center;
                 position: absolute;
@@ -585,8 +598,6 @@
                 padding: 10px 10px 8px 10px;
                 border-radius: 50%;
                 background-color: #fff;
-                width: 22px;
-                height: 25px;
                 animation-name: threeimg;
                 animation-delay: 4s;
                 animation-duration: 2s;
@@ -610,7 +621,7 @@
         }
         &__slide-image{
             position: absolute;
-            bottom: 50px;
+            bottom: 65px;
             right:10px;
             &::before{
                 content: "";
@@ -618,13 +629,12 @@
                 width: 15px;
                 height: 15px;
                 background: white;
-                bottom: 52px;
+                bottom: 57px;
                 left:45px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
             }
             &-img{
-                padding: 8px 6px;
                 margin-right: 12px;
             }
         }
@@ -653,6 +663,7 @@
                 top: 60px;
                 left:-50px;
                 padding: 10px 10px;
+                padding-bottom: 12px;
                 border-radius: 50%;
                 background-color: #fff;
                 animation-name: oneimg;
@@ -680,8 +691,8 @@
                 padding: 10px 10px 8px 10px;
                 border-radius: 50%;
                 background-color: #fff;
-                width: 22px;
-                height: 25px;
+                width:42px ;
+                height: 43px;
                 animation-name: threeimg;
                 animation-delay: 4s;
                 animation-duration: 2s;
@@ -699,13 +710,14 @@
                 top: 65px;
                 right: -50px;
                 padding: 8px;
+                padding-bottom: 10px;
                 border-radius: 50%;
                 background-color: #fff;
             }
         }
         &__slide-image{
             position: absolute;
-            bottom: 50px;
+            bottom: 70px;
             right:10px;
             &::before{
                 content: "";
@@ -713,13 +725,12 @@
                 width: 15px;
                 height: 15px;
                 background: white;
-                bottom: 50px;
+                bottom: 57px;
                 left:45px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
             }
             &-img{
-                padding: 8px 6px;
                 margin-right: 12px;
             }
         }
@@ -753,7 +764,7 @@
         }
         &__slide-image{
             position: absolute;
-            bottom: 30px;
+            bottom: 80px;
             right:0px;
             &::before{
                 content: "";
@@ -761,10 +772,19 @@
                 width: 15px;
                 height: 15px;
                 background: white;
-                bottom: 52px;
+                bottom: 57px;
                 left:65px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin-right: 12px;
             }
         }
         &__slide-images{
@@ -776,6 +796,7 @@
                 top: 55px;
                 left:-40px;
                 padding: 6px 8px;
+                padding-bottom: 9px;
                 border-radius: 50%;
                 background-color: #fff;
                 animation-name: oneimg;
@@ -795,16 +816,16 @@
                 animation-duration: 2s;
             }
             &-three{
+                width:42px ;
+                height: 43px;
                 display: flex;
                 align-items: center;
                 position: absolute;
                 top: 0px;
-                left: 50px;
+                left: 52px;
                 padding: 10px 10px 8px 10px;
                 border-radius: 50%;
                 background-color: #fff;
-                width: 22px;
-                height: 25px;
                 animation-name: threeimg;
                 animation-delay: 4s;
                 animation-duration: 2s;

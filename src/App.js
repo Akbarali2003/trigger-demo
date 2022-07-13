@@ -5,6 +5,7 @@ import "./App.scss";
 import Header from './Component/Header/Header';
 import Main from './Component/Main/Main';
 import Footer from './Component/Footer/Footer';
+import { ScrollUp } from "./Assets/Images";
 export default function App() {
     const [lang, setLang] = React.useState('ru')
     const [color, setColor] = useState(
@@ -27,6 +28,7 @@ export default function App() {
             <Header size={size} setSize={setSize} lang={lang} setLang={setLang} color={color} setColor={setColor} />
             <Main size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
             <Footer size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
+           {/* <a href="#" className="scrollup"><ScrollUp/></a> */}
         </React.Fragment>
     );
 }

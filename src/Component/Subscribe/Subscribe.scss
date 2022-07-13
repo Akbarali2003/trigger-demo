@@ -1,11 +1,12 @@
 .subscribe{
-    max-width: 960px;
+    max-width: 1140px;
     margin: 0 auto;
     background: #0C2F62;
     border-radius: 30px;
-    padding: 88px 80px;
+    padding: 88px 60px;
     display: flex;
     align-items: center;  
+    justify-content: center;
     transform: translateY(116px);
     z-index: 2;
     &__title{
@@ -25,6 +26,7 @@
     
     &__email{
         width: 232px;
+        height: 52px;
         background: #FFFFFF;
         border-radius: 10px 0px 0px 10px;
         padding: 17px 16px;
@@ -38,12 +40,13 @@
         }
     }
     &__btn{
+        width: 134px;
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
         line-height: 24px;
         color: #FFFFFF;
-        padding: 13px 16px;
+        padding: 14px 16px;
         border: none;
         background: #3E96FC;
         border-radius: 0px 10px 10px 0px;
@@ -58,7 +61,7 @@
 
 @media screen and (max-width:1024px) {
     .subscribe{
-        width: 840px;
+        width: 960px;
         transform: translateY(80px);
         padding: 68px 60px;
         &__title{
@@ -72,7 +75,7 @@
 
 @media screen and (max-width:991px) {
     .subscribe{
-        width: 600px;
+        width: 720px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -87,7 +90,8 @@
             margin-bottom: 24px;
         }
         &__email{
-            width: 433px;
+            width: 465px;
+            height: 52px;
             &::placeholder{
                 font-style: normal;
                 font-weight: 400;
@@ -98,6 +102,33 @@
         }
         &__btn{
             width: 135px;
+            height: 52px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:912px) {
+    .subscribe{
+        width: 720px;
+        &__email{
+            width: 465px;
+            height: 52px;
+            padding:17px 16px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            height: 52px;
             padding: 13.5px 16px;
             cursor: pointer;
             &:hover{
@@ -108,7 +139,7 @@
 }
 @media screen and (max-width:768px) {
     .subscribe{
-        width: 600px;
+        width: 720px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -123,7 +154,7 @@
             margin-bottom: 24px;
         }
         &__email{
-            width:433px;
+            width:465px;
             &::placeholder{
                 font-style: normal;
                 font-weight: 400;
@@ -144,7 +175,7 @@
 }
 @media screen and (max-width:576px) {
     .subscribe{
-        width: 432px;
+        width: 552px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -159,7 +190,7 @@
             margin-bottom: 24px;
         }
         &__email{
-            width: 265.5px;
+            width: 396px;
             &::placeholder{
                 font-style: normal;
                 font-weight: 400;
@@ -178,15 +209,52 @@
         }
     }
 }
+@media screen and (max-width:540px) {
+    .subscribe{
+        width: 456px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        transform: translateY(95px);
+        &__title{
+            width: 426px;
+            font-size: 2em;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 320px;
+            padding: 0 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            padding: 11px 10px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
 @media screen and(max-width:415px) {
     .subscribe{
-        width: 366px;
+        width: 390px;
         &__title{
             width: 320px;
             font-size: 1.5em;
         }
         &__email{
-            width: 230px;
+            width: 254px;
             padding: 14px 12px;
             &::placeholder{
                 font-style: normal;
@@ -197,7 +265,7 @@
             }
         }
         &__btn{
-            width: 122px;
+            width: 112px;
             font-size: 0.9em;
             padding: 10.5px 10px;
         }
@@ -205,7 +273,7 @@
 }
 @media screen and(max-width:394px) {
     .subscribe{
-        width: 345px;
+        width: 369px;
         &__title{
             width: 320px;
             font-size: 1.5em;
@@ -230,13 +298,13 @@
 }
 @media screen and(max-width:376px) {
     .subscribe{
-        width: 327px;
+        width: 351px;
         &__title{
             width: 320px;
             font-size: 1.5em;
         }
         &__email{
-           width: 190px;
+            width: 215px;
             padding: 14px 12px;
             &::placeholder{
                 font-style: normal;
@@ -255,13 +323,13 @@
 }
 @media screen and(max-width:361px) {
     .subscribe{
-        width: 312px;
+        width: 336px;
         &__title{
             width: 312px;
             font-size: 1.5em;
         }
         &__email{
-           width: 175px;
+            width: 198px;
             padding: 14px 12px;
             &::placeholder{
                 font-style: normal;
@@ -280,7 +348,7 @@
 }
 @media screen and (max-width:320px) {
     .subscribe{
-        width: 272px;
+        width: 296px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -295,7 +363,7 @@
             margin-bottom: 24px;
         }
         &__email{
-            width: 135.7px;
+            width: 156px;
             padding: 14px 12px;
             &::placeholder{
                 font-style: normal;

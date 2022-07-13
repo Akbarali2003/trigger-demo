@@ -46,7 +46,7 @@ function Service({ lang, size }) {
                                     sint deserunt ut voluptate aute id deserunt nisi.1
                                 </p>
                             </div>
-                            <img src={Family2} className='service__img-family' alt="Family2" />
+                           <div style={{borderRadius:'30px'}}> <img src={Family2} className='service__img-family' alt="Family2" /></div>
                         </SwiperSlide>
                         <SwiperSlide className="service__content-slide">
                             <div>
