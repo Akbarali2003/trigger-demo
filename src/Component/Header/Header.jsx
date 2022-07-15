@@ -5,14 +5,6 @@ import Nav from '../Nav/Nav';
 import content from "../Localization/content";
 import { ArrowButton, ScrollUp } from '../../Assets/Images/index';
 function Header({ lang, setLang, color, setColor, size, setSize }) {
-    const elModal = React.useRef();
-    const elDropdown1 = React.useRef();
-    const elDropdown2 = React.useRef();
-    const elSearch = React.useRef();
-    const show = React.useRef();
-    const icon1 = React.useRef();
-    const icon2 = React.useRef();
-    const elView = React.useRef();
     const elBar1 = React.useRef();
     const elBar2 = React.useRef();
     const elBar3 = React.useRef();
@@ -20,40 +12,12 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
     const openList = React.useRef();
     const openNav = React.useRef();
     return (
-        <header className="header" onClick={(evt) => {
-            if (evt.target.matches('.header')) {
-                elModal.current.classList.remove('header__nav-openmodal')
-            }
-            if (evt.target.matches('.header')
-                || evt.target.matches('.header__dropdown-one-open')
-                || evt.target.matches('.header__dropdown-item-custom1')
-                || evt.target.matches('.header__close-item-one')) {
-                elDropdown1.current.classList.remove('header__dropdown-one-open')
-                elSearch.current.classList.remove('header__nav-opensearch')
-                show.current.classList.remove('show')
-                icon1.current.classList.remove('icon')
-                icon2.current.classList.remove('icon')
-                elView.current.classList.remove('header__nav-openview')
-            }
-            if (evt.target.matches('.header')
-                || evt.target.matches('.header__dropdown-two-open')
-                || evt.target.matches('.header__dropdown-item-custom2')) {
-                elDropdown2.current.classList.remove('header__dropdown-two-open')
-            }
-        }}>
+        <header className="header" >
             <Nav
                 lang={lang}
                 setLang={setLang}
-                elModal={elModal}
-                elSearch={elSearch}
-                show={show}
-                icon1={icon1}
-                icon2={icon2}
-                elDropdown1={elDropdown1}
-                elDropdown2={elDropdown2}
                 color={color}
                 setColor={setColor}
-                elView={elView}
                 size={size}
                 setSize={setSize}
                 openNav={openNav} />
@@ -77,7 +41,7 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                                 {content[lang].header.text[1]}
                                 <span className="header__arrow"><ArrowButton /></span>
                             </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2" style={{zIndex:'100'}}>
                                 <li><button className="dropdown-item" type="button">Action</button></li>
                                 <li><button className="dropdown-item" type="button">Another action</button></li>
                                 <li><button className="dropdown-item" type="button">Something else here</button></li>

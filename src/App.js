@@ -7,11 +7,11 @@ import Main from './Component/Main/Main';
 import Footer from './Component/Footer/Footer';
 import { ScrollUp } from "./Assets/Images";
 export default function App() {
-    const [lang, setLang] = React.useState('ru')
+    const [lang, setLang] = useState('ru')
     const [color, setColor] = useState(
         JSON.parse(localStorage.getItem("color")) || 0,
     );
-    const [size, setSize] = React.useState(0);
+    const [size, setSize] = useState(0);
     const elRoot = document.querySelector('#root');
     if (color == 0) {
         elRoot.classList.add('white');

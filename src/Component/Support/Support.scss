@@ -244,6 +244,9 @@
             width: 352px;
             margin-right: 0;
             margin-bottom: 24px;
+            &:nth-child(1){
+                margin-right: 0;
+            }
             &:last-child{
                 margin-bottom: 0;
             }

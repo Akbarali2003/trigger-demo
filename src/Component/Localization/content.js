@@ -340,7 +340,7 @@ const content = {
         ],
         footer: [
             {
-                discription: "So'nggi o'n yilliklar davomida bizning shiorimiz <<Sizning xavfsizligingiz birinchi o'rinda>> edi."
+                discription: `So'nggi o'n yilliklar davomida bizning shiorimiz "Sizning xavfsizligingiz birinchi o'rinda" edi.`
             },
             {
                 subtitle: 'Xizmatlar',
@@ -533,7 +533,7 @@ const content = {
         ],
         footer: [
             {
-                discription: "Over the past decades, our motto has been 'Where your safety comes first.'"
+                discription: `Over the past decades, our motto has been "Where your safety comes first."`
             },
             {
                 subtitle: 'Product',

@@ -4,23 +4,26 @@ import content from "../Localization/content";
 import { CarImg, PropertyImg, TravelImg, InsuranceImg } from '../../Assets/Images/index';
 function Pakcage({ lang, size }) {
 
-    const [change, setChange] = React.useState(0);
     const [page, setPage] = React.useState(0);
+    const Animation = React.useRef();
     return (
         <section className="pakcage">
             <div className="container">
                 <div className="pakcage__content" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <h3 className="pakcage__subtitle">{content[lang].main[1].title}</h3>
-                    <span className="pakcage__btns">
-                        <button className={change == 0 ? 'pakcage__btn1-check1' : 'pakcage__btn1'} onClick={() => {
-                            setChange(0)
+                    <div className="pakcage__btns">
+                        <p className="pakcage__btn1" onClick={() => {
+                            Animation.current.classList.remove('start-about')
+                            Animation.current.classList.add('start-home')
                             setPage(0)
-                        }}>{content[lang].main[1].btn1}</button>
-                        <button className={change == 1 ? 'pakcage__btn2-check2' : 'pakcage__btn1'} onClick={() => {
-                            setChange(1)
+                        }}>{content[lang].main[1].btn1}</p>
+                        <p className="pakcage__btn1" onClick={() => {
+                            Animation.current.classList.remove('start-home')
+                            Animation.current.classList.add('start-about')
                             setPage(1)
-                        }}>{content[lang].main[1].btn2}</button>
-                    </span>
+                        }}>{content[lang].main[1].btn2}</p>
+                        <div className="animation start-home" ref={Animation}></div>
+                    </div>
                     {page == 0 ? (
                         <ul className="pakcage__list">
                             <li className="pakcage__item">

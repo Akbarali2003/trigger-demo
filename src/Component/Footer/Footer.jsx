@@ -21,7 +21,7 @@ function Footer({ lang, size }) {
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
                         <span className="footer__logos">
                             <a target='_blank' href="https://twitter.com"><img src={TwitterImg} alt="TwitterImg" /></a>
-                            <a target='_blank' href="https://linkedin.com"><img src={LinkedImg} alt="LinkedImg" /></a>
+                            <a target='_blank' href="https://www.instagram.com"><img src={LinkedImg} alt="LinkedImg" /></a>
                             <a target='_blank' href="https://facebook.com"><img src={FaceBookImg} alt="FaceBookImg" /></a>
                             <a target='_blank' href="https://github.com"><img src={GithubImg} alt="GithubImg" /></a>
                             <a target='_blank' href=""><img src={FingerImg} alt="FingerImg" /></a>
@@ -101,8 +101,8 @@ function Footer({ lang, size }) {
                 <hr className="footer__line" />
                 <span className="footer__links" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <p className="footer__links-one">{content[lang].footer[5].links[0]}</p>
-                    <p className="footer__links-two">{content[lang].footer[5].links[1]}</p>
-                    <p className="footer__links-three">{content[lang].footer[5].links[2]}</p>
+                    <a href="#" className="footer__links-two">{content[lang].footer[5].links[1]}</a>
+                    <a href="#" className="footer__links-three">{content[lang].footer[5].links[2]}</a>
                 </span>
             </div>
         </footer>

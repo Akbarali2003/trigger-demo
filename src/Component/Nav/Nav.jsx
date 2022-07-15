@@ -1,51 +1,30 @@
 import React from "react";
 import './Nav.scss';
+import { useSpeechSynthesis } from "react-speech-kit";
 import content from "../Localization/content";
 import RUFlagImg from '../../Assets/Images/flag-ru.svg';
 import UZFlagImg from '../../Assets/Images/flag-uz.svg';
 import ENFlagImg from '../../Assets/Images/flag-en.svg';
 import { Phone, Home, Karta, Email, Voice, Eye, Search, ArrowButton, } from '../../Assets/Images/index';
 
-function Nav({ lang, setLang, elSearch, show, icon1, icon2, color, setColor, elView, elDropdown1, elDropdown2, size, setSize, openNav }) {
-    const elLangActive = React.useRef();
-    const ChangeSize = React.useRef()
-    let tr = false
-    if (size == 12) {
-        ChangeSize.current.classList.add('header__nav-font-size2')
-        tr = false
-    }
-    if (tr == true) {
-        ChangeSize.current.classList.remove('header__nav-font-size2')
-    }
+function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
 
+    const ChangeSize = React.useRef();
+    const DropdownChange = React.useRef();
+    const voiceStart = React.useRef();
     window.localStorage.setItem('color', JSON.stringify(color));
 
+    function soundEnable() {
+        console.log('bosvolding');
+    }
+
+
+    // const { speak } = useSpeechSynthesis();
     return (
-        <nav className="header__nav" ref={openNav} onClick={(evt) => {
-            if (evt.target.matches('.header__nav-form-btn')
-                || evt.target.matches('.header__nav')
-                || evt.target.matches('.container')
-                || evt.target.matches('.search')) {
-                elSearch.current.classList.remove('header__nav-opensearch')
-                show.current.classList.remove('show')
-                icon1.current.classList.remove('icon')
-                icon2.current.classList.remove('icon')
-            }
-            if (evt.target.matches('.view')) {
-                elView.current.classList.remove('header__nav-openview')
-            }
-            if (evt.target.matches('.search-text') ||
-                evt.target.matches('.header__nav-icon')) {
-                show.current.classList.add('show')
-                icon1.current.classList.add('icon')
-                icon2.current.classList.add('icon')
-            }
-            if (evt.target.matches('.header__nav-lang-uz') ||
-                evt.target.matches('.header__nav-lang-ru') ||
-                evt.target.matches('.header__nav-lang-en')) {
-                elLangActive.current.classList.add('header__nav-lang-active')
-            }
-        }}>
+        <nav className="header__nav" ref={openNav} >
+            {/* <button onClick={() => speak({ text: 'Hello React Js' })}>
+                Speak
+            </button> */}
             <div className="container">
                 <ul className="header__nav-lists" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <li className="header__nav-items">
@@ -173,18 +152,24 @@ function Nav({ lang, setLang, elSearch, show, icon1, icon2, color, setColor, elV
                                 <a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
-                            <li className="header__nav-item">
+                            <li className="header__nav-item" ref={voiceStart} onClick={()=>{
+                                voiceStart.current.classList.add('voice-start')
+                                soundEnable()
+                            }}>
                                 <a href="#" className="header__nav-icon"><Voice /></a>
                                 <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item view">
                                 <div className="dropdown">
-                                    <button className="btn text-light border-0 d-flex align-items-center p-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button className="btn text-light border-0 d-flex align-items-center p-0" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }} type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded='false'>
                                         <a href="#" className="header__nav-icon" ><Eye /></a>
                                         <a href="#" className="header__nav-text" >{content[lang].nav.link[4]} </a>
                                     </button>
-                                    <ul className="dropdown-menu" style={{width:'163px'}} aria-labelledby="dropdownMenu2">
+                                    <ul className="dropdown-menu" ref={DropdownChange} style={{ width: '163px' }} aria-labelledby="dropdownMenu2" onClick={(e) => {
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                    }}>
                                         <li>
                                             <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button">
                                                 <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
@@ -215,6 +200,7 @@ function Nav({ lang, setLang, elSearch, show, icon1, icon2, color, setColor, elV
                                                 {size != 12 ? (
                                                     <span className="header__nav-incremet incremet " onClick={() => {
                                                         setSize(size + 2)
+                                                        DropdownChange.current.classList.add('show')
                                                     }}>A+</span>
                                                 ) : null}
                                             </span>
@@ -224,20 +210,20 @@ function Nav({ lang, setLang, elSearch, show, icon1, icon2, color, setColor, elV
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item search" >
-                                <li className="dropdown">
-                                    <button className="btn text-light border-0 d-flex align-items-center p-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div className="dropdown">
+                                    <button className="btn text-light border-0 d-flex align-items-center p-0" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }} type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                         <a href="#" className="header__nav-icon"><Search /></a>
                                         <a href="#" className='header__nav-text search-text'>{content[lang].nav.link[5]}</a>
                                     </button>
-                                    <ul className="dropdown-menu header__nav-closesearch" style={{padding:'0',borderRadius:'10px'}} aria-labelledby="dropdownMenu2">
+                                    <div className="dropdown-menu header__nav-closesearch" style={{ padding: '0', borderRadius: '10px' }} aria-labelledby="dropdownMenu2">
                                         {/* <div className="header__nav-closesearch"> */}
-                                            <form className="header__nav-form">
-                                                <input type="text" className="header__nav-form-input" placeholder="Поиск..." />
-                                                <button className="header__nav-form-btn" >Поиск</button>
-                                            </form>
+                                        <form className="header__nav-form">
+                                            <input type="text" className="header__nav-form-input" placeholder="Поиск..." />
+                                            <button className="header__nav-form-btn" >Поиск</button>
+                                        </form>
                                         {/* </div> */}
-                                    </ul>
-                                </li>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </li>
