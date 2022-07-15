@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"; 
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./App.scss";
@@ -28,7 +28,7 @@ export default function App() {
             <Header size={size} setSize={setSize} lang={lang} setLang={setLang} color={color} setColor={setColor} />
             <Main size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
             <Footer size={size} lang={lang} setLang={setLang} color={color} setColor={setColor} />
-           {/* <a href="#" className="scrollup"><ScrollUp/></a> */}
+            {/* <a href="#" className="scrollup"><ScrollUp/></a> */}
         </React.Fragment>
     );
 }

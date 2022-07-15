@@ -113,7 +113,7 @@ function Swiper1({ lang, size }) {
                         </a>
                     </SwiperSlide>
                 </Swiper>
-                {/* <div className="swiper-button-prev"></div> */}
+                <div className="swiper-button-prev"></div>
             </div>
         </section >
     );

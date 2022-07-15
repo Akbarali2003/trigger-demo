@@ -18,7 +18,6 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
         console.log('bosvolding');
     }
 
-
     // const { speak } = useSpeechSynthesis();
     return (
         <nav className="header__nav" ref={openNav} >
@@ -152,7 +151,7 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                 <a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
-                            <li className="header__nav-item" ref={voiceStart} onClick={()=>{
+                            <li className="header__nav-item" ref={voiceStart} onClick={() => {
                                 voiceStart.current.classList.add('voice-start')
                                 soundEnable()
                             }}>
@@ -181,7 +180,6 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                                     if (color == 0) {
                                                         evt.currentTarget.classList.remove('toggle')
                                                     }
-
                                                 }} />
                                             </button>
                                         </li>
@@ -216,12 +214,10 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                         <a href="#" className='header__nav-text search-text'>{content[lang].nav.link[5]}</a>
                                     </button>
                                     <div className="dropdown-menu header__nav-closesearch" style={{ padding: '0', borderRadius: '10px' }} aria-labelledby="dropdownMenu2">
-                                        {/* <div className="header__nav-closesearch"> */}
                                         <form className="header__nav-form">
                                             <input type="text" className="header__nav-form-input" placeholder="Поиск..." />
                                             <button className="header__nav-form-btn" >Поиск</button>
                                         </form>
-                                        {/* </div> */}
                                     </div>
                                 </div>
                             </li>

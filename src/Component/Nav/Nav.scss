@@ -24,19 +24,19 @@
         display: none;
         transition: 0.5s;
     }
-    .voice-start{
-        & a svg path{
-            fill:#cc9713;
-            fill-opacity: 1;
-        }
-        & a{
-            color: #cc9713;
-            text-shadow: 0 0 8px #cc9713;
-            &:hover{
-                color: #cc9713;
-            }
-        }
-    }
+    // .voice-start{
+    //     & a svg path{
+    //         fill:#cc9713;
+    //         fill-opacity: 1;
+    //     }
+    //     & a{
+    //         color: #cc9713;
+    //         text-shadow: 0 0 8px #cc9713;
+    //         &:hover{
+    //             color: #cc9713;
+    //         }
+    //     }
+    // }
     &__nav-openview{
         display: block;
         position: absolute;
