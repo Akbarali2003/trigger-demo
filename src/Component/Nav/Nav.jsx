@@ -10,13 +10,10 @@ import { Phone, Home, Karta, Email, Voice, Eye, Search, ArrowButton, } from '../
 function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
 
     const ChangeSize = React.useRef();
-    const DropdownChange = React.useRef();
     const voiceStart = React.useRef();
-    window.localStorage.setItem('color', JSON.stringify(color));
-
-    function soundEnable() {
-        console.log('bosvolding');
-    }
+    const CheckHandle = React.useRef();
+    // window.localStorage.setItem('color', JSON.stringify(color));
+    // window.localStorage.setItem('size', JSON.stringify(size));
 
     // const { speak } = useSpeechSynthesis();
     return (
@@ -52,7 +49,9 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item header__nav-otherlang" type="button">
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('en')
+                                        }}>
                                             <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
                                             English
                                         </button>
@@ -127,12 +126,12 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                             </div>
                         ) : null}
                         <hr className="header__nav-line" />
-                        <li className="header__nav-item">
+                        <div className="header__nav-item">
                             <a href="tel:+99871 231-20-02" className="header__nav-phonespan" >
                                 <span className="header__nav-icon-phone"><Phone /></span>
                                 <p className="header__nav-phonenumber" >+99871 231-20-02</p>
                             </a>
-                        </li>
+                        </div>
                     </li>
                     <li className="header__nav-items">
                         <ul className="header__nav-list" id="nav">
@@ -153,7 +152,6 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item" ref={voiceStart} onClick={() => {
                                 voiceStart.current.classList.add('voice-start')
-                                soundEnable()
                             }}>
                                 <a href="#" className="header__nav-icon"><Voice /></a>
                                 <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
@@ -165,40 +163,36 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                         <a href="#" className="header__nav-icon" ><Eye /></a>
                                         <a href="#" className="header__nav-text" >{content[lang].nav.link[4]} </a>
                                     </button>
-                                    <ul className="dropdown-menu" ref={DropdownChange} style={{ width: '163px' }} aria-labelledby="dropdownMenu2" onClick={(e) => {
-                                        e.stopPropagation();
-                                        e.preventDefault();
-                                    }}>
+                                    <ul className="dropdown-menu" style={{ width: '163px' }} aria-labelledby="dropdownMenu2">
                                         <li>
-                                            <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button">
-                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={(evt) => {
-                                                    color == 0 ? setColor(1) : setColor(0)
-                                                    window.localStorage.setItem('color', JSON.stringify(color));
-                                                    if (color == 1) {
-                                                        evt.currentTarget.classList.add('toggle')
-                                                    }
-                                                    if (color == 0) {
-                                                        evt.currentTarget.classList.remove('toggle')
-                                                    }
+                                            <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button" ref={CheckHandle}>
+                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={() => {
+                                                    color == 1 ? setColor(0) : setColor(1)
+                                                    localStorage.setItem('color', JSON.stringify(color));
                                                 }} />
                                             </button>
                                         </li>
                                         <li><hr className="header__nav-viewline" /></li>
-                                        <li className="header__nav-changesize dropdown-not-close">
+                                        <li className="header__nav-changesize dropdown-not-close" onClick={(e) => {
+                                            e.stopPropagation();
+                                            e.preventDefault();
+                                        }}>
                                             <div className="header__nav-my-size">{`${16 + size}`}px</div>
                                             <span className="header__nav-font-size" ref={ChangeSize}>
                                                 {size != 0 ? (
                                                     <span className="header__nav-decremet decremet" onClick={() => {
                                                         setSize(size - 2)
+                                                        localStorage.setItem('size', JSON.stringify(size));
                                                     }}>A-</span>
                                                 ) : null}
                                                 <span className="header__nav-auto auto " onClick={() => {
                                                     setSize(0)
+                                                    window.localStorage.setItem('size', JSON.stringify(size));
                                                 }}>auto</span>
                                                 {size != 12 ? (
                                                     <span className="header__nav-incremet incremet " onClick={() => {
                                                         setSize(size + 2)
-                                                        DropdownChange.current.classList.add('show')
+                                                        window.localStorage.setItem('size', JSON.stringify(size));
                                                     }}>A+</span>
                                                 ) : null}
                                             </span>
@@ -228,5 +222,4 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
         </nav >
     )
 }
-
 export default Nav;

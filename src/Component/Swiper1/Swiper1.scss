@@ -11,7 +11,6 @@
         align-items: center;
         margin-top: 40px; 
         z-index: 1 !important;
-        overflow:hidden!important;
     }
     
     &__list{
@@ -20,7 +19,6 @@
         display: flex;
         align-items: center; 
         z-index: 1 !important;
-        overflow:inherit;
         margin: 0;
     }
     &__item{
@@ -60,7 +58,7 @@
     &__job{
         font-style: normal;
         font-weight: 500;
-        font-size: 0.875em;
+        font-size: 0.8em;
         line-height: 16px;
         color: #3E4265;
         display: flex;
@@ -117,7 +115,7 @@
         margin: 0 !important;
         margin-left: 12px !important;
     }
-    .swiper-button-prev{
+    .swiper-button-prev-unique{
         width: 36px;
         height: 36px;
         position: absolute;
@@ -126,40 +124,29 @@
         box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
         border: none;
         border-radius: 50%;
-        z-index: 100 !important;
+        z-index: 100;
         transition: 0.35s;
-        &::after{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 6px;
-            height: 10px;
-            font-size: var(--swiper-button-prev);
-            content: icon;
-            color: black;
-        }    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
         
     }
-    .swiper-button-next{
+    .swiper-button-next-unique{
         width: 36px;
         height: 36px;
-        right: 0 !important;
+        position: absolute;
+        right: 0 ;
         background-color: #fff;
         box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
         border: none;
         border-radius: 50%;
-        z-index: 10;
+        z-index: 100;
         transition: 0.35s;
-        &::after{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 6px;
-            height: 10px;
-            font-size: var(--swiper-button-next);
-            content:icon;
-            color: black;
-        }  
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -216,8 +203,7 @@
             align-items: center;
         }
         &__item{
-            width: 306px !important;
-            margin-right: 8px !important;
+            width: 304px !important;
         }
         &__information{
             width: 304px;   
@@ -291,7 +277,7 @@
             z-index: 1;
         }
         &__list{
-            width: 630px !important;
+            width: 626px !important;
             height: 492px;
             display: flex;
             align-items: center; 
@@ -299,7 +285,6 @@
         }
         &__item{
             width: 304px !important;
-            margin-right: 12px !important;
         }
         &__information{
             width: 304px;   
@@ -329,11 +314,11 @@
         }
         .swiper-button-prev{
             position: absolute;
-            left: 10px;
+            left: 0px;
         }
         .swiper-button-next{
             position: absolute;
-            right: 15px;
+            right: 0px;
         }
     }
 }
@@ -358,7 +343,6 @@
         }
         &__item{
             width: 304px !important;
-            margin-right: 0px !important;
         }
         &__information{
             width: 304px;   
@@ -408,7 +392,6 @@
         }
         &__item{
             width: 304px !important;
-            margin-right: 0px !important;
         }
         &__information{
             width: 304px;   
@@ -597,7 +580,6 @@
         }
         &__item{
             width: 296px !important;
-            margin-right: 0px !important;
         }
         &__information{
             width: 296px;   

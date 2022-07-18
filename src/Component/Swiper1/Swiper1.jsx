@@ -28,19 +28,19 @@ function Swiper1({ lang, size }) {
                         },
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 0,
+                            spaceBetween: 17,
                         },
                         820: {
                             slidesPerView: 2,
-                            spaceBetween: 0,
+                            spaceBetween: 17,
                         },
                         991: {
                             slidesPerView: 2,
-                            spaceBetween: 0,
+                            spaceBetween: 17,
                         },
                         1024: {
                             slidesPerView: 2,
-                            spaceBetween: 0,
+                            spaceBetween: 16,
                         },
                         1140: {
                             slidesPerView: 3,
@@ -52,10 +52,16 @@ function Swiper1({ lang, size }) {
                     pagination={{
                         clickable: true,
                     }}
-                    navigation={true}
+                    navigation={
+                        {
+                            nextEl: '.swiper-button-next-unique',
+                            prevEl: '.swiper-button-prev-unique'
+                        }}
                     modules={[Pagination, Navigation]}
                     style={{
-                        fontSize: `${16 + size}` + 'px'
+                        fontSize: `${16 + size}` + 'px',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-all'
                     }}>
                     <SwiperSlide className='swiper1__item'>
                         <a href="#">
@@ -113,7 +119,8 @@ function Swiper1({ lang, size }) {
                         </a>
                     </SwiperSlide>
                 </Swiper>
-                <div className="swiper-button-prev"></div>
+                <div className="swiper-button-prev-unique"><FiChevronLeft /></div>
+                <div className="swiper-button-next-unique"><FiChevronRight /></div>
             </div>
         </section >
     );

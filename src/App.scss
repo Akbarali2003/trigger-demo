@@ -332,23 +332,23 @@ input{
                 .swiper-pagination-bullet-active{
                     background-color: #3E96FC !important;
                 }
-                .swiper-button-prev{
+                .swiper-button-prev-unique{
                     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
                     &:hover{
                         background-color: #0d6efd;
                         box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-                        &::after{
-                            color: #fff;
+                        & svg path{
+                            fill: #fff;
                         }
                     }
                 }
-                .swiper-button-next{
+                .swiper-button-next-unique{
                     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
                     &:hover{
                         background-color: #0d6efd;
                         box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-                        &::after{
-                            color: #fff;
+                        & svg path{
+                            fill: #fff;
                         }
                     }
                 }
@@ -729,33 +729,27 @@ input{
                 .swiper-pagination-bullet-active{
                     background-color: #ABABAB !important;
                 }
-                .swiper-button-prev{
-                    &::after{
-                        color: #A9A9A9;
-                    }
+                .swiper-button-prev-unique{
                     background-color:#fff ;
                     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
                     transition: 0.35s;
                     &:hover{
                         background-color: #898989;
                         box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-                        &::after{
-                            color: #fff;
+                        & svg path{
+                            fill: #fff;
                         }
                     }
                 }
-                .swiper-button-next{
-                    &::after{
-                        color: #A9A9A9;
-                    }
+                .swiper-button-next-unique{
                     background-color: #fff;
                     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
                     transition: 0.35s;
                     &:hover{
                         background-color: #898989;
                         box-shadow: 0px 8px 18px -8px rgba(62, 150, 252, 0.9), 0px 4.4px 12px -1px rgba(62, 150, 252, 0.06);
-                        &::after{
-                            color: #fff;
+                        & svg path{
+                            fill: #fff;
                         }
                     }
                 }
