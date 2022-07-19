@@ -34,6 +34,9 @@ body{
     font-family:'Inter',Arial, sans-serif !important;
     margin: 0;
 }
+#root{
+    scroll-behavior: smooth;
+}
 ul{
     list-style-type: none;
     padding: 0;
@@ -53,6 +56,42 @@ input{
     width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
+}
+.voiceBtn{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    background-color:#ffba08; ;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    & svg {
+        width: 28px;
+        height: 20px;
+        & path{
+        fill: #cc9713;
+        }
+    }
+}
+.scroll{
+    position: fixed;
+    width: 100vw;
+}
+.scrollup{
+    width: 36px;
+    height: 36px;
+    position: fixed !important;
+    right: 16px;
+    bottom: 64px;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    z-index: 999;
+    transition: .6s ease-in-out;
 }
 
 .white{

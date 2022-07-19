@@ -1,26 +1,19 @@
 import React from "react";
 import './Nav.scss';
-import { useSpeechSynthesis } from "react-speech-kit";
 import content from "../Localization/content";
 import RUFlagImg from '../../Assets/Images/flag-ru.svg';
 import UZFlagImg from '../../Assets/Images/flag-uz.svg';
 import ENFlagImg from '../../Assets/Images/flag-en.svg';
 import { Phone, Home, Karta, Email, Voice, Eye, Search, ArrowButton, } from '../../Assets/Images/index';
 
-function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
+function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeMouseUp }) {
 
     const ChangeSize = React.useRef();
     const voiceStart = React.useRef();
     const CheckHandle = React.useRef();
-    // window.localStorage.setItem('color', JSON.stringify(color));
-    // window.localStorage.setItem('size', JSON.stringify(size));
 
-    // const { speak } = useSpeechSynthesis();
     return (
         <nav className="header__nav" ref={openNav} >
-            {/* <button onClick={() => speak({ text: 'Hello React Js' })}>
-                Speak
-            </button> */}
             <div className="container">
                 <ul className="header__nav-lists" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
                     <li className="header__nav-items">
@@ -149,9 +142,10 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav }) {
                                 <a href="#" className="header__nav-icon"><Email /></a>
                                 <a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a>
                             </li>
-                            <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
+                            <li className="header__nav-item-line" ><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item" ref={voiceStart} onClick={() => {
-                                voiceStart.current.classList.add('voice-start')
+                                voiceStart.current.classList.add('voice-start');
+                                VoiceModeMouseUp()
                             }}>
                                 <a href="#" className="header__nav-icon"><Voice /></a>
                                 <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>

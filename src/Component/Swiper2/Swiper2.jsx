@@ -13,12 +13,7 @@ import CarFour from '../../Assets/Images/car4.png';
 import CarFive from '../../Assets/Images/car5.png';
 import CarSix from '../../Assets/Images/car6.png';
 import CarSeven from '../../Assets/Images/car7.png';
-import {
-    Checked,
-    Lock,
-    Check,
-    Starr
-} from "../../Assets/Images/index";
+import { Checked, Lock, Check, Starr } from "../../Assets/Images/index";
 import { Pagination, Navigation, EffectFade } from "swiper";
 
 function Swiper2({ size }) {
@@ -34,7 +29,6 @@ function Swiper2({ size }) {
                             <img className="swiper2__slide-images-four" src={Vektor2Img} alt="Vektor2Img" />
                             <span className="swiper2__slide-images-five"><Starr /></span>
                         </div>
-
                         <Swiper className="swiper2__list"
                             slidesPerView={1}
                             slidesPerGroup={1}
@@ -64,7 +58,6 @@ function Swiper2({ size }) {
                 </div>
             </div>
         </section>
-
     )
 }
 export default Swiper2;

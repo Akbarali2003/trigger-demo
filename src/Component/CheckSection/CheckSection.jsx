@@ -3,6 +3,7 @@ import './CheckSection.scss';
 import Swiper from '../Swiper2/Swiper2';
 import content from "../Localization/content";
 
+
 function CheckSection({ lang, size }) {
 
     return (
@@ -10,8 +11,8 @@ function CheckSection({ lang, size }) {
             <div className="container">
                 <div className="checksection__global" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <div>
-                        <h2 className="checksection__title">{content[lang].main[0].title}</h2>
-                        <p className="checksection__text">{content[lang].main[0].text}</p>
+                        <h2 className="checksection__title mouse">{content[lang].main[0].title}</h2>
+                        <p className="checksection__text mouse">{content[lang].main[0].text}</p>
                         <form className="checksection__form" >
                             <div className="checksection__global-select">
                                 <select className="checksection__select" name="" id="">

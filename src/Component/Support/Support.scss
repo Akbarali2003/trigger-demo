@@ -5,11 +5,13 @@
         position: relative;
     }
     &__decor6{
-        position: relative;
-        top: 650px;
-        right: -565px;
+        display: block;
+        position: absolute;
+        bottom: -52px;
+        right: -52px;
     }
     &__decor5{
+        display: block;
         position: absolute;
         top: 112px;
         left: -32px;
@@ -101,7 +103,7 @@
     }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (max-width:992px) {
     .support{
         &__decor6{
             display: none;

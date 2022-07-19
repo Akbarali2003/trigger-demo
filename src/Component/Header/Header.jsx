@@ -4,7 +4,7 @@ import { LogoImg } from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
 import { ArrowButton, ScrollUp } from '../../Assets/Images/index';
-function Header({ lang, setLang, color, setColor, size, setSize }) {
+function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseUp }) {
     const elBar1 = React.useRef();
     const elBar2 = React.useRef();
     const elBar3 = React.useRef();
@@ -20,7 +20,9 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                 setColor={setColor}
                 size={size}
                 setSize={setSize}
-                openNav={openNav} />
+                openNav={openNav}
+                VoiceModeMouseUp={VoiceModeMouseUp}
+            />
             <div className="container">
                 <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }} >
                     <a href="/"> <LogoImg /></a>
@@ -30,7 +32,7 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                                 {content[lang].header.text[0]}
                                 <span className="header__arrow"><ArrowButton /></span>
                             </button>
-                            <ul className="dropdown-menu" style={{zIndex:'1000'}} aria-labelledby="dropdownMenu2">
+                            <ul className="dropdown-menu" style={{ zIndex: '1000' }} aria-labelledby="dropdownMenu2">
                                 <li><button className="dropdown-item" type="button">Action</button></li>
                                 <li><button className="dropdown-item" type="button">Another action</button></li>
                                 <li><button className="dropdown-item" type="button">Something else here</button></li>
@@ -41,7 +43,7 @@ function Header({ lang, setLang, color, setColor, size, setSize }) {
                                 {content[lang].header.text[1]}
                                 <span className="header__arrow"><ArrowButton /></span>
                             </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2" style={{zIndex:'100'}}>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2" style={{ zIndex: '100' }}>
                                 <li><button className="dropdown-item" type="button">Action</button></li>
                                 <li><button className="dropdown-item" type="button">Another action</button></li>
                                 <li><button className="dropdown-item" type="button">Something else here</button></li>

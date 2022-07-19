@@ -24,6 +24,17 @@
         display: none;
         transition: 0.5s;
     }
+    .voice-start{
+        & a:nth-child(1){
+            & svg path{
+                fill: #cc9713;
+            }
+        }
+        & a:nth-child(2){
+            color: #cc9713;
+            text-shadow: 0 0 8px #cc9713;
+        }
+    }
     &__nav-openview{
         display: block;
         position: absolute;
