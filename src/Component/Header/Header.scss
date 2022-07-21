@@ -6,7 +6,8 @@
     position: relative;
     border: none;
     &__package{
-        max-width: 1140px;
+        width: 1140px;
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;

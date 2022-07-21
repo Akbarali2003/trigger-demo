@@ -3,8 +3,8 @@ import './Header.scss';
 import { LogoImg } from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
-import { ArrowButton, ScrollUp } from '../../Assets/Images/index';
-function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseUp }) {
+import { ArrowButton } from '../../Assets/Images/index';
+function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseUp,onVoice,setonVoice }) {
     const elBar1 = React.useRef();
     const elBar2 = React.useRef();
     const elBar3 = React.useRef();
@@ -22,6 +22,8 @@ function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseU
                 setSize={setSize}
                 openNav={openNav}
                 VoiceModeMouseUp={VoiceModeMouseUp}
+                onVoice={onVoice}
+                setonVoice={setonVoice}
             />
             <div className="container">
                 <div className="header__package" style={{ fontSize: `${16 + size}` + 'px', overflowWrap: 'break-word' }} >

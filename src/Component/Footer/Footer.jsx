@@ -1,6 +1,7 @@
 import React from "react";
 import './Footer.scss';
-import FooterLogo from '../../Assets/Images/footer-logo.svg';
+// import FooterLogo from '../../Assets/Images/footer-logo.svg';
+import { LogoImg } from '../../Assets/Images/index';
 import TwitterImg from '../../Assets/Images/twitter.svg';
 import LinkedImg from '../../Assets/Images/instagram.svg';
 import FaceBookImg from '../../Assets/Images/facebook.svg';
@@ -17,7 +18,7 @@ function Footer({ lang, size }) {
             <div className="container">
                 <ul className="footer__list" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <li className="footer__item">
-                        <a href="/"> <img src={FooterLogo} alt="FooterLogo" /></a>
+                        <a href="/"> <LogoImg/></a>
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
                         <span className="footer__logos">
                             <a target='_blank' href="https://twitter.com"><img src={TwitterImg} alt="TwitterImg" /></a>

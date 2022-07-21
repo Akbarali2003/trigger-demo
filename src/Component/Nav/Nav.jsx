@@ -6,12 +6,12 @@ import UZFlagImg from '../../Assets/Images/flag-uz.svg';
 import ENFlagImg from '../../Assets/Images/flag-en.svg';
 import { Phone, Home, Karta, Email, Voice, Eye, Search, ArrowButton, } from '../../Assets/Images/index';
 
-function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeMouseUp }) {
+
+function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceModeMouseUp, onVoice, setonVoice }) {
 
     const ChangeSize = React.useRef();
     const voiceStart = React.useRef();
     const CheckHandle = React.useRef();
-
     return (
         <nav className="header__nav" ref={openNav} >
             <div className="container">
@@ -20,7 +20,7 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeM
                         {lang == 'uz' ? (
                             <div className="dropdown header__nav-item">
                                 <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                    <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-ru" /></span>
                                     UZ
                                     <span className="header__arrow"><ArrowButton /></span>
                                 </button>
@@ -88,7 +88,7 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeM
                         ) : (lang == 'en') ? (
                             <div className="dropdown header__nav-item">
                                 <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
+                                    <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-ru" /></span>
                                     EN
                                     <span className="header__arrow"><ArrowButton /></span>
                                 </button>
@@ -144,8 +144,15 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeM
                             </li>
                             <li className="header__nav-item-line" ><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item" ref={voiceStart} onClick={() => {
-                                voiceStart.current.classList.add('voice-start');
-                                VoiceModeMouseUp()
+                                if (onVoice == 1) {
+                                    voiceStart.current.classList.add('voice-start');
+                                    VoiceModeMouseUp()
+                                    setonVoice(0)
+                                }
+                            }} onDoubleClick={() => {
+                                voiceStart.current.classList.remove('voice-start');
+                                // setonVoice()
+                                console.log(onVoice);
                             }}>
                                 <a href="#" className="header__nav-icon"><Voice /></a>
                                 <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
@@ -160,8 +167,17 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav,VoiceModeM
                                     <ul className="dropdown-menu" style={{ width: '163px' }} aria-labelledby="dropdownMenu2">
                                         <li>
                                             <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button" ref={CheckHandle}>
-                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onClick={() => {
+                                                <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onChange={() => {
                                                     color == 1 ? setColor(0) : setColor(1)
+                                                    // console.log(color);
+                                                    // if (color == 0) {
+                                                    //     CheckHandle.current.classList.add('toggle1')
+                                                    //     CheckHandle.current.classList.add('toggle2')
+                                                    // }
+                                                    // else if (color = 1) {
+                                                    //     CheckHandle.current.classList.remove('toggle1')
+                                                    //     CheckHandle.current.classList.remove('toggle2')
+                                                    // }
                                                     localStorage.setItem('color', JSON.stringify(color));
                                                 }} />
                                             </button>

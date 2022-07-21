@@ -34,7 +34,6 @@
         width: 155px;
         font-size: 15px;
         position: relative;
-        z-index: 1;
         display: inline-block;
         text-align: center;
         cursor: pointer;
@@ -487,7 +486,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(12, 38, 78, 0.3);
             border-radius: 10px;
             margin-bottom: 48px;
             padding: 4px;
