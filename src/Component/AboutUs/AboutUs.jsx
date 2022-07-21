@@ -9,9 +9,9 @@ function AboutUs({ lang, size }) {
     return (
         <section className="aboutus">
             <div className="container">
-                <div className="aboutus__content" style={{ fontSize: `${16 + size}` + 'px'}}>
+                <div className="aboutus__content" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <div className="aboutus__image">
-                       <div style={{borderRadius:'30px'}}> <img src={FamilyImg} alt="FamilyImg" /></div>
+                        <img src={FamilyImg} alt="FamilyImg" />
                         <div className="aboutus__decor-right">
                             <img src={decor2} alt="" />
                         </div>

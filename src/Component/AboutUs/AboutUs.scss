@@ -9,6 +9,9 @@
         height: 546px;
         margin-right: 100px;
         position: relative;
+        & img {
+            border-radius: 30px;
+        }
     }
     &__decor {
         &-right {
