@@ -22,11 +22,11 @@ function Footer({ lang, size }) {
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
                         <span className="footer__logos">
                             <a target='_blank' href="https://twitter.com"><img src={TwitterImg} alt="TwitterImg" /></a>
-                            <a target='_blank' href="https://www.instagram.com"><img src={LinkedImg} alt="LinkedImg" /></a>
+                            <a target='_blank' href="https://www.linkedin.com"><img src={LinkedImg} alt="LinkedImg" /></a>
                             <a target='_blank' href="https://facebook.com"><img src={FaceBookImg} alt="FaceBookImg" /></a>
                             <a target='_blank' href="https://github.com"><img src={GithubImg} alt="GithubImg" /></a>
-                            <a target='_blank' href=""><img src={FingerImg} alt="FingerImg" /></a>
-                            <a target='_blank' href=""><img src={BallImg} alt="BallImg" /></a>
+                            <a target='_blank' href="#"><img src={FingerImg} alt="FingerImg" /></a>
+                            <a target='_blank' href="#"><img src={BallImg} alt="BallImg" /></a>
                         </span>
                     </li>
                     <li className="footer__item">
