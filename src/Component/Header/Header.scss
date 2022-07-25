@@ -79,7 +79,7 @@
         display: none;
     }
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
     .header{
         padding-top: 36px;
         padding-bottom: 52px;
@@ -126,7 +126,7 @@
         }
         &__bar-toggle{
             display: block;
-            width: 56px;
+            width: 58px;
             height: 40px;
             border: none;
             border: 1px solid rgba(255,255,255,0.1);
@@ -134,37 +134,51 @@
             padding: 4px 12px;
             background-color: transparent;
             border-radius: 0.25rem;
-            transition: box-shadow 0.15s ease-in-out;
+            transition: all 0.5s ease-in-out;
             &:paused{
                 pointer-events: none;
             }
         }
         &__hamburger{
-            width: 30px;
+            width: 32px;
             height: 30px;  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
         &__bar{
             width: 30px;
             height: 4px;
             display: block;
             background-color: #fff;
-            margin-bottom: 9px;
             transition: .7s;
-            &:last-child{
-                margin-bottom: 0;
+            &::after,&::before{
+                content: '';
+                position: absolute;
+                width: 30.5px;
+                height: 4px;
+                background-color: #fff;
+                transition: .7s;
             }
         }
-        .bar1{
-            transition: .7s;
-            transform: rotate(45deg) translateY(8px) translateX(9px);
+        
+        &__bar::before{
+            transform: translateX(-15px) translateY(-12px);
         }
-        .bar2{
-            display: none;
-            transform: rotate(-90deg);
+        &__bar::after{
+            transform: translateX(-15px) translateY(12px);
         }
-        .bar3{
-            transition: .7s;
-            transform: rotate(-45deg) translateX(0.5px);
+        &__hamburger.hamburger-open .header__bar{
+            transform: translateX(-37px) ;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        &__hamburger.hamburger-open .header__bar::before{
+            transform: rotate(45deg) translate(15px ,-15px);
+        }
+        &__hamburger.hamburger-open .header__bar::after{
+            transform: rotate(-45deg) translate(15px ,15px);
         }
         &__dropdown-one-open{
             width: 187px;

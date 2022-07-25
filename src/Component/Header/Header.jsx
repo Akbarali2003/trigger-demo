@@ -4,11 +4,9 @@ import { LogoImg } from '../../Assets/Images/index';
 import Nav from '../Nav/Nav';
 import content from "../Localization/content";
 import { ArrowButton } from '../../Assets/Images/index';
-function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseUp,onVoice,setonVoice }) {
-    const elBar1 = React.useRef();
-    const elBar2 = React.useRef();
-    const elBar3 = React.useRef();
-    const [x, setX] = React.useState(1);
+function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseUp, onVoice, setonVoice }) {
+    let elBar = false;
+    const elBar1 = React.useRef()
     const openList = React.useRef();
     const openNav = React.useRef();
     return (
@@ -58,26 +56,16 @@ function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseU
                     </ul>
                     <button className="header__btn ">{content[lang].header.btn[0]}</button>
                     <button className="header__bar-toggle" onClick={() => {
-                        if (x == 1) {
-                            elBar1.current.classList.add('bar1')
-                            elBar2.current.classList.add('bar2')
-                            elBar3.current.classList.add('bar3')
-                            openList.current.classList.add('header__list-open')
-                            openNav.current.classList.add('header__nav-open')
-                            setX(0)
+                        if (!elBar) {
+                            elBar1.current.classList.add('hamburger-open');
+                            elBar = true;
                         } else {
-                            elBar1.current.classList.remove('bar1')
-                            elBar2.current.classList.remove('bar2')
-                            elBar3.current.classList.remove('bar3')
-                            openList.current.classList.remove('header__list-open')
-                            openNav.current.classList.remove('header__nav-open')
-                            setX(1)
+                            elBar1.current.classList.remove('hamburger-open');
+                            elBar = false;
                         }
                     }}>
-                        <div className="header__hamburger" >
-                            <span className="header__bar" ref={elBar1}></span>
-                            <span className="header__bar" ref={elBar2}></span>
-                            <span className="header__bar" ref={elBar3}></span>
+                        <div className="header__hamburger" ref={elBar1} >
+                            <span className="header__bar" ></span>
                         </div>
                     </button>
                 </div>
