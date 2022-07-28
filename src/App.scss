@@ -119,8 +119,7 @@ input{
             color: rgba(255, 255, 255, 0.65);
         }
         &__nav-lang-ru{
-            color: rgba(255, 255, 255, 0.65);
-            
+            color: rgba(255, 255, 255, 0.65);            
         }
         &__nav-lang-en{
             color: rgba(255, 255, 255, 0.65);
@@ -226,6 +225,13 @@ input{
                         & path :nth-child(3){
                             fill: #3E96FC;
                         }
+                    }
+                }
+                &:hover{
+                    border-color: #3E96FC;
+                    cursor: pointer;
+                    .pakcage__text{
+                        color: #000;
                     }
                 }
             } 
@@ -635,6 +641,9 @@ input{
                 }
                 &:hover{
                     border-color: #8B8B8B;
+                    .pakcage__text{
+                        color: #5d5c5c;
+                    }
                 }
             }   
             &__text{

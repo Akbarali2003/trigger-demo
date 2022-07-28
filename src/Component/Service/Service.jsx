@@ -32,10 +32,10 @@ function Service({ lang, size }) {
                         <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
-                                <span className="service__box">
+                                <a href="#" className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[0]}</h4>
                                     <ArrowRight />
-                                </span>
+                                </a>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla
                                     duis ullamco cillum dolor. Voluptate exercitation incididunt
@@ -51,10 +51,10 @@ function Service({ lang, size }) {
                         <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
-                                <span className="service__box">
+                                <a href="#" className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[1]}</h4>
                                     <ArrowRight />
-                                </span>
+                                </a>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla
                                     duis ullamco cillum dolor. Voluptate exercitation incididunt
@@ -70,10 +70,10 @@ function Service({ lang, size }) {
                         <SwiperSlide className="service__content-slide">
                             <div>
                                 <h3 className="service__title">{content[lang].main[4].titlee}</h3>
-                                <span className="service__box">
+                                <a href="#" className="service__box">
                                     <h4 className="service__subtitle">{content[lang].main[4].subtitle[2]}</h4>
                                     <ArrowRight />
-                                </span>
+                                </a>
                                 <p className="service__text">
                                     Nulla Lorem mollit cupidatat irure. Laborum magna nulla
                                     duis ullamco cillum dolor. Voluptate exercitation incididunt

@@ -21,7 +21,7 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                     <li className="header__nav-items">
                         {lang == 'uz' ? (
                             <div className="dropdown header__nav-item">
-                                <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="header__nav-icon-flag"><img src={UZFlagImg} width='16' height='16' alt="flag-ru" /></span>
                                     UZ
                                     <span className="header__arrow"><ArrowButton /></span>
@@ -55,7 +55,7 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                             </div>
                         ) : (lang == 'ru') ? (
                             <div className="dropdown header__nav-item">
-                                <button className="btn text-light border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn border-0 d-flex align-items-center p-0 header__nav-lang-ru" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="header__nav-icon-flag"><img src={RUFlagImg} width='16' height='16' alt="flag-ru" /></span>
                                     RU
                                     <span className="header__arrow"><ArrowButton /></span>
@@ -134,29 +134,27 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                         <ul className="header__nav-list" id="nav">
                             <li className="header__nav-item">
                                 <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-                                    <span><a href="#" className="header__nav-icon"><Home /></a></span>
-                                    <span><a href="#" className="header__nav-text" >{content[lang].nav.link[0]}</a></span>
+                                    <span className="header__nav-icon"><Home /></span>
+                                    <p className="header__nav-text" >{content[lang].nav.link[0]}</p>
                                 </a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
                                 <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-                                    <span> <a href="#" className="header__nav-icon"><Karta /></a></span>
-                                    <span><a href="#" className="header__nav-text">{content[lang].nav.link[1]}</a></span>
+                                    <span className="header__nav-icon"> <Karta /></span>
+                                    <p className="header__nav-text">{content[lang].nav.link[1]}</p>
                                 </a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
                                 <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-                                    <span> <a href="#" className="header__nav-icon"><Email /></a></span>
-                                    <span><a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a></span>
+                                    <span className="header__nav-icon">  <Email /></span>
+                                    <p className="header__nav-text" >{content[lang].nav.link[2]}</p>
                                 </a>
                             </li>
                             <li className="header__nav-item-line" ><hr className="header__nav-border-line" /></li>
                             <li className='header__nav-item' ref={voiceStart} onClick={() => {
                                 JSON.parse(localStorage.getItem('voice')) == 1 ? setonVoice(0) : setonVoice(1);
-                                // localStorage.setItem('voice', JSON.stringify(onVoice));
-                                console.log(JSON.parse(localStorage.getItem('voice')));
                                 if (JSON.parse(localStorage.getItem('voice')) == 1) {
                                     voiceStart.current.classList.add('voice-start');
                                     voiceStart.current.classList.remove('voice-finish');
@@ -169,10 +167,10 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                                     setonVoice(1)
                                 }
                             }}>
-                                <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                                <span style={{ display: 'flex', alignItems: 'center' }}>
                                     <a href="#" className="header__nav-icon"><Voice /></a>
                                     <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
-                                </a>
+                                </span>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item view">
