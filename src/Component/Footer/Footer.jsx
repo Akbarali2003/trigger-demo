@@ -1,13 +1,6 @@
 import React from "react";
 import './Footer.scss';
-// import FooterLogo from '../../Assets/Images/footer-logo.svg';
-import { LogoImg } from '../../Assets/Images/index';
-import TwitterImg from '../../Assets/Images/twitter.svg';
-import LinkedImg from '../../Assets/Images/instagram.svg';
-import FaceBookImg from '../../Assets/Images/facebook.svg';
-import GithubImg from '../../Assets/Images/github.svg';
-import FingerImg from '../../Assets/Images/finger.svg';
-import BallImg from '../../Assets/Images/ball.svg';
+import { LogoImg,TwitterImg,LinkedImg,FakebookImg,GithubImg,FingerImg,BallImg} from '../../Assets/Images/index';
 import FluentCall from '../../Assets/Images/fluent-call.svg';
 import FluentEmail from '../../Assets/Images/fluent-email.svg';
 import FluentLocation from '../../Assets/Images/fluent-location.svg';
@@ -18,15 +11,15 @@ function Footer({ lang, size }) {
             <div className="container">
                 <ul className="footer__list" style={{ fontSize: `${16 + size}` + 'px' }}>
                     <li className="footer__item">
-                        <a href="/"> <LogoImg/></a>
+                        <a href="/"> <LogoImg /></a>
                         <p className="footer__discription">{content[lang].footer[0].discription}</p>
                         <span className="footer__logos">
-                            <a target='_blank' href="https://twitter.com"><img src={TwitterImg} alt="TwitterImg" /></a>
-                            <a target='_blank' href="https://www.linkedin.com"><img src={LinkedImg} alt="LinkedImg" /></a>
-                            <a target='_blank' href="https://facebook.com"><img src={FaceBookImg} alt="FaceBookImg" /></a>
-                            <a target='_blank' href="https://github.com"><img src={GithubImg} alt="GithubImg" /></a>
-                            <a target='_blank' href="#"><img src={FingerImg} alt="FingerImg" /></a>
-                            <a target='_blank' href="#"><img src={BallImg} alt="BallImg" /></a>
+                            <a target='_blank' className="footer__logos-twitter" href="https://twitter.com"><TwitterImg/></a>
+                            <a target='_blank' className="footer__logos-linked" href="https://www.linkedin.com"><LinkedImg/></a>
+                            <a target='_blank' className="footer__logos-facebook" href="https://facebook.com"><FakebookImg/></a>
+                            <a target='_blank' className="footer__logos-github" href="https://github.com"><GithubImg/></a>
+                            <a target='_blank' className="footer__logos-finger" href="#"><FingerImg/></a>
+                            <a target='_blank' className="footer__logos-ball" href="#"><BallImg/></a>
                         </span>
                     </li>
                     <li className="footer__item">

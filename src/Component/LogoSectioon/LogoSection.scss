@@ -73,6 +73,22 @@
     
 }
 
+@media screen and(max-width:1140px) {
+    .logosection{
+        padding-top:80px;
+        padding-bottom: 80px;
+        &__list{
+            width:960px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__item{
+            width:136px !important;
+            height: 100px !important;
+        }
+    }
+}
 @media screen and(max-width:1024px) {
     .logosection{
         padding-top:80px;
@@ -90,7 +106,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:993px) {
     .logosection{
         padding-top: 80px;
         padding-bottom: 80px;
@@ -120,6 +136,20 @@
         }
     }
 }
+@media screen and (max-width:765px) {
+    .logosection{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &__list{
+            width: 552px;
+        }
+        &__item{
+            width: 160.5px !important;
+            height: 100px !important;
+            margin-right: 25px !important;
+        }
+    }
+}
 @media screen and (max-width:576px) {
     .logosection{
         padding-top: 80px;
@@ -129,6 +159,20 @@
         }
         &__item{
             width: 160.5px !important;
+            height: 100px !important;
+            margin-right: 25px !important;
+        }
+    }
+}
+@media screen and (max-width:570px) {
+    .logosection{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &__list{
+           width: 456px;
+        }
+        &__item{
+            width: 206px !important;
             height: 100px !important;
             margin-right: 25px !important;
         }
@@ -145,6 +189,20 @@
             width: 206px !important;
             height: 100px !important;
             margin-right: 25px !important;
+        }
+    }
+}
+@media screen and (max-width:470px) {
+    .logosection{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &__list{
+            width:390px;
+        }
+        &__item{
+            width: 390px !important;
+            height: 100px !important;
+            margin-right: 0px !important;
         }
     }
 }
@@ -199,6 +257,20 @@
         }
         &__item{
             width: 336px !important;
+            height: 100px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
+@media screen and (max-width:341px) {
+    .logosection{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &__list{
+            width: 318px;
+        }
+        &__item{
+            width: 318px !important;
             height: 100px !important;
             margin-right: 0px !important;
         }

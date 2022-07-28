@@ -1,16 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import './LogoSection.scss';
-import {
-    Coinbase,
-    Spotify,
-    Slack,
-    Dropbox,
-    Webflow,
-    Zoom,
-} from '../../Assets/Images/index';
+import { Coinbase, Spotify, Slack, Dropbox, Webflow, Zoom } from '../../Assets/Images/index';
 function LogoSection() {
     return (
         <div className="logosection">
@@ -18,6 +11,10 @@ function LogoSection() {
                 <Swiper className="logosection__list"
                     loop={true}
                     grabCursor={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                    }}
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
@@ -39,7 +36,15 @@ function LogoSection() {
                             slidesPerView: 2,
                             spaceBetween: 0,
                         },
+                        570: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        },
                         576: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                        },
+                        764: {
                             slidesPerView: 1,
                             spaceBetween: 0,
                         },
@@ -47,8 +52,12 @@ function LogoSection() {
                             slidesPerView: 3,
                             spaceBetween: 0,
                         },
-                        991: {
+                        993: {
                             slidesPerView: 3,
+                            spaceBetween: 0,
+                        },
+                        995: {
+                            slidesPerView: 6,
                             spaceBetween: 0,
                         },
                         1024: {
@@ -60,7 +69,7 @@ function LogoSection() {
                             spaceBetween: 24,
                         }
                     }}
-                    modules={[Pagination, Navigation]}>
+                    modules={[Pagination, Navigation, Autoplay]}>
                     <SwiperSlide className="logosection__item logosection__coinbase"><Coinbase /></SwiperSlide>
                     <SwiperSlide className="logosection__item logosection__spotify"><Spotify /></SwiperSlide>
                     <SwiperSlide className="logosection__item logosection__slack"><Slack /></SwiperSlide>

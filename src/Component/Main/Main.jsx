@@ -10,7 +10,7 @@ import Employer from "../Employer/Employer";
 import News from "../News/News";
 import Support from "../Support/Support";
 import Subscribe from "../Subscribe/Subscribe";
-function Main({ lang,size }) {
+function Main({ lang, size }) {
     return (
         <main className="main">
             <CheckSection lang={lang} size={size} />

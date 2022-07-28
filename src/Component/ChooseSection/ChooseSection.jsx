@@ -3,11 +3,11 @@ import './ChooseSection.scss';
 import { ExcellentImg, CheckImg, ClockImg, PeopleImg } from '../../Assets/Images/index';
 import content from "../Localization/content";
 
-function ChooseSection({ lang,size }) {
+function ChooseSection({ lang, size }) {
     return (
         <div className="choosesection">
             <div className="container">
-                <div className="choosesection__content"style={{ fontSize: `${16 + size}` + 'px'}} >
+                <div className="choosesection__content" style={{ fontSize: `${16 + size}` + 'px' }} >
                     <h3 className="choosesection__subtitle">{content[lang].main[3].title}</h3>
                     <ul className="choosesection__list" >
                         <li className="choosesection__item">

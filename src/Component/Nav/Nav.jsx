@@ -12,6 +12,8 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
     const ChangeSize = React.useRef();
     const voiceStart = React.useRef();
     const CheckHandle = React.useRef();
+
+
     return (
         <nav className="header__nav" ref={openNav} >
             <div className="container">
@@ -110,7 +112,9 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item header__nav-otherlang" type="button">
+                                        <button className="dropdown-item header__nav-otherlang" type="button" onClick={() => {
+                                            setLang('en')
+                                        }}>
                                             <span className="header__nav-icon-flag"><img src={ENFlagImg} width='16' height='16' alt="flag-en" /></span>
                                             English
                                         </button>
@@ -129,33 +133,46 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                     <li className="header__nav-items">
                         <ul className="header__nav-list" id="nav">
                             <li className="header__nav-item">
-                                <a href="#" className="header__nav-icon"><Home /></a>
-                                <a href="#" className="header__nav-text" >{content[lang].nav.link[0]}</a>
+                                <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                                    <span><a href="#" className="header__nav-icon"><Home /></a></span>
+                                    <span><a href="#" className="header__nav-text" >{content[lang].nav.link[0]}</a></span>
+                                </a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
-                                <a href="#" className="header__nav-icon"><Karta /></a>
-                                <a href="#" className="header__nav-text">{content[lang].nav.link[1]}</a>
+                                <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                                    <span> <a href="#" className="header__nav-icon"><Karta /></a></span>
+                                    <span><a href="#" className="header__nav-text">{content[lang].nav.link[1]}</a></span>
+                                </a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item">
-                                <a href="#" className="header__nav-icon"><Email /></a>
-                                <a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a>
+                                <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                                    <span> <a href="#" className="header__nav-icon"><Email /></a></span>
+                                    <span><a href="#" className="header__nav-text" >{content[lang].nav.link[2]}</a></span>
+                                </a>
                             </li>
                             <li className="header__nav-item-line" ><hr className="header__nav-border-line" /></li>
-                            <li className="header__nav-item" ref={voiceStart} onClick={() => {
-                                if (onVoice == 1) {
+                            <li className='header__nav-item' ref={voiceStart} onClick={() => {
+                                JSON.parse(localStorage.getItem('voice')) == 1 ? setonVoice(0) : setonVoice(1);
+                                // localStorage.setItem('voice', JSON.stringify(onVoice));
+                                console.log(JSON.parse(localStorage.getItem('voice')));
+                                if (JSON.parse(localStorage.getItem('voice')) == 1) {
                                     voiceStart.current.classList.add('voice-start');
+                                    voiceStart.current.classList.remove('voice-finish');
                                     VoiceModeMouseUp()
                                     setonVoice(0)
                                 }
-                            }} onDoubleClick={() => {
-                                voiceStart.current.classList.remove('voice-start');
-                                // setonVoice()
-                                console.log(onVoice);
+                                else if (JSON.parse(localStorage.getItem('voice')) == 0) {
+                                    voiceStart.current.classList.remove('voice-start');
+                                    voiceStart.current.classList.add('voice-finish');
+                                    setonVoice(1)
+                                }
                             }}>
-                                <a href="#" className="header__nav-icon"><Voice /></a>
-                                <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
+                                <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                                    <a href="#" className="header__nav-icon"><Voice /></a>
+                                    <a href="#" className="header__nav-text">{content[lang].nav.link[3]}</a>
+                                </a>
                             </li>
                             <li className="header__nav-item-line"><hr className="header__nav-border-line" /></li>
                             <li className="header__nav-item view">
@@ -169,17 +186,8 @@ function Nav({ lang, setLang, color, setColor, size, setSize, openNav, VoiceMode
                                             <button className="dropdown-item noDefalult header__nav-viewdarkmode" type="button" ref={CheckHandle}>
                                                 <input type="checkbox" id="toggle" className="header__nav-viewcheckbox" onChange={() => {
                                                     color == 1 ? setColor(0) : setColor(1)
-                                                    // console.log(color);
-                                                    // if (color == 0) {
-                                                    //     CheckHandle.current.classList.add('toggle1')
-                                                    //     CheckHandle.current.classList.add('toggle2')
-                                                    // }
-                                                    // else if (color = 1) {
-                                                    //     CheckHandle.current.classList.remove('toggle1')
-                                                    //     CheckHandle.current.classList.remove('toggle2')
-                                                    // }
                                                     localStorage.setItem('color', JSON.stringify(color));
-                                                }} />
+                                                }} checked={color == 1 ? 'checked' : ''} />
                                             </button>
                                         </li>
                                         <li><hr className="header__nav-viewline" /></li>

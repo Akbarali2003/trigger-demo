@@ -5,22 +5,25 @@ import './App.scss';
 import Header from './Component/Header/Header';
 import Main from './Component/Main/Main';
 import Footer from './Component/Footer/Footer';
-import { ScrollUp } from './Assets/Images';
-import { VoiceMode } from './Assets/Images/index';
+import { ScrollUp, VoiceMode } from './Assets/Images/index';
 
 export default function App() {
-    const [onVoice, setonVoice] = useState(1);
+    const [onVoice, setonVoice] = useState(() => {
+        const localVoice = localStorage.getItem('voice')
+        return localVoice == 1 ? JSON.parse(localVoice) : 0;
+    });
     const [voiceText, setVoiceText] = useState('');
     const { speak } = useSpeechSynthesis();
     const [lang, setLang] = useState('ru');
     const [color, setColor] = useState(() => {
         const localColor = localStorage.getItem('color')
-        return localColor ? JSON.parse(localColor) : 0;
+        return localColor == 1 ? JSON.parse(localColor) : 0;
     });
     const [size, setSize] = useState(
         JSON.parse(window.localStorage.getItem('size')) || 0,
     );
     const elRoot = document.querySelector('#root');
+    const voiceBtn = document.querySelector('.voiceBtn');
 
     if (color == 0) {
         elRoot.classList.add('white');
@@ -29,13 +32,11 @@ export default function App() {
         elRoot.classList.add('black');
         elRoot.classList.remove('white');
     }
-
-    const voiceBtn = document.querySelector('.voiceBtn');
     const VoiceModeMouseUp = () => {
         elRoot.addEventListener('mouseup', (evt) => {
             const selectedText = window.getSelection().toString();
             setVoiceText(selectedText)
-            if (selectedText.length && onVoice == 1) {
+            if (selectedText.length && JSON.parse(localStorage.getItem('voice')) == 0) {
                 voiceBtn.style.display = 'block';
                 const x = evt.pageX;
                 const y = evt.pageY;
@@ -44,7 +45,7 @@ export default function App() {
                 voiceBtn.style.left = `${x - voiceBtnWidth * 0.5}px`;
                 voiceBtn.style.top = `${y - voiceBtnHeigth * 1.25}px`;
             }
-            if (onVoice == 0) {
+            else if (JSON.parse(localStorage.getItem('voice')) == 1) {
                 voiceBtn.style.display = 'none';
             }
         })
@@ -58,7 +59,8 @@ export default function App() {
     useEffect(() => {
         localStorage.setItem('color', JSON.stringify(color));
         localStorage.setItem('size', JSON.stringify(size));
-    }, [color, size]);
+        localStorage.setItem('voice', JSON.stringify(onVoice));
+    }, [color, size, onVoice]);
 
     function scrollUp() {
         const scrollUp = document.getElementById('scroll-up');
@@ -66,6 +68,7 @@ export default function App() {
         else scrollUp.classList.remove('show-scroll');
     }
     window.addEventListener('scroll', scrollUp);
+
     return (
         <Fragment>
             <a href='#' className='scroll' id='scroll-up'><ScrollUp /></a>

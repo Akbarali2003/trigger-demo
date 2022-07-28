@@ -30,6 +30,7 @@
     url('./Assets/Fonts/inter-v11-latin-700.woff2') format('woff2'),
     url('./Assets/Fonts/inter-v11-latin-700.woff') format('woff');
 }
+
 body{
     font-family:'Inter',Arial, sans-serif !important;
     margin: 0;
@@ -48,7 +49,7 @@ a{
 }
 p,h1,h2,h3,h4,h5,h6{
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 input{
     outline: none !important;
@@ -94,22 +95,25 @@ input{
     }
 }
 .scrollUpSvg{
-    box-shadow: 0 8px 12px rgba(39,69, 190, 0.01);
     border-radius: 50%;
-    border: 3px solid #0c2f62;
+    border: 3px solid;
 }
 .show-scroll{
     display: block;
     position: fixed;
     bottom: 4rem;
 }
-
 .white{
     overflow: hidden;
+    .scrollUpSvg{
+        border-color: #0c2f62;
+        fill: #0c2f62;
+        box-shadow: 0 8px 12px rgba(39,69, 190, 0.01);
+    }
     .header{
         background-color: #0C2F62;
         &__nav-item:nth-child(1){
-        filter: grayscale(0);
+            filter: grayscale(0);
         }
         &__nav-lang-uz{
             color: rgba(255, 255, 255, 0.65);
@@ -127,15 +131,12 @@ input{
         &__nav-text{
             color: rgba(255, 255, 255, 0.65);
         }
-        &__item{
+        &__select{
+            &:hover{
+                color: #0d6efd !important;
+            }
             &:hover .header__arrow svg path{
                 fill:#0d6efd;
-            }
-        }
-        &__select{
-            color: #fff;
-            &:hover{
-                color: #0d6efd;
             }
         }
         &__discription{
@@ -152,7 +153,13 @@ input{
                 box-shadow: none;
             }
         }
-        
+        &__nav-form-btn{
+            color: #FFFFFF;
+            background: #3E96FC;
+            &:hover{
+                background: #2263ae;
+            }
+        }
     }
     .main{
         background-color: #fff;
@@ -161,6 +168,15 @@ input{
             filter: grayscale(0);
             &__text{
                 color: rgba(255, 255, 255, 0.7);
+            }
+            &__global-select:hover{
+                .checksection__select{
+                    color: black;
+                }
+                .checksection__select-icon svg path{
+                    fill: #000;
+                    fill-opacity: 1;
+                }
             }
             &__select{
                 color: #96A1AC;
@@ -446,11 +462,16 @@ input{
 }
 .black{
     overflow: hidden;
+    .scrollUpSvg{
+        border-color:  #252525;
+        fill:  #252525;
+        box-shadow:none;
+    }
     .header{
         background-color: #2B2B2B ;
         &__nav-item:nth-child(1){
             filter: grayscale(1);
-            }
+        }
         &__package{
             & svg path:nth-child(1){
                 fill: #888888;
@@ -459,6 +480,12 @@ input{
                 fill: #494949;
                 height: 36px;
             }
+        }
+        &__nav-open{
+            background-color: #252525;
+        }
+        &__list-open{
+            background-color: #252525;
         }
         &__nav-lang-uz{
             color: #919191
@@ -475,15 +502,16 @@ input{
         &__nav-text{
             color: #919191;
         }
-        &__item{
-            &:hover .header__arrow svg path{
-                fill:#8B8B8B;
-            }
-        }
         &__select{
             color: #FCFCFC;
             &:hover{
-                color: #8B8B8B;
+                color: #8B8B8B !important;
+            }
+            & .header__arrow svg path{
+                fill: #FCFCFC;
+            }
+            &:hover .header__arrow svg path{
+                fill:#8B8B8B;
             }
         }
         &__discription{
@@ -500,6 +528,13 @@ input{
                 box-shadow: none;
             }
         }
+        &__nav-form-btn{
+            color:  rgba(255, 255, 255, 0.65);
+            background: #8B8B8B;
+            &:hover{
+                background: #5c5b5b;
+            }
+        }
     }
     .main{
         background-color: #A9A9A9;
@@ -508,6 +543,15 @@ input{
             background-color: #2B2B2B ;
             &__text{
                 color: #C0C0C0;
+            }
+            &__global-select:hover{
+                .checksection__select{
+                    color: black;
+                }
+                .checksection__select-icon svg path{
+                    fill: #000;
+                    fill-opacity: 1;
+                }
             }
             &__select{
                 color: #96A1AC;
@@ -862,6 +906,14 @@ input{
         }
     }
 }
+@media screen and (max-width:1140px) {
+    .container{
+        width: 984px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0px 12px;
+    }
+}
 @media screen and (max-width:1024px) {
     .container{
         width: 984px;
@@ -870,7 +922,7 @@ input{
         padding: 0px 12px;
     }
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width:993px) {
     .container{
         width: 744px;
         max-width: 100%;
@@ -898,10 +950,24 @@ input{
         margin: 0 auto;
     }
 }
+@media screen and (max-width:765px) {
+    .container{
+        width: 576px;
+        max-width: 576px;
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width:576px) {
     .container{
         width: 576px;
         max-width: 576px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:570px) {
+    .container{
+        width: 480px;
+        max-width: 480px;
         margin: 0 auto;
     }
 }
@@ -910,6 +976,14 @@ input{
         width: 480px;
         max-width: 480px;
         margin: 0 auto;
+    }
+}
+@media screen and (max-width:470px) {
+    .container{
+        width: 414px;
+        max-width: 414px;
+        margin: 0 auto;
+        padding: 0 12px;
     }
 }
 @media screen and (max-width:415px) {
@@ -940,6 +1014,14 @@ input{
     .container{
         width: 360px;
         max-width: 360px;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+}
+@media screen and (max-width:341px) {
+    .container{
+        width: 340px;
+        max-width: 340px;
         margin: 0 auto;
         padding: 0 12px;
     }

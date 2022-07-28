@@ -38,7 +38,7 @@ function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseU
                                 <li><button className="dropdown-item" type="button">Something else here</button></li>
                             </ul>
                         </li>
-                        <li className="dropdown header__item ">
+                        <li className="dropdown header__item">
                             <button className="btn header__select text-light border-0 d-flex align-items-center pt-0 pb-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                 {content[lang].header.text[1]}
                                 <span className="header__arrow"><ArrowButton /></span>
@@ -58,9 +58,13 @@ function Header({ lang, setLang, color, setColor, size, setSize, VoiceModeMouseU
                     <button className="header__bar-toggle" onClick={() => {
                         if (!elBar) {
                             elBar1.current.classList.add('hamburger-open');
+                            openList.current.classList.add('header__list-open');
+                            openNav.current.classList.add('header__nav-open');
                             elBar = true;
                         } else {
                             elBar1.current.classList.remove('hamburger-open');
+                            openList.current.classList.remove('header__list-open');
+                            openNav.current.classList.remove('header__nav-open');
                             elBar = false;
                         }
                     }}>

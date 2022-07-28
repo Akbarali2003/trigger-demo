@@ -1,15 +1,15 @@
 import React from "react";
 import './Employer.scss';
-import { StarColor,Star } from '../../Assets/Images/index';
+import { StarColor, Star } from '../../Assets/Images/index';
 import MarksImg from '../../Assets/Images/mark.svg';
 import UserOne from '../../Assets/Images/user1.png';
 import UserTwo from '../../Assets/Images/user2.png';
 import UserThree from '../../Assets/Images/user3.png';
 import content from "../Localization/content";
 
-function Employer({lang,size}) {
+function Employer({ lang, size }) {
     return (
-        <div className="employer" style={{ fontSize: `${16 + size}` + 'px'}}>
+        <div className="employer" style={{ fontSize: `${16 + size}` + 'px' }}>
             <div className="container">
                 <h3 className="employer__title">{content[lang].main[5].title}</h3>
                 <ul className="employer__list">

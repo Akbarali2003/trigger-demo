@@ -198,6 +198,34 @@
     }
 }
 
+@media screen and(max-width:1140px) {
+    .swiper2{
+        margin-left: 20px;
+        &__content{
+            width: 480px;
+            height: 480px;
+        }
+        &__list{
+            display: flex;
+            width: 480px;
+            height: 480px;
+        }
+        &__item{
+            width: 480px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__carimage{
+            width: 480px;
+            height: 480px;
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+}
 @media screen and(max-width:1024px) {
     .swiper2{
         margin-left: 20px;
@@ -227,7 +255,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:993px) {
     .swiper2{
         margin: 0;
         height: 480px;
@@ -334,8 +362,7 @@
             display: flex;
             align-items: center;
             margin-top: 20px; 
-        } 
-        
+        }         
         &__list{
             display: flex;
             width: 456px;
@@ -365,6 +392,105 @@
                 left:65px;
                 border-top-left-radius: 4px;
                 transform: rotate(56deg) skew(20deg);
+            }
+        }
+    }
+}
+@media screen and (max-width:470px) {
+    .swiper2{
+        &__content{
+            width: 390px;
+        }
+        &__list{
+            display: flex;
+            width: 390px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 390px;
+            height: 480px;
+        }
+        &__slide-images{
+            width: 370px;
+            height: 114px;
+            position: absolute;
+            top:50px;
+            z-index: 10;
+            &-one{
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                bottom: 0;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &-two{
+                width: 100px;
+                height: 40px;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                z-index: 15;
+                animation-name: twoimg;
+                animation-duration: 2s;
+            }
+            &-three{
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 135px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 130px;
+                height: 40px;
+                position: absolute;
+                top: 30px;
+                right: 45px;          
+            }
+            &-five{
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                right: 0px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 60px;
+            right:0px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 58px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                margin-right: 8px;
             }
         }
     }
@@ -682,6 +808,105 @@
         }
         &__slide-images{
             width: 336px;
+            height: 114px;
+            position: absolute;
+            top:60px;
+            z-index: 10;
+            &-one{
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                bottom: 0;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: oneimg;
+                animation-duration: 2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &-two{
+                width: 80px;
+                height: 40px;
+                position: absolute;
+                top: 30px;
+                left: 40px;
+                z-index: 15;
+                animation-name: twoimg;
+                animation-duration: 2s;
+            }
+            &-three{
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 125px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation-name: threeimg;
+                animation-delay: 4s;
+                animation-duration: 2s;
+            }
+            &-four{
+                width: 110px;
+                height: 40px;
+                position: absolute;
+                top: 30px;
+                right: 40px;          
+            }
+            &-five{
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                right: 0px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &__slide-image{
+            position: absolute;
+            bottom: 70px;
+            right:10px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: white;
+                bottom: 57px;
+                left:45px;
+                border-top-left-radius: 4px;
+                transform: rotate(56deg) skew(20deg);
+            }
+            &-img{
+                margin-right: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width:341px) {
+    .swiper2{
+        &__content{
+            width: 316px;
+        }
+        &__list{
+            display: flex;
+            width: 316px;
+            height: 480px;
+        }
+        &__carimage{
+            width: 316px;
+            height: 480px;
+        }
+        &__slide-images{
+            width: 316px;
             height: 114px;
             position: absolute;
             top:60px;

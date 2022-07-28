@@ -2,7 +2,7 @@ import React from "react";
 import './CheckSection.scss';
 import Swiper from '../Swiper2/Swiper2';
 import content from "../Localization/content";
-
+import { ArrowButton } from '../../Assets/Images/index'
 
 function CheckSection({ lang, size }) {
 
@@ -20,6 +20,9 @@ function CheckSection({ lang, size }) {
                                     <option value="DDB">DDB</option>
                                     <option value="DDB">DDB</option>
                                 </select>
+                                <div className="checksection__select-icon">
+                                    <ArrowButton />
+                                </div>
                             </div>
                             <input className="checksection__input" type="text" placeholder={content[lang].main[0].placeholder} />
                             <button className="checksection__btn" >{content[lang].main[0].btn}</button>

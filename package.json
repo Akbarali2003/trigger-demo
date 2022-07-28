@@ -40,5 +40,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gulp-group-css-media-queries": "^1.2.2"
 	}
 }

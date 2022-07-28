@@ -59,6 +59,19 @@
     }
 }
 
+@media screen and (max-width:1140px) {
+    .subscribe{
+        width: 960px;
+        transform: translateY(80px);
+        padding: 68px 60px;
+        &__title{
+            font-size: 2em;
+            line-height: 48px;
+            margin-right: 27px;
+            
+        }
+    }
+}
 @media screen and (max-width:1024px) {
     .subscribe{
         width: 960px;
@@ -73,7 +86,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:993px) {
     .subscribe{
         width: 720px;
         display: flex;
@@ -173,6 +186,78 @@
         }
     }
 }
+@media screen and (max-width:765px) {
+    .subscribe{
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        transform: translateY(95px);
+        &__title{
+            width: 576px;
+            font-size: 2em;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 440px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .subscribe{
+        width: 552px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        transform: translateY(95px);
+        &__title{
+            width: 426px;
+            font-size: 2em;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 396px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 135px;
+            padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
 @media screen and (max-width:576px) {
     .subscribe{
         width: 552px;
@@ -202,6 +287,43 @@
         &__btn{
             width: 135px;
             padding: 13.5px 16px;
+            cursor: pointer;
+            &:hover{
+                background: #2263ae;
+            }
+        }
+    }
+}
+@media screen and (max-width:570px) {
+    .subscribe{
+        width: 456px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        transform: translateY(95px);
+        &__title{
+            width: 426px;
+            font-size: 2em;
+            line-height: 48px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__email{
+            width: 320px;
+            padding: 0 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            padding: 11px 10px;
             cursor: pointer;
             &:hover{
                 background: #2263ae;
@@ -243,6 +365,31 @@
             &:hover{
                 background: #2263ae;
             }
+        }
+    }
+}
+@media screen and(max-width:470px) {
+    .subscribe{
+        width: 390px;
+        &__title{
+            width: 320px;
+            font-size: 1.5em;
+        }
+        &__email{
+            width: 254px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 112px;
+            font-size: 0.9em;
+            padding: 10.5px 10px;
         }
     }
 }
@@ -341,6 +488,31 @@
         }
         &__btn{
             width: 112px;
+            font-size: 0.9em;
+            padding: 10px 10px;
+        }
+    }
+}
+@media screen and(max-width:341px) {
+    .subscribe{
+        width: 316px;
+        &__title{
+            width: 292px;
+            font-size: 1.5em;
+        }
+        &__email{
+            width: 189px;
+            padding: 14px 12px;
+            &::placeholder{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #96A1AC;
+            }
+        }
+        &__btn{
+            width: 103px;
             font-size: 0.9em;
             padding: 10px 10px;
         }
